@@ -1,0 +1,18 @@
+---
+layout: basement
+topdir: ..
+---
+<div class="container-fluid">
+  <div class="row">
+	<nav class="col-md-2 d-none d-md-block sidebar">
+	  <div class="sidebar-header">
+	  </div>
+	  <div class="list-group list-group-root">
+		{% include_relative navi.html %}
+	  </div>
+	</nav>
+  </div>
+  <main role="main" class="col-md-10 ml-sm-auto">
+	{{ content }}
+  </main>
+</div>
