@@ -3,11 +3,9 @@ layout: default
 lang: en
 title: document
 ---
-<h1 name="documents">Documents</h1>
-
 <!-- ----------------------------------------------------------------------- -->
 
-<h2 name="documents"><i class="fas fa-book" style="width: 1.5em"></i> Reference</h2>
+<h2 name="documents"><i class="fas fa-book-open" style="width: 1.5em"></i> Reference</h2>
 
 <table class="table">
   <thead class="thead-light">

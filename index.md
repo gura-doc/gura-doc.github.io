@@ -4,13 +4,24 @@ lang: en
 title: top
 ---
 <div class="jumbotron">
-  <h1 class="display-4">Gura Programming Language</h1>
-  <p class="lead">A programming language that comes with powerful operation on iterators.</p>
-  <a class="btn btn-primary btn-lg" href="/download/" role="button">Download</a>
+  <div class="container">
+	<h1 class="display-4">Gura Programming Language</h1>
+	<p class="lead">
+	  A programming language that comes with powerful operation on iterators.
+	</p>
+	<p>
+	  <a class="btn btn-primary" href="/download/"><i class="fas fa-download"></i> Download</a>
+	  <a class="btn btn-primary" href="https://github.com/gura-lang/gura"><i class="fab fa-github"></i>
+		View on GitHub</a>
+	</p>
+  </div>
 </div>
 
-<div class="card-deck">
-  <div class="card">
+<div class="container">
+  <div class="card-deck">
+
+<!-- card -->
+	<div class="card">
 <div class="card-body" markdown="1">
 <h5 class="card-title">What's This?</h5>
 **Gura** is an **iterator-oriented** programming language
@@ -28,38 +39,47 @@ But a new feature called **Implicit Mapping** is working internally,
 which automatically repeats evaluation of `printf` function
 after it's given with iterators, `1..` and `readlines('foo.txt')`, as its arguments.
 </div>
-  </div>
-  <div class="card">
-	<div class="card-body">
-	  <h5 class="card-title">Latest News</h5>
-	  <table class="table">
-		<tr><td style="white-space:nowrap">2017-07-04</td><td>
-			<a href="Download.html">Gura v0.7.0</a> was released.
-		</td></tr>
-
-		<tr><td style="white-space:nowrap">2015-06-30</td><td>
-			<a href="Documents.html">Documents</a> in PDF format were published.
-		</td></tr>
-
-		<tr><td style="white-space:nowrap">2015-06-24</td><td>
-			<a href="Download.html">Gura v0.6.2</a> was released.
-		</td></tr>
-
-		<tr><td style="white-space:nowrap">2015-04-10</td><td>
-			<a href="library-reference/index.html">Gura Library Reference</a> was published.
-		</td></tr>
-
-		<tr><td style="white-space:nowrap">2015-01-07</td><td>
-			<a href="Download.html">Gura v0.6.1</a> was released.
-		</td></tr>
-
-	  </table>
 	</div>
-  </div>
-</div>
+<!-- card -->
 
-<div class="card-deck mt-3">
-  <div class="card">
+<!-- card -->
+	<div class="card">
+	  <div class="card-body">
+		<h5 class="card-title">Latest News</h5>
+
+		<table class="table">
+		  <tr><td style="white-space:nowrap">2017-07-04</td><td>
+			  <a href="Download.html">Gura v0.7.0</a> was released.
+		  </td></tr>
+		  
+		  <tr><td style="white-space:nowrap">2015-06-30</td><td>
+			  <a href="Documents.html">Documents</a> in PDF format were published.
+		  </td></tr>
+		  
+		  <tr><td style="white-space:nowrap">2015-06-24</td><td>
+			  <a href="Download.html">Gura v0.6.2</a> was released.
+		  </td></tr>
+		  
+		  <tr><td style="white-space:nowrap">2015-04-10</td><td>
+			  <a href="library-reference/index.html">Gura Library Reference</a> was published.
+		  </td></tr>
+		  
+		  <tr><td style="white-space:nowrap">2015-01-07</td><td>
+			  <a href="Download.html">Gura v0.6.1</a> was released.
+		  </td></tr>
+		  
+		</table>
+
+	  </div>
+	</div>
+<!-- card -->
+
+  </div>
+
+  <div class="card-deck mt-3">
+
+<!-- card -->
+	<div class="card">
 <div class="card-body" markdown="1">
 <h5 class="card-title">Features</h5>
 * It provides a variety of iterator operations including mapping process
@@ -70,10 +90,22 @@ after it's given with iterators, `1..` and `readlines('foo.txt')`, as its argume
   The site [http://app.gura-lang.org/](http://app.gura-lang.org/) introduces you
   some applications that makes use of Gura.
 </div>
-  </div>
-  <div class="card">
-	<div class="card-body">
-	  <h5 class="card-title">Contact</h5>
 	</div>
+<!-- card -->
+
+<!-- card -->
+	<div class="card">
+<div class="card-body" markdown="1">
+<h5 class="card-title">Resources</h5>
+* <a class="btn btn-outline-secondary btn-sm" href="/document/"><i class="fas fa-book"></i> Document</a>
+  &hellip; Get detailed specification and other information of this language.
+* <a class="btn btn-outline-secondary btn-sm" href="/download/"><i class="fas fa-download"></i> Download</a>
+  &hellip; Get binary installer/packages and source tar-balls.
+* <a class="btn btn-outline-secondary btn-sm" href="/gallery/"><i class="fas fa-image"></i> Gallery</a>
+  &hellip; View screen snapshots of sample programs.
+</div>
+	</div>
+<!-- card -->
+
   </div>
 </div>

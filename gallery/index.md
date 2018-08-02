@@ -3,8 +3,6 @@ layout: default
 lang: en
 title: gallery
 ---
-# Gallery
-
 ## Application
 
 <table>

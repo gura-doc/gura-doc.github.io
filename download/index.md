@@ -6,7 +6,7 @@ title: download
 {% assign gura_version = '0.7.0' %}
 {% assign gura_version_prev = '0.6.2' %}
 
-# Download <a name="download"></a>
+# Package <a name="package"></a>
 
 ## Latest Version <a name="download-latest"></a><a class="btn btn-secondary float-right" data-toggle="collapse" href="#relnote-latest" role="button" aria-expanded="false" aria-controls="relnote-latest">Release Notes</a>
 
