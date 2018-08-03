@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Language Manual
+prevpage: chapter-07.html
+nextpage: chapter-09.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">8</span><a name="anchor-8"></a>Function</h1>
 <h2><span class="caption-index-2">8.1</span><a name="anchor-8-1"></a>Definition and Evaluation</h2>

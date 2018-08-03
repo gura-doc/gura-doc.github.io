@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Language Manual
+prevpage: chapter-13.html
+nextpage: chapter-15.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">14</span><a name="anchor-14"></a>Iterator/List Operation</h1>
 <h2><span class="caption-index-2">14.1</span><a name="anchor-14-1"></a>Overview</h2>

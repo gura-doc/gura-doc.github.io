@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Language Manual
+prevpage: chapter-09.html
+nextpage: chapter-11.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">10</span><a name="anchor-10"></a>Object Oriented Programming</h1>
 <h2><span class="caption-index-2">10.1</span><a name="anchor-10-1"></a>Class and Instance</h2>

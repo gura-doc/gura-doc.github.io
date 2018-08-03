@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: page
 lang: en
 title: Gura Language Manual
+prevpage: chapter-03.html
+nextpage: chapter-05.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">4</span><a name="anchor-4"></a>Data Type</h1>
 <h2><span class="caption-index-2">4.1</span><a name="anchor-4-1"></a>Overview</h2>

@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Language Manual
+prevpage: chapter-10.html
+nextpage: chapter-12.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">11</span><a name="anchor-11"></a>Mapping Process</h1>
 <h2><span class="caption-index-2">11.1</span><a name="anchor-11-1"></a>About This Chapter</h2>

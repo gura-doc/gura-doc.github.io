@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Language Manual
+prevpage: chapter-17.html
+nextpage: chapter-19.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">18</span><a name="anchor-18"></a>Graphical User Interface</h1>
 <h2><span class="caption-index-2">18.1</span><a name="anchor-18-1"></a>Overview</h2>

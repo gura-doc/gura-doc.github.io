@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Language Manual
+prevpage: chapter-18.html
+nextpage: chapter-20.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">19</span><a name="anchor-19"></a>Mathematic Functions</h1>
 <p>

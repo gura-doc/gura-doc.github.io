@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Language Manual
+prevpage: chapter-06.html
+nextpage: chapter-08.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">7</span><a name="anchor-7"></a>Interpreter</h1>
 <h2><span class="caption-index-2">7.1</span><a name="anchor-7-1"></a>How Interpreter Works</h2>

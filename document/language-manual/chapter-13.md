@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Language Manual
+prevpage: chapter-12.html
+nextpage: chapter-14.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">13</span><a name="anchor-13"></a>String and Binary</h1>
 <h2><span class="caption-index-2">13.1</span><a name="anchor-13-1"></a>Overview</h2>

@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Language Manual
+prevpage: chapter-19.html
+nextpage: chapter-21.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">20</span><a name="anchor-20"></a>Template Engine</h1>
 <p>

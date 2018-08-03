@@ -4,7 +4,7 @@ lang: en
 title: top
 ---
 <div class="jumbotron">
-  <div class="container">
+  <div class="container-fluid">
 	<h1 class="display-4">Gura Programming Language</h1>
 	<p class="lead">
 	  A programming language that comes with powerful operation on iterators.
@@ -17,7 +17,7 @@ title: top
   </div>
 </div>
 
-<div class="container">
+<div class="container-fluid">
   <div class="card-deck">
 
 <!-- card -->
@@ -46,30 +46,22 @@ after it's given with iterators, `1..` and `readlines('foo.txt')`, as its argume
 	<div class="card">
 	  <div class="card-body">
 		<h5 class="card-title">Latest News</h5>
+		<dl class="row">
+		  <dt class="col-sm-3">2017-07-04</dt>
+		  <dd class="col-sm-9"><a href="Download.html">Gura v0.7.0</a> was released.</dd>
 
-		<table class="table">
-		  <tr><td style="white-space:nowrap">2017-07-04</td><td>
-			  <a href="Download.html">Gura v0.7.0</a> was released.
-		  </td></tr>
-		  
-		  <tr><td style="white-space:nowrap">2015-06-30</td><td>
-			  <a href="Documents.html">Documents</a> in PDF format were published.
-		  </td></tr>
-		  
-		  <tr><td style="white-space:nowrap">2015-06-24</td><td>
-			  <a href="Download.html">Gura v0.6.2</a> was released.
-		  </td></tr>
-		  
-		  <tr><td style="white-space:nowrap">2015-04-10</td><td>
-			  <a href="library-reference/index.html">Gura Library Reference</a> was published.
-		  </td></tr>
-		  
-		  <tr><td style="white-space:nowrap">2015-01-07</td><td>
-			  <a href="Download.html">Gura v0.6.1</a> was released.
-		  </td></tr>
-		  
-		</table>
+		  <dt class="col-sm-3">2015-06-30</dt>
+		  <dd class="col-sm-9"><a href="Documents.html">Documents</a> in PDF format were published.</dd>
 
+		  <dt class="col-sm-3">2015-06-24</dt>
+		  <dd class="col-sm-9"><a href="Download.html">Gura v0.6.2</a> was released.</dd>
+
+		  <dt class="col-sm-3">2015-04-10</dt>
+		  <dd class="col-sm-9"><a href="library-reference/index.html">Gura Library Reference</a> was published.</dd>
+
+		  <dt class="col-sm-3">2015-01-07</dt>
+		  <dd class="col-sm-9"><a href="Download.html">Gura v0.6.1</a> was released.</dd>
+		</dl>
 	  </div>
 	</div>
 <!-- card -->
@@ -95,15 +87,25 @@ after it's given with iterators, `1..` and `readlines('foo.txt')`, as its argume
 
 <!-- card -->
 	<div class="card">
-<div class="card-body" markdown="1">
-<h5 class="card-title">Resources</h5>
-* <a class="btn btn-outline-secondary btn-sm" href="/document/"><i class="fas fa-book"></i> Document</a>
-  &hellip; Get detailed specification and other information of this language.
-* <a class="btn btn-outline-secondary btn-sm" href="/download/"><i class="fas fa-download"></i> Download</a>
-  &hellip; Get binary installer/packages and source tar-balls.
-* <a class="btn btn-outline-secondary btn-sm" href="/gallery/"><i class="fas fa-image"></i> Gallery</a>
-  &hellip; View screen snapshots of sample programs.
-</div>
+	  <div class="card-body">
+		<h5 class="card-title">Resources</h5>
+		<dl class="row">
+		  <dt class="col-sm-3">
+			<a class="btn btn-outline-secondary btn-sm" href="/document/"><i class="fas fa-book"></i> Document</a>
+		  </dt>
+		  <dd class="col-sm-9">Get detailed specification and other information of this language.</dd>
+
+		  <dt class="col-sm-3">
+			<a class="btn btn-outline-secondary btn-sm" href="/download/"><i class="fas fa-download"></i> Download</a>
+		  </dt>
+		  <dd class="col-sm-9">Get binary installer/packages and source tar-balls.</dd>
+
+		  <dt class="col-sm-3">
+			<a class="btn btn-outline-secondary btn-sm" href="/gallery/"><i class="fas fa-image"></i> Gallery</a>
+		  </dt>
+		  <dd class="col-sm-9">View screen snapshots of sample programs.</dd>
+		</dl>
+	  </div>
 	</div>
 <!-- card -->
 

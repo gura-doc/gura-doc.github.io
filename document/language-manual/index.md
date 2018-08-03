@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: page
 lang: en
 title: Gura Language Manual
 ---
+
 <h1>Gura Language Manual</h1>
 
 <div><span class="toc-index-1">1</span><a href="chapter-01.html#anchor-1">Introduction</a></div>

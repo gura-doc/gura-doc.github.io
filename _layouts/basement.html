@@ -15,7 +15,7 @@
   <body>
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
 	  <a class="navbar-brand" href="{{ topdir }}/">Gura</a>
-	  <div class="collapse navbar-collapse" id="navbarsExample03">
+	  <div class="collapse navbar-collapse">
 		<ul class="navbar-nav mr-auto">
 		  <li class="nav-item{% if page.url == "/" %} active{% endif %}">
 			<a class="nav-link" href="{{ topdir }}/">
@@ -39,6 +39,12 @@
 		  </li>
 		</ul>
 	  </div>
+	  {% if page.prevpage %}
+	  <a class="btn btn-secondary active" href="{{ page.prevpage }}"><i class="fas fa-chevron-circle-left mr-2"></i>Prev</a>
+	  {% endif %}
+	  {% if page.nextpage %}
+	  <a class="btn btn-secondary active ml-2" href="{{ page.nextpage }}">Next<i class="fas fa-chevron-circle-right ml-2"></i></a>
+	  {% endif %}
 	</nav>
 	<main>
 	  {{ content }}
