@@ -31,6 +31,8 @@ fileNames = [
 	'19-Template-Engine.md'
 ]
 
+idxChapterLast = fileNames.len()
+
 Renderer@html = class(markdown.Renderer@html) {
 	tmpl@headerForPage:public = R'''
 	---
@@ -53,11 +55,17 @@ Renderer@html = class(markdown.Renderer@html) {
 	OnRenderItemPre(item:item) = {
 		if (item.type == `h1) {
 			this.out && this.out.print(footerForPage)
-			fileName = path.join(dirName@html, 'chapter-%02d.md' % (this.indices[0] + 1))
+			idxChapter = this.indices[0] + 1
+			fileName = path.join(dirName@html, 'chapter-%02d.md' % (idxChapter))
 			println('rendering ', path.filename(fileName))
 			this.out = open(fileName, 'w')
-			prevPage = 'chapter-%02d.html' % ((this.indices[0] + 1) - 1)
-			nextPage = 'chapter-%02d.html' % ((this.indices[0] + 1) + 1)
+			prevPage = nextPage = '""'
+			if (idxChapter > 1) {
+				prevPage = 'chapter-%02d.html' % (idxChapter - 1)
+			}
+			if (idxChapter + 1 <= idxChapterLast) {
+				nextPage = 'chapter-%02d.html' % (idxChapter + 1)
+			}
 			tmpl@headerForPage.render(this.out)
 		}
 		true
@@ -73,7 +81,7 @@ Renderer@html = class(markdown.Renderer@html) {
 makeDocument() = {
 	doc = markdown.document()
 	fileNames.each {|fileName|
-		println('reading: ', fileName)
+		//println('reading: ', fileName)
 		doc.read(fileName)
 	}
 	doc
@@ -90,6 +98,24 @@ output@pdf(doc:markdown.document) = {
 	os.exec('dvipdfmx', fileNameTeX.replace('.tex', '.dvi'))
 }
 
+Item = struct(level:number, indices[]:number, anchorName:string, text:string, itemList[] => [])
+
+printItems(itemList[]:Item) = {
+	itemList.each {|item|
+		print(Re'''
+		<span class="list-group-item">
+		<a href="#item-1" data-toggle="collapse"><i class="far fa-plus-square"></i></a>
+		<a href="chapter-${format('%02d', item.indices[0])}.html">${item.indices[0]}. ${item.text}</a>
+		''')
+		//printf('%*s%s\n', item.level * 2, '', item.text)
+		if (!item.itemList.isempty()) {
+			printItems(item.itemList)
+		}
+		print(Re'''
+		</span>
+		''')
+	}
+}
 
 output@html(doc:markdown.document) = {
 	tmpl@naviItem = R'''
@@ -102,9 +128,35 @@ output@html(doc:markdown.document) = {
 	'''.template()
 	println('Output directory: ', dirName@html)
 	!path.exists(dirName@html) && fs.mkdir(dirName@html)
-	fileName = path.join(dirName@html, 'navi.html')
-	println('rendering ', path.filename(fileName))
-	open(fileName, 'w') {|out|
+
+	itemListRoot = []
+	itemStack = []
+	itemList = itemListRoot
+	itemPrev = nil
+	doc.render@toc {|level:number, indices[]:number, anchorName:string, text:string|
+		item = Item(level, indices.clone(), anchorName, text)
+		if (itemPrev) {
+			if (level < itemPrev.level) {
+				while (level < itemStack.len()) {
+					itemStack.erase(-1)
+					itemList = if (itemStack.isempty()) { itemListRoot } else { itemStack[-1].itemList }
+				}
+			}
+			if (level > itemPrev.level) {
+				if (level > itemPrev.level + 1) { println('**** error ****') }
+				itemList = itemPrev.itemList
+				itemStack.add(item)
+			}
+		}
+		itemList.add(item)
+		itemPrev = item
+	}
+	printItems(itemListRoot)
+
+	/*
+	fileNameNavi = path.join(dirName@html, 'navi.html')
+	println('rendering ', path.filename(fileNameNavi))
+	open(fileNameNavi, 'w') {|out|
 		doc.render@toc {|level:number, indices[]:number, anchorName:string, text:string|
 			if (level == 0) {
 				tmpl@naviItem.render(out)
@@ -116,7 +168,8 @@ output@html(doc:markdown.document) = {
 			}
 		}
 	}
-	Renderer@html().Render(doc)
+	*/
+	//Renderer@html().Render(doc)
 }
 
 usage() = {

@@ -2,7 +2,7 @@
 layout: page
 lang: en
 title: Gura Language Manual
-prevpage: chapter-00.html
+prevpage: ""
 nextpage: chapter-02.html
 ---
 {% raw %}
