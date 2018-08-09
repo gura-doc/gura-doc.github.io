@@ -98,34 +98,36 @@ output@pdf(doc:markdown.document) = {
 	os.exec('dvipdfmx', fileNameTeX.replace('.tex', '.dvi'))
 }
 
-Item = struct(level:number, indices[]:number, anchorName:string, text:string, itemList[] => [])
+NaviItem = struct(level:number, indices[]:number, anchorName:string, text:string, itemList[] => [])
 
-printItems(itemList[]:Item) = {
+printNaviItems(out:stream:w, itemList[]:NaviItem) = {
+	tmpl@naviItem = R'''
+	<span class="list-group-item">
+	${if (item.itemList.isempty())}
+	<span></span>
+	${else}
+	<a href="#naviitem-${item.anchorName}" data-toggle="collapse"><i class="far fa-plus-square"></i></a>
+	${end}
+	<a href="chapter-${'%02d' % item.indices[0]}.html#${item.anchorName}">${item.indices.head(item.level + 1).join('.')} ${item.text}</a>
+	</span>
+	'''T
+	tmpl@naviGroupOpen = R'''
+	<div class="list-group collapse" id="naviitem-${item.anchorName}">
+	'''T
+	tmpl@naviGroupClose = R'''
+	</div>
+	'''T
 	itemList.each {|item|
-		print(Re'''
-		<span class="list-group-item">
-		<a href="#item-1" data-toggle="collapse"><i class="far fa-plus-square"></i></a>
-		<a href="chapter-${format('%02d', item.indices[0])}.html">${item.indices[0]}. ${item.text}</a>
-		''')
-		//printf('%*s%s\n', item.level * 2, '', item.text)
+		tmpl@naviItem.render(out)
 		if (!item.itemList.isempty()) {
-			printItems(item.itemList)
+			tmpl@naviGroupOpen.render(out)
+			printNaviItems(out, item.itemList)
+			tmpl@naviGroupClose.render(out)
 		}
-		print(Re'''
-		</span>
-		''')
 	}
 }
 
 output@html(doc:markdown.document) = {
-	tmpl@naviItem = R'''
-	<span class="list-group-item">
-	  <a href="#item-1" data-toggle="collapse">
-	    <i class="far fa-plus-square"></i>
-	  </a>
-	  <a href="chapter-${format('%02d', indices[0])}.html">${indices[0]}. ${text}</a>
-	</span>
-	'''.template()
 	println('Output directory: ', dirName@html)
 	!path.exists(dirName@html) && fs.mkdir(dirName@html)
 
@@ -134,13 +136,13 @@ output@html(doc:markdown.document) = {
 	itemList = itemListRoot
 	itemPrev = nil
 	doc.render@toc {|level:number, indices[]:number, anchorName:string, text:string|
-		item = Item(level, indices.clone(), anchorName, text)
+		item = NaviItem(level, indices.clone(), anchorName, text)
 		if (itemPrev) {
 			if (level < itemPrev.level) {
 				while (level < itemStack.len()) {
 					itemStack.erase(-1)
-					itemList = if (itemStack.isempty()) { itemListRoot } else { itemStack[-1].itemList }
 				}
+				itemList = if (itemStack.isempty()) { itemListRoot } else { itemStack[-1].itemList }
 			}
 			if (level > itemPrev.level) {
 				if (level > itemPrev.level + 1) { println('**** error ****') }
@@ -151,8 +153,11 @@ output@html(doc:markdown.document) = {
 		itemList.add(item)
 		itemPrev = item
 	}
-	printItems(itemListRoot)
-
+	fileNameNavi = path.join(dirName@html, 'navi.html')
+	println('rendering ', path.filename(fileNameNavi))
+	open(fileNameNavi, 'w') {|out|
+		printNaviItems(out, itemListRoot)
+	}
 	/*
 	fileNameNavi = path.join(dirName@html, 'navi.html')
 	println('rendering ', path.filename(fileNameNavi))

@@ -50,6 +50,10 @@
 	color: #000000;
 }
 
+.caption-index-1, .caption-index-2, .caption-index-3, .caption-index-4, .caption-index-5, .caption-index-6 {
+  margin:0 1em 0 0;
+}
+
 a {
 	color: #0000cc;
 }
