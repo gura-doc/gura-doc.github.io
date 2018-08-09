@@ -8,7 +8,7 @@ title = 'Gura Language Manual'
 author = 'Yutaka Saito'
 date = 'June 17th, 2017'
 
-fileNames = [
+fileNamesSrc = [
 	'00-Introduction.md'
 	'01-Launch-Program.md'
 	'02-Syntax.md'
@@ -31,7 +31,7 @@ fileNames = [
 	'19-Template-Engine.md'
 ]
 
-idxChapterLast = fileNames.len()
+idxChapterLast = fileNamesSrc.len()
 
 Renderer@html = class(markdown.Renderer@html) {
 	tmpl@headerForPage:public = R'''
@@ -80,9 +80,9 @@ Renderer@html = class(markdown.Renderer@html) {
 
 makeDocument() = {
 	doc = markdown.document()
-	fileNames.each {|fileName|
-		//println('reading: ', fileName)
-		doc.read(fileName)
+	fileNamesSrc.each {|fileNameSrc|
+		//println('reading: ', fileNameSrc)
+		doc.read(fileNameSrc)
 	}
 	doc
 }
@@ -102,9 +102,8 @@ NaviItem = struct(level:number, indices[]:number, anchorName:string, text:string
 
 printNaviItems(out:stream:w, itemList[]:NaviItem) = {
 	tmpl@naviItem = R'''
-	<span class="list-group-item">
+	<span class="list-group-item border-0">
 	${if (item.itemList.isempty())}
-	<span></span>
 	${else}
 	<a href="#naviitem-${item.anchorName}" data-toggle="collapse"><i class="far fa-plus-square"></i></a>
 	${end}
@@ -144,46 +143,31 @@ output@html(doc:markdown.document) = {
 	itemListRoot = []
 	itemStack = []
 	itemList = itemListRoot
-	itemPrev = nil
 	doc.render@toc {|level:number, indices[]:number, anchorName:string, text:string|
+
+		//printf('%s %s\n', indices.head(level + 1).join('.'), text)
+
 		item = NaviItem(level, indices.clone(), anchorName, text)
-		if (itemPrev) {
-			if (level < itemPrev.level) {
-				repeat (itemPrev.level - level) {
+		if (!itemStack.isempty()) {
+			itemPrev = itemStack[-1]
+			if (level <= itemPrev.level) {
+				repeat (itemPrev.level - level + 1) {
 					itemStack.erase(-1)
 				}
 				itemList = if (itemStack.isempty()) { itemListRoot } else { itemStack[-1].itemList }
-			}
-			if (level > itemPrev.level) {
+			} else {
 				if (level > itemPrev.level + 1) { println('**** error ****') }
 				itemList = itemPrev.itemList
-				itemStack.add(item)
 			}
 		}
 		itemList.add(item)
-		itemPrev = item
+		itemStack.add(item)
 	}
 	fileNameNavi = path.join(dirName@html, 'navi.html')
 	println('rendering ', path.filename(fileNameNavi))
 	open(fileNameNavi, 'w') {|out|
 		printNaviItems(out, itemListRoot)
 	}
-	/*
-	fileNameNavi = path.join(dirName@html, 'navi.html')
-	println('rendering ', path.filename(fileNameNavi))
-	open(fileNameNavi, 'w') {|out|
-		doc.render@toc {|level:number, indices[]:number, anchorName:string, text:string|
-			if (level == 0) {
-				tmpl@naviItem.render(out)
-			} elsif (level == 1) {
-				//out.printf(
-				//		'<div><span class="toc-index-2">%d.%d</span>' \
-				//		'<a href="chapter-%02d.html#%s">%s</a>\</div>\n',
-				//		indices[0], indices[1], indices[0], anchorName, text)
-			}
-		}
-	}
-	*/
 	//Renderer@html().Render(doc)
 }
 
