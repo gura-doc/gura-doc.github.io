@@ -127,6 +127,16 @@ printNaviItems(out:stream:w, itemList[]:NaviItem) = {
 	}
 }
 
+printNaviItems2(out:stream:w, itemList[]:NaviItem) = {
+	out = sys.stdout
+	itemList.each {|item|
+		printf('%*s%s %s\n', item.level * 2, '', item.indices.head(item.level + 1).join('.'), item.text)
+		if (!item.itemList.isempty()) {
+			printNaviItems(out, item.itemList)
+		}
+	}
+}
+
 output@html(doc:markdown.document) = {
 	println('Output directory: ', dirName@html)
 	!path.exists(dirName@html) && fs.mkdir(dirName@html)
@@ -139,7 +149,7 @@ output@html(doc:markdown.document) = {
 		item = NaviItem(level, indices.clone(), anchorName, text)
 		if (itemPrev) {
 			if (level < itemPrev.level) {
-				while (level < itemStack.len()) {
+				repeat (itemPrev.level - level) {
 					itemStack.erase(-1)
 				}
 				itemList = if (itemStack.isempty()) { itemListRoot } else { itemStack[-1].itemList }
