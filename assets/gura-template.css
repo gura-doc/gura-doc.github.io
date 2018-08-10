@@ -10,8 +10,19 @@
 
 .sidebar {
 	border-right: 1px solid #eee;
-	z-index: 100;		/* Behind the navbar */
-	padding: 56px 0 0;	/* Height of navbar */
+	z-index: 100;			/* Behind the navbar */
+	padding: 56px 0 0;		/* Height of navbar */
+}
+
+a[name] {
+    display: inline-block;
+	padding-top: 56px;		/* Height of navbar */
+	margin-top: -56px;		/* Height of navbar */
+	vertical-align: top;
+}
+
+body {
+	padding-top: 56px;		/* Height of navbar */
 }
 
 .list-group.list-group-root {
@@ -56,10 +67,6 @@
 
 a {
 	color: #0000cc;
-}
-
-body {
-	padding-top: 56px;	/* Height of navbar */
 }
 
 code.highlighter-rouge {
