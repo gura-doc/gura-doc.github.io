@@ -1,12 +1,6 @@
 #!/usr/bin/env gura
 import(markdown)
-
-fileNameTeX = 'gura-lang-e.tex'
-dirName@html = '..'
-
-title = 'Gura Language Manual'
-author = 'Yutaka Saito'
-date = 'June 17th, 2017'
+import(helper.builddoc)
 
 fileNamesSrc = [
 	'00-Introduction.md'
@@ -30,200 +24,17 @@ fileNamesSrc = [
 	'18-Mathematic-Functions.md'
 	'19-Template-Engine.md'
 ]
+baseName = 'gura-lang-en'
+dirName@html = '..'
+nChapters = fileNamesSrc.len()
+title = 'Gura Language Manual'
+author = 'Yutaka Saito'
+date = 'June 17th, 2017'
 
-idxChapterLast = fileNamesSrc.len()
-
-Renderer@html = class(markdown.Renderer@html) {
-	tmpl@headerForPage:public = R'''
-	---
-	layout: page
-	lang: en
-	title: ${title}
-	${if (prevPage) { 'prevpage: ' + prevPage }}
-	${if (nextPage) { 'nextpage: ' + nextPage }}
-	---
-	{% raw %}
-	'''.template()
-	footerForPage:public = R'''
-	<p />
-
-	{% endraw %}
-	'''
-	__init__() = {|sys.stdout, true|
-		this.out = nil
-	}
-	OnRenderItemPre(item:item) = {
-		if (item.type == `h1) {
-			this.out && this.out.print(footerForPage)
-			idxChapter = this.indices[0] + 1
-			fileName = path.join(dirName@html, 'chapter-%02d.md' % (idxChapter))
-			println('rendering ', path.filename(fileName))
-			this.out = open(fileName, 'w')
-			prevPage = nextPage = '""'
-			if (idxChapter > 1) {
-				prevPage = 'chapter-%02d.html' % (idxChapter - 1)
-			}
-			if (idxChapter + 1 <= idxChapterLast) {
-				nextPage = 'chapter-%02d.html' % (idxChapter + 1)
-			}
-			tmpl@headerForPage.render(this.out)
-		} elsif (item.type == `tag && item.text == 'gura.funcentry') {
-			if (m = item.attrs.match('fullname="([^\"]+)" format="([^\"]+)"')) {
-				this.out.printf(R'''
-				<div><strong style="text-decoration:underline">%s</strong></div>
-				<div style="margin-bottom:1em"><code>%s</code></div>
-				''', m[1], m[2])
-			} else {
-				println('**** error ****')
-				sys.exit(1)
-			}
-			return(false)
-		}
-		true
-	}
-	OnRenderItemPost(item:item):void = {
-		if (item.type == `root) {
-			this.out && this.out.print(footerForPage)
-			this.out = nil
-		}
-	}
+helper.builddoc.checkArgument()
+doc = markdown.document()
+fileNamesSrc.each {|fileNameSrc|
+	//println('reading: ', fileNameSrc)
+	doc.read(fileNameSrc)
 }
-
-Renderer@tex = class(markdown.Renderer@tex) {
-	OnRenderItemPre(item:item) = {
-		if (item.type == `tag && item.text == 'gura.funcentry') {
-			if (m = item.attrs.match('fullname="([^\"]+)" format="([^\"]+)"')) {
-				this.out.printf(R'''
-				\vspace{5mm}
-				\vbox{
-				\underline{\tt\small %s}}
-				''', this.EscapeText(m[2].unescapehtml()))
-			} else {
-				println('**** error ****')
-				sys.exit(1)
-			}
-			return(false)
-		}
-		true
-	}
-}
-
-Renderer@rtf = class(markdown.Renderer@rtf) {
-}
-
-makeDocument() = {
-	doc = markdown.document()
-	fileNamesSrc.each {|fileNameSrc|
-		//println('reading: ', fileNameSrc)
-		doc.read(fileNameSrc)
-	}
-	doc
-}
-
-output@tex(doc:markdown.document) = {
-	open(fileNameTeX, 'w') {|out|
-		Renderer@tex(out, title, author, date).Render(doc)
-	}
-	sys.stderr.println(fileNameTeX, ' was created.')
-}
-
-output@pdf(doc:markdown.document) = {
-	output@tex(doc)
-	repeat (2) { os.exec('platex', fileNameTeX) }
-	os.exec('dvipdfmx', fileNameTeX.replace('.tex', '.dvi'))
-}
-
-NaviItem = struct(level:number, indices[]:number, anchorName:string, text:string, itemList[] => [])
-
-printNaviItems(out:stream:w, itemList[]:NaviItem) = {
-	tmpl@naviItem = R'''
-	<span class="list-group-item border-0">
-	${if (item.itemList.isempty())}
-	${else}
-	<a href="#naviitem-${item.anchorName}" data-toggle="collapse"><i class="far fa-plus-square"></i></a>
-	${end}
-	<a href="chapter-${'%02d' % item.indices[0]}.html#${item.anchorName}">${item.indices.head(item.level + 1).join('.')} ${item.text}</a>
-	</span>
-	'''T
-	tmpl@naviGroupOpen = R'''
-	<div class="list-group collapse" id="naviitem-${item.anchorName}">
-	'''T
-	tmpl@naviGroupClose = R'''
-	</div>
-	'''T
-	itemList.each {|item|
-		tmpl@naviItem.render(out)
-		if (!item.itemList.isempty()) {
-			tmpl@naviGroupOpen.render(out)
-			printNaviItems(out, item.itemList)
-			tmpl@naviGroupClose.render(out)
-		}
-	}
-}
-
-printNaviItems2(out:stream:w, itemList[]:NaviItem) = {
-	out = sys.stdout
-	itemList.each {|item|
-		printf('%*s%s %s\n', item.level * 2, '', item.indices.head(item.level + 1).join('.'), item.text)
-		if (!item.itemList.isempty()) {
-			printNaviItems(out, item.itemList)
-		}
-	}
-}
-
-output@html(doc:markdown.document) = {
-	println('Output directory: ', dirName@html)
-	!path.exists(dirName@html) && fs.mkdir(dirName@html)
-
-	itemListRoot = []
-	itemStack = []
-	itemList = itemListRoot
-	doc.render@toc {|level:number, indices[]:number, anchorName:string, text:string|
-		item = NaviItem(level, indices.clone(), anchorName, text)
-		if (!itemStack.isempty()) {
-			itemPrev = itemStack[-1]
-			if (level <= itemPrev.level) {
-				repeat (itemPrev.level - level + 1) {
-					itemStack.erase(-1)
-				}
-				itemList = if (itemStack.isempty()) { itemListRoot } else { itemStack[-1].itemList }
-			} else {
-				if (level > itemPrev.level + 1) { println('**** error ****') }
-				itemList = itemPrev.itemList
-			}
-		}
-		itemList.add(item)
-		itemStack.add(item)
-	}
-	fileNameNavi = path.join(dirName@html, 'navi.html')
-	println('rendering ', path.filename(fileNameNavi))
-	open(fileNameNavi, 'w') {|out|
-		printNaviItems(out, itemListRoot)
-	}
-	Renderer@html().Render(doc)
-}
-
-output@rtf(doc:markdown.document) = {
-	open(fileNameRTF, 'w') {|out|
-		Renderer@rtf(out, true).Render(doc)
-	}
-	sys.stderr.println(fileNameRTF, ' was created.')
-}
-
-usage() = {
-	sys.stderr.println('usage: gura build-doc [tex|pdf|html]')
-}
-
-if (sys.argv.len() < 2) {
-	usage()
-} else {
-	entries = %{
-		'tex' => output@tex
-		'pdf' => output@pdf
-		'html' => output@html
-		'rtf' => output@rtf
-	}
-	try { funcs = entries[sys.argv[1..]] } catch { usage() }
-	doc = makeDocument()
-	funcs.each {|func| func(doc)}
-}
+helper.builddoc.output(doc, baseName, dirName@html, title, author, date, nChapters)

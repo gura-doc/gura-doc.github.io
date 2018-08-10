@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Library Reference
+prevpage: chapter-22.html
+nextpage: chapter-24.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">23</span><a name="anchor-23"></a>glu Module</h1>
 <h2><span class="caption-index-2">23.1</span><a name="anchor-23-1"></a>Overview</h2>

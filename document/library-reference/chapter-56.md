@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Library Reference
+prevpage: chapter-55.html
+nextpage: chapter-57.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">56</span><a name="anchor-56"></a>tokenizer Module</h1>
 <p>

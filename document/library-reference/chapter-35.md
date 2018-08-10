@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Library Reference
+prevpage: chapter-34.html
+nextpage: chapter-36.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">35</span><a name="anchor-35"></a>ml.linear Module</h1>
 <h2><span class="caption-index-2">35.1</span><a name="anchor-35-1"></a>Overview</h2>

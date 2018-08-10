@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Library Reference
+prevpage: chapter-49.html
+nextpage: chapter-51.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">50</span><a name="anchor-50"></a>sdl2 Module</h1>
 <h2><span class="caption-index-2">50.1</span><a name="anchor-50-1"></a>Overview</h2>

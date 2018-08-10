@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Library Reference
+prevpage: chapter-04.html
+nextpage: chapter-06.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">5</span><a name="anchor-5"></a>Built-in Class</h1>
 <h2><span class="caption-index-2">5.1</span><a name="anchor-5-1"></a>argument Class</h2>

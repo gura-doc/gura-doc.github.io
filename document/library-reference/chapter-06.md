@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Library Reference
+prevpage: chapter-05.html
+nextpage: chapter-07.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">6</span><a name="anchor-6"></a>argopt Module</h1>
 <p>

@@ -2,8 +2,9 @@
 layout: page
 lang: en
 title: Gura Library Reference
+prevpage: chapter-18.html
+nextpage: chapter-20.html
 ---
-
 {% raw %}
 <h1><span class="caption-index-1">19</span><a name="anchor-19"></a>fftw Module</h1>
 <h2><span class="caption-index-2">19.1</span><a name="anchor-19-1"></a>Overview</h2>
