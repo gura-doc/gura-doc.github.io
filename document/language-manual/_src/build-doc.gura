@@ -67,6 +67,17 @@ Renderer@html = class(markdown.Renderer@html) {
 				nextPage = 'chapter-%02d.html' % (idxChapter + 1)
 			}
 			tmpl@headerForPage.render(this.out)
+		} elsif (item.type == `tag && item.text == 'gura.funcentry') {
+			if (m = item.attrs.match('fullname="([^\"]+)" format="([^\"]+)"')) {
+				this.out.printf(R'''
+				<div><strong style="text-decoration:underline">%s</strong></div>
+				<div style="margin-bottom:1em"><code>%s</code></div>
+				''', m[1], m[2])
+			} else {
+				println('**** error ****')
+				sys.exit(1)
+			}
+			return(false)
 		}
 		true
 	}
@@ -76,6 +87,28 @@ Renderer@html = class(markdown.Renderer@html) {
 			this.out = nil
 		}
 	}
+}
+
+Renderer@tex = class(markdown.Renderer@tex) {
+	OnRenderItemPre(item:item) = {
+		if (item.type == `tag && item.text == 'gura.funcentry') {
+			if (m = item.attrs.match('fullname="([^\"]+)" format="([^\"]+)"')) {
+				this.out.printf(R'''
+				\vspace{5mm}
+				\vbox{
+				\underline{\tt\small %s}}
+				''', this.EscapeText(m[2].unescapehtml()))
+			} else {
+				println('**** error ****')
+				sys.exit(1)
+			}
+			return(false)
+		}
+		true
+	}
+}
+
+Renderer@rtf = class(markdown.Renderer@rtf) {
 }
 
 makeDocument() = {
@@ -88,7 +121,9 @@ makeDocument() = {
 }
 
 output@tex(doc:markdown.document) = {
-	doc.render@tex(title, author, date, fileNameTeX)
+	open(fileNameTeX, 'w') {|out|
+		Renderer@tex(out, title, author, date).Render(doc)
+	}
 	sys.stderr.println(fileNameTeX, ' was created.')
 }
 
@@ -144,9 +179,6 @@ output@html(doc:markdown.document) = {
 	itemStack = []
 	itemList = itemListRoot
 	doc.render@toc {|level:number, indices[]:number, anchorName:string, text:string|
-
-		//printf('%s %s\n', indices.head(level + 1).join('.'), text)
-
 		item = NaviItem(level, indices.clone(), anchorName, text)
 		if (!itemStack.isempty()) {
 			itemPrev = itemStack[-1]
@@ -168,7 +200,14 @@ output@html(doc:markdown.document) = {
 	open(fileNameNavi, 'w') {|out|
 		printNaviItems(out, itemListRoot)
 	}
-	//Renderer@html().Render(doc)
+	Renderer@html().Render(doc)
+}
+
+output@rtf(doc:markdown.document) = {
+	open(fileNameRTF, 'w') {|out|
+		Renderer@rtf(out, true).Render(doc)
+	}
+	sys.stderr.println(fileNameRTF, ' was created.')
 }
 
 usage() = {
@@ -182,6 +221,7 @@ if (sys.argv.len() < 2) {
 		'tex' => output@tex
 		'pdf' => output@pdf
 		'html' => output@html
+		'rtf' => output@rtf
 	}
 	try { funcs = entries[sys.argv[1..]] } catch { usage() }
 	doc = makeDocument()
