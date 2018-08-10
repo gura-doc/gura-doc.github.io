@@ -7,8 +7,8 @@ Renderer@html = class(markdown.Renderer@html) {
 	layout: page
 	lang: en
 	title: ${title}
-	${if (prevPage) { 'prevpage: ' + prevPage }}
-	${if (nextPage) { 'nextpage: ' + nextPage }}
+	prevpage: ${prevPage}
+	nextpage: ${nextPage}
 	---
 	{% raw %}
 	'''.template()
@@ -90,15 +90,11 @@ NaviItem = struct(level:number, indices[]:number, anchorName:string, text:string
 printNaviItems(out:stream:w, itemList[]:NaviItem) = {
 	tmpl@naviItem = R'''
 	<span class="list-group-item border-0">
-	${if (item.itemList.isempty())}
-	${else}
-	<a href="#naviitem-${item.anchorName}" data-toggle="collapse"><i class="far fa-plus-square"></i></a>
-	${end}
-	<a href="chapter-${'%02d' % item.indices[0]}.html#${item.anchorName}">${item.indices.head(item.level + 1).join('.')} ${item.text}</a>
+	<a href="chapter-${"%02d" % item.indices[0]}.html${if (item.level > 0) { "#" + item.anchorName }}">${item.indices.head(item.level + 1).join('.')} ${item.text}</a>
 	</span>
 	'''T
 	tmpl@naviGroupOpen = R'''
-	<div class="list-group collapse" id="naviitem-${item.anchorName}">
+	<div class="list-group" id="naviitem-${item.anchorName}">
 	'''T
 	tmpl@naviGroupClose = R'''
 	</div>
@@ -139,9 +135,7 @@ output@pdf(doc:markdown.document, baseName:string, title:string, author:string, 
 	os.exec('dvipdfmx', fileNameDVI)
 }
 
-output@html(doc:markdown.document, dirName@html:string, title:string, aurhot:string, date:string, nChapters:number) = {
-	println('Output directory: ', dirName@html)
-	!path.exists(dirName@html) && fs.mkdir(dirName@html)
+output@htmlnavi(doc:markdown.document, dirName@html:string) = {
 	itemListRoot = []
 	itemStack = []
 	itemList = itemListRoot
@@ -167,6 +161,12 @@ output@html(doc:markdown.document, dirName@html:string, title:string, aurhot:str
 	open(fileNameNavi, 'w') {|out|
 		printNaviItems(out, itemListRoot)
 	}
+}
+
+output@html(doc:markdown.document, dirName@html:string, title:string, aurhot:string, date:string, nChapters:number) = {
+	println('Output directory: ', dirName@html)
+	!path.exists(dirName@html) && fs.mkdir(dirName@html)
+	output@htmlnavi(doc, dirName@html)
 	Renderer@html(dirName@html, title, aurhot, date, nChapters).Render(doc)
 }
 
