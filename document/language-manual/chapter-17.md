@@ -10,20 +10,20 @@ nextpage: chapter-18.html
 <h2><span class="caption-index-2">17.1</span><a name="anchor-17-1"></a>Overview</h2>
 <h2><span class="caption-index-2">17.2</span><a name="anchor-17-2"></a>Image Instance</h2>
 <p>
-An instance of <code>image</code> class contains image data and provides functions such as reading/writing image files, resizing and rotating.
+An instance of <code class="highlighter-rouge">image</code> class contains image data and provides functions such as reading/writing image files, resizing and rotating.
 </p>
 <p>
-An image instance can be created by a constructor function <code>image</code>. Calling <code>image</code> function with an argument that specifies a stream containing an image data would read that data. The code below reads a JPEG file and write it in PNG format.
+An image instance can be created by a constructor function <code class="highlighter-rouge">image</code>. Calling <code class="highlighter-rouge">image</code> function with an argument that specifies a stream containing an image data would read that data. The code below reads a JPEG file and write it in PNG format.
 </p>
-<pre><code>import(jpeg)
+<pre class="highlight"><code>import(jpeg)
 import(png)
 image('foo.jpg').write('foo.png')
 </code></pre>
 <p>
-Before <code>image</code> function, you have to import a module that can handle an image type. The following table shows image types and associated module names.
+Before <code class="highlighter-rouge">image</code> function, you have to import a module that can handle an image type. The following table shows image types and associated module names.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Image Type</th>
@@ -109,7 +109,7 @@ TIFF</td>
 
 </p>
 <p>
-Importing those modules also add methods to <code>image</code> class like <code>jpeg</code> module adding <code>image#jpegread</code> and <code>image#jpegwrite</code>.
+Importing those modules also add methods to <code class="highlighter-rouge">image</code> class like <code class="highlighter-rouge">jpeg</code> module adding <code class="highlighter-rouge">image#jpegread</code> and <code class="highlighter-rouge">image#jpegwrite</code>.
 </p>
 <h2><span class="caption-index-2">17.3</span><a name="anchor-17-3"></a>Format-specific Operations</h2>
 <h2><span class="caption-index-2">17.4</span><a name="anchor-17-4"></a>JPEG</h2>
@@ -139,7 +139,7 @@ The program needs to do the following jobs.
 <p>
 And here is the script code:
 </p>
-<pre><code>import(jpeg)
+<pre class="highlight"><code>import(jpeg)
 import(gif)
 
 delayTime = 12             // interval time in 1/100 seconds
@@ -153,7 +153,7 @@ imgFrames = img.crop(xs, ys, w, h)
 gif.content().addimage(imgFrames, delayTime).write('cat-anim.gif')
 </code></pre>
 <p>
-It utilizes Implicit Mapping feature to process frame images. If you're interested in what's running in the code, trace the variable <code>imgFrames</code> about how it's created by <code>image#crop()</code> and how it's processed in <code>gif.content#addimage()</code>.
+It utilizes Implicit Mapping feature to process frame images. If you're interested in what's running in the code, trace the variable <code class="highlighter-rouge">imgFrames</code> about how it's created by <code class="highlighter-rouge">image#crop()</code> and how it's processed in <code class="highlighter-rouge">gif.content#addimage()</code>.
 </p>
 <p>
 <img src="../images/cat-anim.gif" alt="cat-picture"> <a href="../images/cat-anim.gif">cat-anim.gif</a>
@@ -163,7 +163,7 @@ It utilizes Implicit Mapping feature to process frame images. If you're interest
 <p>
 Here is a simple example using Cairo.
 </p>
-<pre><code>import(cairo)
+<pre class="highlight"><code>import(cairo)
 import(show)
 
 img = image(`rgba, 300, 300)
@@ -183,7 +183,7 @@ img.show()
 <p>
 The following is an example that performs reading a JPEG file, drawing something on it with Cairo APIs and writing it out as a JPEG file.
 </p>
-<pre><code>import(jpeg)
+<pre class="highlight"><code>import(jpeg)
 import(cairo)
 I(filename:string) = path.join(sys.datadir, 'sample/resource', filename)
 img = image(I('Winter.jpg'))
@@ -205,7 +205,7 @@ img.write('result.jpg')
 <p>
 You can create a GIF file that has a dynamically produced image. The example below shows how to output an animation GIF file that contains images created by Cairo APIs.
 </p>
-<pre><code>import(cairo)
+<pre class="highlight"><code>import(cairo)
 import(gif)
 str = 'Hello'
 img = image(`rgba, 64, 64, `white)
@@ -236,7 +236,7 @@ Gura supports APIs of OpenGL 1.1.
 <p>
 The following example has been ported from one of the samples in <a href="http://www.wakayama-u.ac.jp/~tokoi/opengl/libglut.html">http://www.wakayama-u.ac.jp/~tokoi/opengl/libglut.html</a>.
 </p>
-<pre><code>import(glu) {*}
+<pre class="highlight"><code>import(glu) {*}
 import(opengl) {*}
 import(gltester)
 

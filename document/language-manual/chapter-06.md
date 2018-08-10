@@ -17,7 +17,7 @@ Module, Class, and Object are all inherited from Environment.
 <p>
 scope problems
 </p>
-<pre><code>x = 0
+<pre class="highlight"><code>x = 0
 if (true) {
     x = 3
 }
@@ -49,25 +49,25 @@ Environment type:
 <li>lister</li>
 </ul>
 <p>
-When the Interpreter starts, it runs with an Environment containing a frame of <code>root</code> type.
+When the Interpreter starts, it runs with an Environment containing a frame of <code class="highlighter-rouge">root</code> type.
 </p>
-<pre><code>+-------------------+
+<pre class="highlight"><code>+-------------------+
 |       root        |
 +-------------------+
 </code></pre>
 <p>
-In a function call, the Interpreter creates a new Environment with cloned frames and pushes a new frame of <code>local</code> type.
+In a function call, the Interpreter creates a new Environment with cloned frames and pushes a new frame of <code class="highlighter-rouge">local</code> type.
 </p>
-<pre><code>+-------------------+
+<pre class="highlight"><code>+-------------------+
 |      local        |
 +-------------------+
 |       root        |
 +-------------------+
 </code></pre>
 <p>
-When a block is evaluated, the Interpreter creates a new Environment with cloned frames and pushes a frame of <code>block</code> type.
+When a block is evaluated, the Interpreter creates a new Environment with cloned frames and pushes a frame of <code class="highlighter-rouge">block</code> type.
 </p>
-<pre><code>+-------------------+
+<pre class="highlight"><code>+-------------------+
 |      block        |
 +-------------------+
 |       root        |

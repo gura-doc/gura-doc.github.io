@@ -15,9 +15,9 @@ The Interpreter looks up and modifies content of Environment in accordance with 
 The execution of the Interpreter consists of two stages <strong>evaluation</strong> and <strong>assignment</strong>. In an evaluation stage, it looks up variables in Environment and do evaluation depending on the current expression. In an assingment stage, the Interpreter will add new variables or modify existing variables in Environment.
 </p>
 <p>
-In the Interpreter, Evaluation stage always occurs on each Expression while Assignment stage only does when <code>Assign</code> expression is executed.
+In the Interpreter, Evaluation stage always occurs on each Expression while Assignment stage only does when <code class="highlighter-rouge">Assign</code> expression is executed.
 </p>
-<pre><code>      +---------------+
+<pre class="highlight"><code>      +---------------+
       |  Expressions  |
       +---------------+
               | control
@@ -35,147 +35,147 @@ This section explains how each Expression acts in the Interpreter's evaulation s
 </p>
 <h3><span class="caption-index-3">7.2.2</span><a name="anchor-7-2-2"></a>Evaluation of Value</h3>
 <p>
-Evaluation result of a <code>Value</code> expression will be the value that it owns in itself.
+Evaluation result of a <code class="highlighter-rouge">Value</code> expression will be the value that it owns in itself.
 </p>
 <p>
 Consider the following expressions:
 </p>
 <ul>
 <li><p>
-<code>3.141</code>
+<code class="highlighter-rouge">3.141</code>
 </p>
 <p>
-Returns an instance of <code>number</code> type.
+Returns an instance of <code class="highlighter-rouge">number</code> type.
 </p>
 </li>
 <li><p>
-<code>'hello'</code>
+<code class="highlighter-rouge">'hello'</code>
 </p>
 <p>
-Returns an instance of <code>string</code> type
+Returns an instance of <code class="highlighter-rouge">string</code> type
 </p>
 </li>
 <li><p>
-<code>b'\x00\x01\x02\x03'</code>
+<code class="highlighter-rouge">b'\x00\x01\x02\x03'</code>
 </p>
 <p>
-Returns an instance of <code>binary</code> type.
+Returns an instance of <code class="highlighter-rouge">binary</code> type.
 </p>
 </li>
 </ul>
 <h3><span class="caption-index-3">7.2.3</span><a name="anchor-7-2-3"></a>Evaluation of Identifier</h3>
 <p>
-An <code>Identifier</code> expression will look up a variable whose name matches the expression's symbol in an Environment and return the result value. If no variable is found, it occurs an error.
+An <code class="highlighter-rouge">Identifier</code> expression will look up a variable whose name matches the expression's symbol in an Environment and return the result value. If no variable is found, it occurs an error.
 </p>
 <p>
 Consider the following expression:
 </p>
 <ul>
 <li><p>
-<code>foo</code>
+<code class="highlighter-rouge">foo</code>
 </p>
 <p>
-Looks up a symbol <code>foo</code> in the current Environment and returns the associated value if found. If the symbol does not exist, occurs an error.
+Looks up a symbol <code class="highlighter-rouge">foo</code> in the current Environment and returns the associated value if found. If the symbol does not exist, occurs an error.
 </p>
 </li>
 </ul>
 <h3><span class="caption-index-3">7.2.4</span><a name="anchor-7-2-4"></a>Evaluation of Suffixed</h3>
 <p>
-A <code>Suffixed</code> expression will look up an entry in Suffix Manager that matches its suffix symbol and execute the entry with its body string.
+A <code class="highlighter-rouge">Suffixed</code> expression will look up an entry in Suffix Manager that matches its suffix symbol and execute the entry with its body string.
 </p>
 <p>
 Consider the following expressions:
 </p>
 <ul>
-<li><code>123.45foo</code><ol>
-<li>Looks up a handler associated with a symbol <code>foo</code> in the Suffix Manager.</li>
-<li>If found, it evaluates the handler by passing it a string <code>'123.45'</code> and returns the result. If no handler is found, occurs an error.</li>
+<li><code class="highlighter-rouge">123.45foo</code><ol>
+<li>Looks up a handler associated with a symbol <code class="highlighter-rouge">foo</code> in the Suffix Manager.</li>
+<li>If found, it evaluates the handler by passing it a string <code class="highlighter-rouge">'123.45'</code> and returns the result. If no handler is found, occurs an error.</li>
 </ol>
 </li>
-<li><code>'hello world'bar</code><ol>
-<li>Looks up a handler associated with a symbol <code>bar</code> in the Suffix Manager.</li>
-<li>If found, evaluates the handler by passing it a string <code>'hello world'</code> and returns the result. If no handler is found, occurs an error.</li>
+<li><code class="highlighter-rouge">'hello world'bar</code><ol>
+<li>Looks up a handler associated with a symbol <code class="highlighter-rouge">bar</code> in the Suffix Manager.</li>
+<li>If found, evaluates the handler by passing it a string <code class="highlighter-rouge">'hello world'</code> and returns the result. If no handler is found, occurs an error.</li>
 </ol>
 </li>
 </ul>
 <h3><span class="caption-index-3">7.2.5</span><a name="anchor-7-2-5"></a>Evaluation of UnaryOp</h3>
 <p>
-A <code>UnaryOp</code> expression evaluates the child expression it owns, and then evaluate the value with its associated unary operator.
+A <code class="highlighter-rouge">UnaryOp</code> expression evaluates the child expression it owns, and then evaluate the value with its associated unary operator.
 </p>
 <p>
 Consider the following expressions:
 </p>
 <ul>
-<li><code>-123.45</code><ol>
-<li>Evaluates the child expression and gets a value <code>123.45</code> of <code>number</code> type.</li>
-<li>Looks up a unary operator function of <code>-</code> that can calculate <code>number</code> type.</li>
-<li>Evaluates the function by passing it a number <code>123.45</code> and returns the result.</li>
+<li><code class="highlighter-rouge">-123.45</code><ol>
+<li>Evaluates the child expression and gets a value <code class="highlighter-rouge">123.45</code> of <code class="highlighter-rouge">number</code> type.</li>
+<li>Looks up a unary operator function of <code class="highlighter-rouge">-</code> that can calculate <code class="highlighter-rouge">number</code> type.</li>
+<li>Evaluates the function by passing it a number <code class="highlighter-rouge">123.45</code> and returns the result.</li>
 </ol>
 </li>
 </ul>
 <h3><span class="caption-index-3">7.2.6</span><a name="anchor-7-2-6"></a>Evaluation of Quote</h3>
 <p>
-A <code>Quote</code> expression
+A <code class="highlighter-rouge">Quote</code> expression
 </p>
-<pre><code>`X
+<pre class="highlight"><code>`X
 </code></pre>
 <h3><span class="caption-index-3">7.2.7</span><a name="anchor-7-2-7"></a>Evaluation of BinaryOp</h3>
 <p>
-A <code>BinaryOp</code> expression evaluates both of the two child expressions it owns, and then evaluate the value with its associated Binary Operator.
+A <code class="highlighter-rouge">BinaryOp</code> expression evaluates both of the two child expressions it owns, and then evaluate the value with its associated Binary Operator.
 </p>
-<pre><code>X + Y
+<pre class="highlight"><code>X + Y
 </code></pre>
 <p>
-Binary Operator <code>&amp;&amp;</code> and <code>||</code> are exceptional.
+Binary Operator <code class="highlighter-rouge">&amp;&amp;</code> and <code class="highlighter-rouge">||</code> are exceptional.
 </p>
 <p>
-With operator <code>&amp;&amp;</code>, it first evaluates the child expression on the left. If the value is determined as <strong>false</strong>, that value is the result. Otherwise, it then evaluates the child expression on the right and returns the result.
+With operator <code class="highlighter-rouge">&amp;&amp;</code>, it first evaluates the child expression on the left. If the value is determined as <strong>false</strong>, that value is the result. Otherwise, it then evaluates the child expression on the right and returns the result.
 </p>
 <p>
-With operator <code>||</code>, it first evaluates the child expression on the left. If the value is determined as <strong>true</strong>, that value is the result. Otherwise, it then evaluates the child expression on the right and returns the result.
+With operator <code class="highlighter-rouge">||</code>, it first evaluates the child expression on the left. If the value is determined as <strong>true</strong>, that value is the result. Otherwise, it then evaluates the child expression on the right and returns the result.
 </p>
 <h3><span class="caption-index-3">7.2.8</span><a name="anchor-7-2-8"></a>Evaluation of Assign</h3>
 <p>
-Execution of an <code>Assign</code> expression triggers Assignment Stage. See the next section.
+Execution of an <code class="highlighter-rouge">Assign</code> expression triggers Assignment Stage. See the next section.
 </p>
-<pre><code>X = Y
+<pre class="highlight"><code>X = Y
 </code></pre>
 <h3><span class="caption-index-3">7.2.9</span><a name="anchor-7-2-9"></a>Evaluation of Member</h3>
 <p>
-A <code>Member</code> expression
+A <code class="highlighter-rouge">Member</code> expression
 </p>
-<pre><code>X.Y
+<pre class="highlight"><code>X.Y
 </code></pre>
 <p>
 Class, Module and Object
 </p>
 <h3><span class="caption-index-3">7.2.10</span><a name="anchor-7-2-10"></a>Evaluation of Lister</h3>
 <p>
-A <code>Lister</code> expression
+A <code class="highlighter-rouge">Lister</code> expression
 </p>
-<pre><code>[A, B, C]
+<pre class="highlight"><code>[A, B, C]
 </code></pre>
 <h3><span class="caption-index-3">7.2.11</span><a name="anchor-7-2-11"></a>Evaluation of Iterer</h3>
 <p>
-An <code>Iterer</code> expression
+An <code class="highlighter-rouge">Iterer</code> expression
 </p>
-<pre><code>(A, B, C)
+<pre class="highlight"><code>(A, B, C)
 </code></pre>
 <h3><span class="caption-index-3">7.2.12</span><a name="anchor-7-2-12"></a>Evaluation of Block</h3>
 <p>
-A <code>Block</code> expression
+A <code class="highlighter-rouge">Block</code> expression
 </p>
-<pre><code>{A, B, C}
+<pre class="highlight"><code>{A, B, C}
 </code></pre>
 <h3><span class="caption-index-3">7.2.13</span><a name="anchor-7-2-13"></a>Evaluation of Root</h3>
 <p>
-A <code>Root</code> expression
+A <code class="highlighter-rouge">Root</code> expression
 </p>
 <h3><span class="caption-index-3">7.2.14</span><a name="anchor-7-2-14"></a>Evaluation of Indexer</h3>
 <p>
-An <code>Indexer</code> expression
+An <code class="highlighter-rouge">Indexer</code> expression
 </p>
-<pre><code>X[A, B, C]
+<pre class="highlight"><code>X[A, B, C]
 
 x[2]
 
@@ -184,33 +184,33 @@ x[1, 2, 3]
 x['foo']
 </code></pre>
 <p>
-How an <code>Indexer</code> expression behaves in Interpreter's evaluation and assignment stage depends on what instance the car element returns.
+How an <code class="highlighter-rouge">Indexer</code> expression behaves in Interpreter's evaluation and assignment stage depends on what instance the car element returns.
 </p>
 <p>
-If car's instance is of <code>list</code> type:
+If car's instance is of <code class="highlighter-rouge">list</code> type:
 </p>
 <ul>
 <li><strong>Evaluation:</strong> the expression seeks the list's content at specified positions by indices.</li>
 <li><strong>Assignment:</strong> modifies or adds the list's content at specified positions by indices.</li>
 </ul>
 <p>
-In these cases, indices values are expected to be of <code>number</code> type.
+In these cases, indices values are expected to be of <code class="highlighter-rouge">number</code> type.
 </p>
 <p>
-If car's instance is of <code>dict</code> type:
+If car's instance is of <code class="highlighter-rouge">dict</code> type:
 </p>
 <ul>
 <li><strong>Evaluation:</strong> the expression seeks the dictionary's content using indices as the keys.</li>
 <li><strong>Assignment:</strong> modifies or adds the dictionary's values associated with specified keys by indices.</li>
 </ul>
 <p>
-In these cases, indices values are expected to be of <code>number</code>, <code>string</code> or <code>symbol</code> type.
+In these cases, indices values are expected to be of <code class="highlighter-rouge">number</code>, <code class="highlighter-rouge">string</code> or <code class="highlighter-rouge">symbol</code> type.
 </p>
 <h3><span class="caption-index-3">7.2.15</span><a name="anchor-7-2-15"></a>Evaluation of Caller</h3>
 <p>
-A <code>Caller</code> expression evaluates expressions listed as its arguments.
+A <code class="highlighter-rouge">Caller</code> expression evaluates expressions listed as its arguments.
 </p>
-<pre><code>X(A, B, C)
+<pre class="highlight"><code>X(A, B, C)
 
 f(a, b, c, d)
 
@@ -222,83 +222,83 @@ f {}
 If the argument is declared as Quoted, it doesn't evaluates its argument.
 </p>
 <p>
-How a <code>Caller</code> expression behaves in Interpreter's evaluation stage depends on what instance the car element returns.
+How a <code class="highlighter-rouge">Caller</code> expression behaves in Interpreter's evaluation stage depends on what instance the car element returns.
 </p>
 <p>
-If car's instance is of <code>function</code> type the expression calls the function with specified arguments.
+If car's instance is of <code class="highlighter-rouge">function</code> type the expression calls the function with specified arguments.
 </p>
 <p>
-If the <code>Caller</code> expression is specified as a target in Interpreter's assignment stage, it always creates <code>function</code> instance and assigns it in a specific Environment.
+If the <code class="highlighter-rouge">Caller</code> expression is specified as a target in Interpreter's assignment stage, it always creates <code class="highlighter-rouge">function</code> instance and assigns it in a specific Environment.
 </p>
 <h2><span class="caption-index-2">7.3</span><a name="anchor-7-3"></a>Assignment Stage</h2>
 <h3><span class="caption-index-3">7.3.1</span><a name="anchor-7-3-1"></a>Overview</h3>
 <p>
-In an operation <code>X = Y</code>, the target expression <code>X</code> may be one of <code>Identifer</code>, <code>Lister</code>, <code>Member</code>, <code>Indexer</code> and <code>Caller</code>.
+In an operation <code class="highlighter-rouge">X = Y</code>, the target expression <code class="highlighter-rouge">X</code> may be one of <code class="highlighter-rouge">Identifer</code>, <code class="highlighter-rouge">Lister</code>, <code class="highlighter-rouge">Member</code>, <code class="highlighter-rouge">Indexer</code> and <code class="highlighter-rouge">Caller</code>.
 </p>
 <p>
-If the target expression is <code>Identifier</code>, <code>Lister</code> or <code>Member</code>, the source expression is evaluated at first before the result is assigned to the target.
+If the target expression is <code class="highlighter-rouge">Identifier</code>, <code class="highlighter-rouge">Lister</code> or <code class="highlighter-rouge">Member</code>, the source expression is evaluated at first before the result is assigned to the target.
 </p>
 <p>
-If the target expression is <code>Caller</code>, the source expression itself is assigned to the target without any evaluation.
+If the target expression is <code class="highlighter-rouge">Caller</code>, the source expression itself is assigned to the target without any evaluation.
 </p>
 <h3><span class="caption-index-3">7.3.2</span><a name="anchor-7-3-2"></a>Assignment for Identifier</h3>
 <p>
-An assignment for an <code>Identifier</code> expression
+An assignment for an <code class="highlighter-rouge">Identifier</code> expression
 </p>
-<pre><code>X = Y
+<pre class="highlight"><code>X = Y
 </code></pre>
 <p>
-If a type name is specified as the <code>Identifier</code>'s  attribute, the source value will be casted to the type before assignment.
+If a type name is specified as the <code class="highlighter-rouge">Identifier</code>'s  attribute, the source value will be casted to the type before assignment.
 </p>
-<pre><code>a:number = '3'
+<pre class="highlight"><code>a:number = '3'
 </code></pre>
 <p>
 This works in the same way as a data type casting in an argument list of function call. See <a href="Function.html">Chapter.7. Function</a> for more detail.
 </p>
 <h3><span class="caption-index-3">7.3.3</span><a name="anchor-7-3-3"></a>Assignment for Lister</h3>
 <p>
-When the assignment destionation is a <code>Lister</code> expression, assignment operation is applied to each expression described as its element. Elements in the <code>Lister</code> must be <code>Identifier</code> expressions.
+When the assignment destionation is a <code class="highlighter-rouge">Lister</code> expression, assignment operation is applied to each expression described as its element. Elements in the <code class="highlighter-rouge">Lister</code> must be <code class="highlighter-rouge">Identifier</code> expressions.
 </p>
-<pre><code>[A, B, C] = X
+<pre class="highlight"><code>[A, B, C] = X
 </code></pre>
 <p>
 If assignment source is a scalar, that value is assigned to each element.
 </p>
-<pre><code>[a, b, c] = 3          // a = 3, b = 3, c = 3
+<pre class="highlight"><code>[a, b, c] = 3          // a = 3, b = 3, c = 3
 </code></pre>
 <p>
 If assignment source is a list, each value in the list is assigned to each element.
 </p>
-<pre><code>[a, b, c] = [1, 2, 3]  // a = 1, b = 2, c = 3
+<pre class="highlight"><code>[a, b, c] = [1, 2, 3]  // a = 1, b = 2, c = 3
 </code></pre>
 <p>
 It would be the same with an iterator.
 </p>
-<pre><code>[a, b, c] = (1, 2, 3)  // a = 1, b = 2, c = 3
+<pre class="highlight"><code>[a, b, c] = (1, 2, 3)  // a = 1, b = 2, c = 3
 </code></pre>
 <p>
 If the assignment source has more elements than the destination requires, remaining elements are simply ignored. If the source has insufficient number of elements, it would occur an error.
 </p>
-<pre><code>[a, b, c] = [1, 2, 3, 4, 5]  // a = 1, b = 2, c = 3
+<pre class="highlight"><code>[a, b, c] = [1, 2, 3, 4, 5]  // a = 1, b = 2, c = 3
 [a, b, c] = [1, 2]           // error!
 </code></pre>
 <h3><span class="caption-index-3">7.3.4</span><a name="anchor-7-3-4"></a>Assignment for Member</h3>
 <p>
-A <code>Member</code> expression
+A <code class="highlighter-rouge">Member</code> expression
 </p>
-<pre><code>X.Y = Z
+<pre class="highlight"><code>X.Y = Z
 </code></pre>
 <p>
 Class, Module and Object
 </p>
-<pre><code>obj.var1 = 3
+<pre class="highlight"><code>obj.var1 = 3
 obj.f(x) = { }
 </code></pre>
 <h3><span class="caption-index-3">7.3.5</span><a name="anchor-7-3-5"></a>Assignment for Indexer</h3>
 <p>
-An <code>Indexer</code> expression
+An <code class="highlighter-rouge">Indexer</code> expression
 </p>
-<pre><code>X[A] = Y
+<pre class="highlight"><code>X[A] = Y
 
 X[A, B, C] = Y
 
@@ -312,9 +312,9 @@ x[0, 2, 5] = [1, 2, 3]
 </code></pre>
 <h3><span class="caption-index-3">7.3.6</span><a name="anchor-7-3-6"></a>Assignment for Caller</h3>
 <p>
-A <code>Caller</code> expression
+A <code class="highlighter-rouge">Caller</code> expression
 </p>
-<pre><code>X(A, B, C) = Y
+<pre class="highlight"><code>X(A, B, C) = Y
 </code></pre>
 <p>
 Assignments for other expressions than what are described above are invalid and occurs an error.
@@ -324,7 +324,7 @@ Assignments for other expressions than what are described above are invalid and 
 An Assignment operator can be combined with one of several other operators.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Assignment Form</th>

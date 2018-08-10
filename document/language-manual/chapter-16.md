@@ -9,10 +9,10 @@ nextpage: chapter-17.html
 <h1><span class="caption-index-1">16</span><a name="anchor-16"></a>Network Operation</h1>
 <h2><span class="caption-index-2">16.1</span><a name="anchor-16-1"></a>Overview</h2>
 <p>
-<code>curl</code> module
+<code class="highlighter-rouge">curl</code> module
 </p>
 <p>
-<code>http</code> module
+<code class="highlighter-rouge">http</code> module
 </p>
 <p>
 client-side and server-side
@@ -21,13 +21,13 @@ client-side and server-side
 <p>
 You can download files via HTTP protocol using a generic stream-copy function copy. Below is the example.
 </p>
-<pre><code>import(http)
+<pre class="highlight"><code>import(http)
 copy('http://sourceforge.jp/', 'sf.html')
 </code></pre>
 <p>
 If you want to use a proxy server, you need to specify a server setting using http.addproxy like follows.
 </p>
-<pre><code>import(http)
+<pre class="highlight"><code>import(http)
 http.addproxy('xx.xx.xx.xx', 8080, 'username', 'password')
 copy('http://sourceforge.jp/', 'sf.html')
 </code></pre>
@@ -35,7 +35,7 @@ copy('http://sourceforge.jp/', 'sf.html')
 <p>
 Simple Example:
 </p>
-<pre><code>import(http)
+<pre class="highlight"><code>import(http)
 
 text = R'''
 &lt;html&gt;
@@ -57,7 +57,7 @@ http.server(port =&gt; 8000).wait {|req|
 <p>
 The following example works as a HTTP server, which generates a graph that shows values in SQLite3 database <a href="https://github.com/gura-lang/gura/blob/master/sample/resource/temperature.sqlite3?raw=true">temperature.sqlite3</a>.
 </p>
-<pre><code>import(re)
+<pre class="highlight"><code>import(re)
 import(cairo)
 import(http)
 import(png)

@@ -12,48 +12,48 @@ This section summarizes mathematic functions.
 </p>
 <h2><span class="caption-index-2">19.1</span><a name="anchor-19-1"></a>Complex Number</h2>
 <p>
-A number literal followed by suffix <code>j</code> becomes an imaginary part of a <code>complex</code> value.
+A number literal followed by suffix <code class="highlighter-rouge">j</code> becomes an imaginary part of a <code class="highlighter-rouge">complex</code> value.
 </p>
-<pre><code>&gt;&gt;&gt; (1 - 2j) * (3 + 1j)
+<pre class="highlight"><code>&gt;&gt;&gt; (1 - 2j) * (3 + 1j)
 5 - 5j
 </code></pre>
 <h2><span class="caption-index-2">19.2</span><a name="anchor-19-2"></a>Rational Number</h2>
 <p>
-A number literal followed by suffix <code>r</code> becomes a <code>rational</code> value with which you can do faction calculations.
+A number literal followed by suffix <code class="highlighter-rouge">r</code> becomes a <code class="highlighter-rouge">rational</code> value with which you can do faction calculations.
 </p>
-<pre><code>&gt;&gt;&gt; 2 / 3r + 1 / 2r
+<pre class="highlight"><code>&gt;&gt;&gt; 2 / 3r + 1 / 2r
 7/6r
 </code></pre>
 <h2><span class="caption-index-2">19.3</span><a name="anchor-19-3"></a>Big Number</h2>
 <p>
-Importing <code>gmp</code> module would add following suffixes:
+Importing <code class="highlighter-rouge">gmp</code> module would add following suffixes:
 </p>
 <ul>
-<li>Suffix <code>L</code> creates a <code>gmp.mpz</code> or <code>gmp.mpf</code> instances that can calculate numbers with variable-length digits.</li>
-<li>Suffix <code>Lr</code> creates a <code>gmp.mpq</code> instance that can calculate rational value with variable-length digits.</li>
+<li>Suffix <code class="highlighter-rouge">L</code> creates a <code class="highlighter-rouge">gmp.mpz</code> or <code class="highlighter-rouge">gmp.mpf</code> instances that can calculate numbers with variable-length digits.</li>
+<li>Suffix <code class="highlighter-rouge">Lr</code> creates a <code class="highlighter-rouge">gmp.mpq</code> instance that can calculate rational value with variable-length digits.</li>
 </ul>
 <h2><span class="caption-index-2">19.4</span><a name="anchor-19-4"></a>Differentiation Formula</h2>
 <p>
-When a function is declared with a body that contains math calculation, you can get a differentiation formula from it using <code>function#mathdiff()</code> method. Assumes that you have the following function:
+When a function is declared with a body that contains math calculation, you can get a differentiation formula from it using <code class="highlighter-rouge">function#mathdiff()</code> method. Assumes that you have the following function:
 </p>
-<pre><code>&gt;&gt;&gt; f(x) = math.sin(x ** 2)
+<pre class="highlight"><code>&gt;&gt;&gt; f(x) = math.sin(x ** 2)
 </code></pre>
 <p>
-Then, you can call <code>function#mathdiff()</code> method for it like following:
+Then, you can call <code class="highlighter-rouge">function#mathdiff()</code> method for it like following:
 </p>
-<pre><code>&gt;&gt;&gt; g = f.mathdiff()
+<pre class="highlight"><code>&gt;&gt;&gt; g = f.mathdiff()
 </code></pre>
 <p>
-The newly created function <code>g(x)</code> is one that does differential calculation of <code>f(x)</code>. You can examine what body it has by seeing <code>function#expr</code> property.
+The newly created function <code class="highlighter-rouge">g(x)</code> is one that does differential calculation of <code class="highlighter-rouge">f(x)</code>. You can examine what body it has by seeing <code class="highlighter-rouge">function#expr</code> property.
 </p>
-<pre><code>&gt;&gt;&gt; g.expr
+<pre class="highlight"><code>&gt;&gt;&gt; g.expr
 `(math.cos(x ** 2) * (2 * x))
 </code></pre>
 <p>
 The table below shows what differentiation formulas are obtained from original math functions:
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Original</th>

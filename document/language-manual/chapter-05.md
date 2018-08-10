@@ -17,16 +17,16 @@ There are three types of Operators.
 <li><strong>Binary Operator</strong> takes two input values specified on both sides of them.</li>
 </ul>
 <p>
-An Operator has a table of procedures that are indexed by Data Types of given values, one Data Type indexing for Unary Operators and two Data Types for Binary Operators. For instance, operator <code>+</code> has a procedure to calculate between values of <code>number</code> and <code>number</code> and also a procecure beween values of <code>string</code> and <code>string</code>. These procedures are isolated each other as long as combination of the given Data Types is different.
+An Operator has a table of procedures that are indexed by Data Types of given values, one Data Type indexing for Unary Operators and two Data Types for Binary Operators. For instance, operator <code class="highlighter-rouge">+</code> has a procedure to calculate between values of <code class="highlighter-rouge">number</code> and <code class="highlighter-rouge">number</code> and also a procecure beween values of <code class="highlighter-rouge">string</code> and <code class="highlighter-rouge">string</code>. These procedures are isolated each other as long as combination of the given Data Types is different.
 </p>
 <p>
-Users can overload operators' procedures through <code>operator</code> instance. If combination of Data Types of the overloading procedure is the same as that of existing one, it would override the registered procedure. Otherwise, it would add a new procedure to the operator.
+Users can overload operators' procedures through <code class="highlighter-rouge">operator</code> instance. If combination of Data Types of the overloading procedure is the same as that of existing one, it would override the registered procedure. Otherwise, it would add a new procedure to the operator.
 </p>
 <h2><span class="caption-index-2">5.2</span><a name="anchor-5-2"></a>Precedence</h2>
 <p>
 The following table shows operators' precedence order from the lowest to the highest.
 </p>
-<table>
+<table class="table">
 <tr>
 <th>
 Precedence</th>
@@ -37,91 +37,91 @@ Operators</th>
 <td>
 Lower</td>
 <td>
-<code>=&gt;</code></td>
+<code class="highlighter-rouge">=&gt;</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>||</code></td>
+<code class="highlighter-rouge">||</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>&amp;&amp;</code></td>
+<code class="highlighter-rouge">&amp;&amp;</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>!</code></td>
+<code class="highlighter-rouge">!</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>in</code></td>
+<code class="highlighter-rouge">in</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>&lt;   &gt;   &lt;=   &gt;=   &lt;=&gt;   ==   !=</code></td>
+<code class="highlighter-rouge">&lt;   &gt;   &lt;=   &gt;=   &lt;=&gt;   ==   !=</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>..</code></td>
+<code class="highlighter-rouge">..</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>|</code></td>
+<code class="highlighter-rouge">|</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>^</code></td>
+<code class="highlighter-rouge">^</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>&amp;</code></td>
+<code class="highlighter-rouge">&amp;</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>&lt;&lt;   &gt;&gt;</code></td>
+<code class="highlighter-rouge">&lt;&lt;   &gt;&gt;</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>+   -</code></td>
+<code class="highlighter-rouge">+   -</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>*   /   %  ?</code></td>
+<code class="highlighter-rouge">*   /   %  ?</code></td>
 </tr>
 <tr>
 <td>
 </td>
 <td>
-<code>~</code></td>
+<code class="highlighter-rouge">~</code></td>
 </tr>
 <tr>
 <td>
 Higher</td>
 <td>
-<code>**</code></td>
+<code class="highlighter-rouge">**</code></td>
 </tr>
 </table>
 <h2><span class="caption-index-2">5.3</span><a name="anchor-5-3"></a>Calculation Operators</h2>
@@ -130,10 +130,10 @@ Basically, Operators are used for mathematical and logical calculation. This sub
 </p>
 <h3><span class="caption-index-3">5.3.1</span><a name="anchor-5-3-1"></a>Prefixed Unary Operators</h3>
 <p>
-Operation <code>+x</code> returns the value of <code>x</code> itself.
+Operation <code class="highlighter-rouge">+x</code> returns the value of <code class="highlighter-rouge">x</code> itself.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -180,10 +180,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>-x</code> returns a negaive value of <code>x</code>.
+Operation <code class="highlighter-rouge">-x</code> returns a negaive value of <code class="highlighter-rouge">x</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -230,10 +230,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>~x</code> returns a bit-inverted value of <code>x</code>.
+Operation <code class="highlighter-rouge">~x</code> returns a bit-inverted value of <code class="highlighter-rouge">x</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -252,10 +252,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>!x</code> returns a logically inverted value of <code>x</code> after evaluating it as a boolean value.
+Operation <code class="highlighter-rouge">!x</code> returns a logically inverted value of <code class="highlighter-rouge">x</code> after evaluating it as a boolean value.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -275,10 +275,10 @@ Result Data Type</th>
 </p>
 <h3><span class="caption-index-3">5.3.2</span><a name="anchor-5-3-2"></a>Suffixed Unary Operators</h3>
 <p>
-Operation <code>x..</code> returns an infinite iterator that starts from <code>x</code> and is increased by one.
+Operation <code class="highlighter-rouge">x..</code> returns an infinite iterator that starts from <code class="highlighter-rouge">x</code> and is increased by one.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -297,10 +297,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x?</code> returns <code>false</code> if <code>x</code> is <code>false</code> or <code>nil</code>, and <code>true</code> otherwise. This operator is not affected by Implicit Mapping and returns <code>true</code> if <code>x</code> is of <code>list</code> or <code>iterator</code> type.
+Operation <code class="highlighter-rouge">x?</code> returns <code class="highlighter-rouge">false</code> if <code class="highlighter-rouge">x</code> is <code class="highlighter-rouge">false</code> or <code class="highlighter-rouge">nil</code>, and <code class="highlighter-rouge">true</code> otherwise. This operator is not affected by Implicit Mapping and returns <code class="highlighter-rouge">true</code> if <code class="highlighter-rouge">x</code> is of <code class="highlighter-rouge">list</code> or <code class="highlighter-rouge">iterator</code> type.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -320,10 +320,10 @@ Result Data Type</th>
 </p>
 <h3><span class="caption-index-3">5.3.3</span><a name="anchor-5-3-3"></a>Binary Operators</h3>
 <p>
-Operation <code>x + y</code> returns an added result of <code>x</code> and <code>y</code>.
+Operation <code class="highlighter-rouge">x + y</code> returns an added result of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -426,10 +426,10 @@ Result Data Type</th>
 
 </p>
 <p>
-If <code>x</code> and <code>y</code> are of <code>string</code> or <code>binary</code> type, Operation <code>x + y</code> returns concatenated result of <code>x</code> and <code>y</code>.
+If <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> are of <code class="highlighter-rouge">string</code> or <code class="highlighter-rouge">binary</code> type, Operation <code class="highlighter-rouge">x + y</code> returns concatenated result of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -483,10 +483,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x - y</code> returns a subtracted result of <code>x</code> and <code>y</code>.
+Operation <code class="highlighter-rouge">x - y</code> returns a subtracted result of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -589,10 +589,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x * y</code> returns a multiplied result of <code>x</code> and <code>y</code>.
+Operation <code class="highlighter-rouge">x * y</code> returns a multiplied result of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -688,10 +688,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Applying <code>*</code> operator between <code>string</code>/<code>binary</code> and <code>number</code> will join the <code>string</code>/<code>binary</code> for <code>number</code> times.
+Applying <code class="highlighter-rouge">*</code> operator between <code class="highlighter-rouge">string</code>/<code class="highlighter-rouge">binary</code> and <code class="highlighter-rouge">number</code> will join the <code class="highlighter-rouge">string</code>/<code class="highlighter-rouge">binary</code> for <code class="highlighter-rouge">number</code> times.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -731,10 +731,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x / y</code> returns a divided result of <code>x</code> and <code>y</code>.
+Operation <code class="highlighter-rouge">x / y</code> returns a divided result of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -816,10 +816,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x % y</code> returns a remainder after dividing <code>x</code> by <code>y</code>.
+Operation <code class="highlighter-rouge">x % y</code> returns a remainder after dividing <code class="highlighter-rouge">x</code> by <code class="highlighter-rouge">y</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -838,10 +838,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x ** y</code> returns a powered result of <code>x</code> and <code>y</code>.
+Operation <code class="highlighter-rouge">x ** y</code> returns a powered result of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -881,10 +881,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x == y</code> returns <code>true</code> when <code>x</code> equals to <code>y</code>, and <code>false</code> otherwise.
+Operation <code class="highlighter-rouge">x == y</code> returns <code class="highlighter-rouge">true</code> when <code class="highlighter-rouge">x</code> equals to <code class="highlighter-rouge">y</code>, and <code class="highlighter-rouge">false</code> otherwise.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -903,10 +903,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x &lt; y</code> returns <code>true</code> when <code>x</code> is less than <code>y</code>, and <code>false</code> otherwise.
+Operation <code class="highlighter-rouge">x &lt; y</code> returns <code class="highlighter-rouge">true</code> when <code class="highlighter-rouge">x</code> is less than <code class="highlighter-rouge">y</code>, and <code class="highlighter-rouge">false</code> otherwise.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -925,10 +925,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x &gt; y</code> returns <code>true</code> when <code>x</code> is greater than <code>y</code>, and <code>false</code> otherwise.
+Operation <code class="highlighter-rouge">x &gt; y</code> returns <code class="highlighter-rouge">true</code> when <code class="highlighter-rouge">x</code> is greater than <code class="highlighter-rouge">y</code>, and <code class="highlighter-rouge">false</code> otherwise.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -947,10 +947,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x &lt;= y</code> returns <code>true</code> when <code>x</code> is less than or equal to <code>y</code>, and <code>false</code> otherwise.
+Operation <code class="highlighter-rouge">x &lt;= y</code> returns <code class="highlighter-rouge">true</code> when <code class="highlighter-rouge">x</code> is less than or equal to <code class="highlighter-rouge">y</code>, and <code class="highlighter-rouge">false</code> otherwise.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -969,10 +969,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x &gt;= y</code> returns <code>true</code> when <code>x</code> is greater than or equal to <code>y</code>, and <code>false</code> otherwise.
+Operation <code class="highlighter-rouge">x &gt;= y</code> returns <code class="highlighter-rouge">true</code> when <code class="highlighter-rouge">x</code> is greater than or equal to <code class="highlighter-rouge">y</code>, and <code class="highlighter-rouge">false</code> otherwise.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -991,10 +991,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x &lt;=&gt; y</code> returns <code>0</code> when <code>x</code> is equal to <code>y</code>, <code>-1</code> when <code>x</code> is less than <code>y</code> and <code>1</code> when <code>x</code> is greater than <code>y</code>.
+Operation <code class="highlighter-rouge">x &lt;=&gt; y</code> returns <code class="highlighter-rouge">0</code> when <code class="highlighter-rouge">x</code> is equal to <code class="highlighter-rouge">y</code>, <code class="highlighter-rouge">-1</code> when <code class="highlighter-rouge">x</code> is less than <code class="highlighter-rouge">y</code> and <code class="highlighter-rouge">1</code> when <code class="highlighter-rouge">x</code> is greater than <code class="highlighter-rouge">y</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -1013,13 +1013,13 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x in y</code> checks if <code>x</code> is contained in <code>y</code>.
+Operation <code class="highlighter-rouge">x in y</code> checks if <code class="highlighter-rouge">x</code> is contained in <code class="highlighter-rouge">y</code>.
 </p>
 <p>
-When Operator <code>in</code> takes a value of any type other than <code>list</code> and <code>iterator</code> at its left, it will check if the value is contained in the container specified at its right. If the right value is not of <code>list</code> or <code>iterator</code>, it would act in the same way as Operator <code>==</code>.
+When Operator <code class="highlighter-rouge">in</code> takes a value of any type other than <code class="highlighter-rouge">list</code> and <code class="highlighter-rouge">iterator</code> at its left, it will check if the value is contained in the container specified at its right. If the right value is not of <code class="highlighter-rouge">list</code> or <code class="highlighter-rouge">iterator</code>, it would act in the same way as Operator <code class="highlighter-rouge">==</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -1052,10 +1052,10 @@ Result Data Type</th>
 
 </p>
 <p>
-When Operator <code>in</code> takes a value of <code>list</code> or <code>iterator</code> type at its left, it will check if each value of the container's element is contained in the container specified at its right, and return a list of <code>boolean</code> indicating the result of each containing check.
+When Operator <code class="highlighter-rouge">in</code> takes a value of <code class="highlighter-rouge">list</code> or <code class="highlighter-rouge">iterator</code> type at its left, it will check if each value of the container's element is contained in the container specified at its right, and return a list of <code class="highlighter-rouge">boolean</code> indicating the result of each containing check.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -1109,18 +1109,18 @@ Result Data Type</th>
 
 </p>
 <p>
-When Operator <code>in</code> is used in an argument of <code>for()</code> and <code>cross()</code> function, it would work as an iterable assignment. See <a href="Flow-Control.html">Chapter.8. Flow Control</a> for detail.
+When Operator <code class="highlighter-rouge">in</code> is used in an argument of <code class="highlighter-rouge">for()</code> and <code class="highlighter-rouge">cross()</code> function, it would work as an iterable assignment. See <a href="Flow-Control.html">Chapter.8. Flow Control</a> for detail.
 </p>
 <p>
-Operation <code>x &amp; y</code> returns an AND calculation result of <code>x</code> and <code>y</code>.
+Operation <code class="highlighter-rouge">x &amp; y</code> returns an AND calculation result of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>.
 </p>
 <ul>
-<li>If <code>x</code> and <code>y</code> are of <code>number</code> type, it calculates bitwise AND between them.</li>
-<li>If <code>x</code> and <code>y</code> are of <code>boolean</code> type, it calculates logical AND between them.</li>
-<li>If either <code>x</code> or <code>y</code> is <code>nil, it returns</code>nil<code>.</code></li>
+<li>If <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> are of <code class="highlighter-rouge">number</code> type, it calculates bitwise AND between them.</li>
+<li>If <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> are of <code class="highlighter-rouge">boolean</code> type, it calculates logical AND between them.</li>
+<li>If either <code class="highlighter-rouge">x</code> or <code class="highlighter-rouge">y</code> is <code class="highlighter-rouge">nil, it returns</code>nil<code class="highlighter-rouge">.</code></li>
 </ul>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -1160,15 +1160,15 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x | y</code> returns an OR calculation result of <code>x</code> and <code>y</code>.
+Operation <code class="highlighter-rouge">x | y</code> returns an OR calculation result of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>.
 </p>
 <ul>
-<li>If <code>x</code> and <code>y</code> are of <code>number</code> type, it calculates bitwise OR between them.</li>
-<li>If <code>x</code> and <code>y</code> are of <code>boolean</code> type, it calculates logical OR between them.</li>
-<li>If either <code>x</code> or <code>y</code> is <code>nil, it returns one of their values that is not</code>nil<code>.</code></li>
+<li>If <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> are of <code class="highlighter-rouge">number</code> type, it calculates bitwise OR between them.</li>
+<li>If <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> are of <code class="highlighter-rouge">boolean</code> type, it calculates logical OR between them.</li>
+<li>If either <code class="highlighter-rouge">x</code> or <code class="highlighter-rouge">y</code> is <code class="highlighter-rouge">nil, it returns one of their values that is not</code>nil<code class="highlighter-rouge">.</code></li>
 </ul>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -1208,14 +1208,14 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x ^ y</code> returns a XOR calculation result of <code>x</code> and <code>y</code>.
+Operation <code class="highlighter-rouge">x ^ y</code> returns a XOR calculation result of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>.
 </p>
 <ul>
-<li>If <code>x</code> and <code>y</code> are of <code>number</code> type, it calculates bitwise XOR between them.</li>
-<li>If <code>x</code> and <code>y</code> are of <code>boolean</code> type, it calculates logical XOR between them.</li>
+<li>If <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> are of <code class="highlighter-rouge">number</code> type, it calculates bitwise XOR between them.</li>
+<li>If <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> are of <code class="highlighter-rouge">boolean</code> type, it calculates logical XOR between them.</li>
 </ul>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -1241,10 +1241,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x &lt;&lt; y</code> returns a value of <code>x</code> shifted left by <code>y</code> bits.
+Operation <code class="highlighter-rouge">x &lt;&lt; y</code> returns a value of <code class="highlighter-rouge">x</code> shifted left by <code class="highlighter-rouge">y</code> bits.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -1263,10 +1263,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x &gt;&gt; y</code> returns a value of <code>x</code> shifted right by <code>y</code> bits.
+Operation <code class="highlighter-rouge">x &gt;&gt; y</code> returns a value of <code class="highlighter-rouge">x</code> shifted right by <code class="highlighter-rouge">y</code> bits.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -1285,15 +1285,15 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x &amp;&amp; y</code> returns a conditional AND result of <code>x</code> and <code>y</code> as described below:
+Operation <code class="highlighter-rouge">x &amp;&amp; y</code> returns a conditional AND result of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> as described below:
 </p>
 <ul>
-<li>If <code>x</code> is not of <code>list</code> nor <code>iterator</code> type, it would return the value of <code>x</code> when <code>x</code> is determined as <code>false</code>, and return the value of <code>y</code> otherwise. It won't evaluate <code>y</code> when <code>x</code> comes out to be in <code>false</code> state.</li>
-<li>If <code>x</code> is of <code>list</code> type, it applies the above operation on each value of the list's elements and returns a list containing the results.</li>
-<li>If <code>x</code> is of <code>iterator</code> type, it returns an iterator that is to apply the above operation on each value of the iterator's elements.</li>
+<li>If <code class="highlighter-rouge">x</code> is not of <code class="highlighter-rouge">list</code> nor <code class="highlighter-rouge">iterator</code> type, it would return the value of <code class="highlighter-rouge">x</code> when <code class="highlighter-rouge">x</code> is determined as <code class="highlighter-rouge">false</code>, and return the value of <code class="highlighter-rouge">y</code> otherwise. It won't evaluate <code class="highlighter-rouge">y</code> when <code class="highlighter-rouge">x</code> comes out to be in <code class="highlighter-rouge">false</code> state.</li>
+<li>If <code class="highlighter-rouge">x</code> is of <code class="highlighter-rouge">list</code> type, it applies the above operation on each value of the list's elements and returns a list containing the results.</li>
+<li>If <code class="highlighter-rouge">x</code> is of <code class="highlighter-rouge">iterator</code> type, it returns an iterator that is to apply the above operation on each value of the iterator's elements.</li>
 </ul>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -1326,15 +1326,15 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x || y</code> returns a conditional OR result of <code>x</code> and <code>y</code> as described below:
+Operation <code class="highlighter-rouge">x || y</code> returns a conditional OR result of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> as described below:
 </p>
 <ul>
-<li>If <code>x</code> is not of <code>list</code> nor <code>iterator</code> type, it would return the value of <code>x</code> when <code>x</code> is determined as <code>true</code>, and return the value of <code>y</code> otherwise. It won't evaluate <code>y</code> when <code>x</code> comes out to be in <code>true</code> state.</li>
-<li>If <code>x</code> is of <code>list</code> type, it applies the above operation on each value of the list's elements and returns a list containing the results.</li>
-<li>If <code>x</code> is of <code>iterator</code> type, it returns an iterator that is to apply the above operation on each value of the iterator's elements.</li>
+<li>If <code class="highlighter-rouge">x</code> is not of <code class="highlighter-rouge">list</code> nor <code class="highlighter-rouge">iterator</code> type, it would return the value of <code class="highlighter-rouge">x</code> when <code class="highlighter-rouge">x</code> is determined as <code class="highlighter-rouge">true</code>, and return the value of <code class="highlighter-rouge">y</code> otherwise. It won't evaluate <code class="highlighter-rouge">y</code> when <code class="highlighter-rouge">x</code> comes out to be in <code class="highlighter-rouge">true</code> state.</li>
+<li>If <code class="highlighter-rouge">x</code> is of <code class="highlighter-rouge">list</code> type, it applies the above operation on each value of the list's elements and returns a list containing the results.</li>
+<li>If <code class="highlighter-rouge">x</code> is of <code class="highlighter-rouge">iterator</code> type, it returns an iterator that is to apply the above operation on each value of the iterator's elements.</li>
 </ul>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -1367,10 +1367,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x..y</code> creates an iterator that returns <code>number</code> value that starts from <code>x</code> and is increased by one until <code>y</code>.
+Operation <code class="highlighter-rouge">x..y</code> creates an iterator that returns <code class="highlighter-rouge">number</code> value that starts from <code class="highlighter-rouge">x</code> and is increased by one until <code class="highlighter-rouge">y</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -1389,10 +1389,10 @@ Result Data Type</th>
 
 </p>
 <p>
-Operation <code>x =&gt; y</code> returns a list <code>[x, y]</code>.
+Operation <code class="highlighter-rouge">x =&gt; y</code> returns a list <code class="highlighter-rouge">[x, y]</code>.
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Operation</th>
@@ -1425,67 +1425,67 @@ Result Data Type</th>
 
 </p>
 <p>
-When Operator <code>=&gt;</code> is used in an argument declaration of any function definition, it would work as an assignment for a default value. And, when it is used in an argument list of any function call, it would work as a named argument. See <a href="Function.html">Chapter.7. Function</a> for their detail.
+When Operator <code class="highlighter-rouge">=&gt;</code> is used in an argument declaration of any function definition, it would work as an assignment for a default value. And, when it is used in an argument list of any function call, it would work as a named argument. See <a href="Function.html">Chapter.7. Function</a> for their detail.
 </p>
 <h2><span class="caption-index-2">5.4</span><a name="anchor-5-4"></a>Other Operators</h2>
 <p>
-Operation <code>string % any</code> returns a result formatted by the string containing specifiers of <code>printf</code> format. The value of <code>any</code> must be a list if more than one argument are necessary.
+Operation <code class="highlighter-rouge">string % any</code> returns a result formatted by the string containing specifiers of <code class="highlighter-rouge">printf</code> format. The value of <code class="highlighter-rouge">any</code> must be a list if more than one argument are necessary.
 </p>
-<pre><code>'Name: %s, Age: %d' % [name, age]
+<pre class="highlight"><code>'Name: %s, Age: %d' % [name, age]
 </code></pre>
 <p>
 The code above has the same result as the following.
 </p>
-<pre><code>format('Name: %s, Age: %d', name, age)
+<pre class="highlight"><code>format('Name: %s, Age: %d', name, age)
 </code></pre>
 <p>
-Operation <code>function * any</code> applies the function on <code>any</code>.
+Operation <code class="highlighter-rouge">function * any</code> applies the function on <code class="highlighter-rouge">any</code>.
 </p>
 <p>
-Operation <code>stream &lt;&lt; any</code> outputs <code>any</code> to the <code>stream</code>.
+Operation <code class="highlighter-rouge">stream &lt;&lt; any</code> outputs <code class="highlighter-rouge">any</code> to the <code class="highlighter-rouge">stream</code>.
 </p>
-<pre><code>sys.stdout &lt;&lt; 'Hello World\n'
+<pre class="highlight"><code>sys.stdout &lt;&lt; 'Hello World\n'
 </code></pre>
 <h2><span class="caption-index-2">5.5</span><a name="anchor-5-5"></a>Operator Overload</h2>
 <p>
-You can assign your own functions to operators through <code>operator</code> instance. The example below assings <code>string - string</code> operation by using <code>operator#assign()</code> method.
+You can assign your own functions to operators through <code class="highlighter-rouge">operator</code> instance. The example below assings <code class="highlighter-rouge">string - string</code> operation by using <code class="highlighter-rouge">operator#assign()</code> method.
 </p>
-<pre><code>op = operator(`-)
+<pre class="highlight"><code>op = operator(`-)
 op.assign(`string, `string) {|x, y|
     x.replace(y, '')
 }
 </code></pre>
 <p>
-After this assignment, the following code results in <code>'Hello, world'</code>.
+After this assignment, the following code results in <code class="highlighter-rouge">'Hello, world'</code>.
 </p>
-<pre><code>'Hello, 1234world' - '1234'
+<pre class="highlight"><code>'Hello, 1234world' - '1234'
 </code></pre>
 <p>
-If you want to assign a function of a unary operator, specify one argument in <code>operator#assign()</code> method like below.
+If you want to assign a function of a unary operator, specify one argument in <code class="highlighter-rouge">operator#assign()</code> method like below.
 </p>
-<pre><code>op = operator(`-)
+<pre class="highlight"><code>op = operator(`-)
 op.assign(`string) {|x|
     x.each().reverse().join()
 }
 </code></pre>
 <p>
-Then, the code below has a result <code>'987654321'</code>.
+Then, the code below has a result <code class="highlighter-rouge">'987654321'</code>.
 </p>
-<pre><code>-'123456789'
+<pre class="highlight"><code>-'123456789'
 </code></pre>
 <p>
 You can also override existing operators.
 </p>
 <p>
-You can use <code>operator#entries()</code> method to get all of the functions registered in the operator.
+You can use <code class="highlighter-rouge">operator#entries()</code> method to get all of the functions registered in the operator.
 </p>
-<pre><code>op = operator(`-)
+<pre class="highlight"><code>op = operator(`-)
 println(op.entries())
 </code></pre>
 <p>
-The method returns entries registered as binary operators. Specifying a symbol <code>`unary</code> as its argument would return a list of unary operators.
+The method returns entries registered as binary operators. Specifying a symbol <code class="highlighter-rouge">`unary</code> as its argument would return a list of unary operators.
 </p>
-<pre><code>op = operator(`-)
+<pre class="highlight"><code>op = operator(`-)
 println(op.entries(`unary))
 </code></pre>
 <p />
