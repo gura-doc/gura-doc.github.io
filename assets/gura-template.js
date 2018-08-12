@@ -1,4 +1,5 @@
 // jQuery entry
+/*
 $(document).ready(function() {
 	$('.list-group-item').on('click', function() {
 		$('i', this)
@@ -6,3 +7,4 @@ $(document).ready(function() {
 			.toggleClass('fa-plus-square');
 	});
 });
+*/

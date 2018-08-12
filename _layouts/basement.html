@@ -41,17 +41,25 @@
 	  </div>
 	  {% if page.prevpage %}
 	  {% if page.prevpage == "" %}
-	  <span class="btn btn-secondary disabled" href="{{ page.prevpage }}"><i class="fas fa-chevron-circle-left mr-2"></i>Prev</span>
+	  <span class="btn btn-secondary disabled" href="{{ page.prevpage }}">
+		<i class="fas fa-chevron-circle-left mr-2"></i><span class="small">Prev</span>
+	  </span>
 	  {% else %}
-	  <a class="btn btn-secondary active" href="{{ page.prevpage }}"><i class="fas fa-chevron-circle-left mr-2"></i>Prev</a>
+	  <a class="btn btn-secondary active" href="{{ page.prevpage }}">
+		<i class="fas fa-chevron-circle-left mr-2"></i><span class="small">Prev</span>
+	  </a>
 	  {% endif %}
 	  {% endif %}
 
 	  {% if page.nextpage %}
 	  {% if page.nextpage == "" %}
-	  <span class="btn btn-secondary disabled ml-2" href="{{ page.nextpage }}">Next<i class="fas fa-chevron-circle-right ml-2"></i></span>
+	  <span class="btn btn-secondary disabled ml-2" href="{{ page.nextpage }}">
+		<span class="small">Next</span><i class="fas fa-chevron-circle-right ml-2"></i>
+	  </span>
 	  {% else %}
-	  <a class="btn btn-secondary active ml-2" href="{{ page.nextpage }}">Next<i class="fas fa-chevron-circle-right ml-2"></i></a>
+	  <a class="btn btn-secondary active ml-2" href="{{ page.nextpage }}">
+		<span class="small">Next</span><i class="fas fa-chevron-circle-right ml-2"></i>
+	  </a>
 	  {% endif %}
 	  {% endif %}
 	</nav>

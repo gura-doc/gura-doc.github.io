@@ -25,7 +25,7 @@ fileNamesSrc = [
 	'19-Template-Engine.md'
 ]
 baseName = 'gura-lang-en'
-dirName@html = '..'
+dirNameOut@jekyll = '..'
 nChapters = fileNamesSrc.len()
 title = 'Gura Language Manual'
 author = 'Yutaka Saito'
@@ -37,4 +37,4 @@ fileNamesSrc.each {|fileNameSrc|
 	println('reading: ', fileNameSrc)
 	doc.read(fileNameSrc)
 }
-helper.builddoc.output(doc, baseName, dirName@html, title, author, date, nChapters)
+helper.builddoc.output(doc, baseName, dirNameOut@jekyll, title, author, date, nChapters)

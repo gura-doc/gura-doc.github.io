@@ -6,9 +6,9 @@ title: download
 {% assign gura_version = '0.7.0' %}
 {% assign gura_version_prev = '0.6.2' %}
 
-# Package <a name="package"></a>
+# Package<a name="package"></a>
 
-## Latest Version <a name="download-latest"></a><a class="btn btn-secondary float-right" data-toggle="collapse" href="#relnote-latest" role="button" aria-expanded="false" aria-controls="relnote-latest">Release Notes</a>
+## Latest Version<a name="download-latest"></a><a class="btn btn-secondary float-right" data-toggle="collapse" href="#relnote-latest" role="button" aria-expanded="false" aria-controls="relnote-latest">Release Notes</a>
 
 <div class="collapse bg-light p-2 mb-2" id="relnote-latest" markdown="1">
   - Performance has been improved. It's **twice** as fast as v0.6.2.
@@ -52,7 +52,7 @@ title: download
 
 </table>
 
-## Previous Version <a name="download-previous"></a><a class="btn btn-secondary float-right" data-toggle="collapse" href="#relnote-previous" role="button" aria-expanded="false" aria-controls="relnote-previous">Release Notes</a>
+## Previous Version<a name="download-previous"></a><a class="btn btn-secondary float-right" data-toggle="collapse" href="#relnote-previous" role="button" aria-expanded="false" aria-controls="relnote-previous">Release Notes</a>
 
 <div class="collapse bg-light p-2 mb-2" id="relnote-previous" markdown="1">
   - Enhanced features to provide help documents of each function.
@@ -102,9 +102,9 @@ title: download
 
 </table>
 
-# Installation <a name="installation"></a>
+# Installation<a name="installation"></a>
 
-## <i class="fab fa-windows"></i> Windows <a name="installation-windows"></a>
+## <i class="fab fa-windows mr-2"></i>Windows<a name="installation-windows"></a>
 
 It has been confirmed that Gura runs on the following versions of Windows:
 
@@ -164,7 +164,7 @@ If you don't want to modify registries, you can just expand ZIP file
   in some directory and edit PATH environment so that it includes `gura\bin-x86` directory in the expanded content.
 
 
-## <i class="fab fa-apple"></i> Mac OS X <a name="installation-mac"></a>
+## <i class="fab fa-apple mr-2"></i>Mac OS X<a name="installation-mac"></a>
 
 It has been confirmed that Gura runs on the following versions of Mac OS X.
 
@@ -197,7 +197,7 @@ Symbolic link /usr/bin/gura was created.
 </code></pre>
 
 
-## <i class="fab fa-linux"></i> Linux <a name="installation-linux"></a>
+## <i class="fab fa-linux mr-2"></i>Linux<a name="installation-linux"></a>
 
 It has been confirmed that Gura can run on the following distributions of Linux.
 

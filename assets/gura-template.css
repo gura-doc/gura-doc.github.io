@@ -43,12 +43,20 @@ body {
 	border-top-width: 0;
 }
 
+.list-group.list-group-root > .list-group-item {
+	padding-left: 10px;
+}
+
 .list-group.list-group-root > .list-group > .list-group-item {
-	padding-left: 30px;
+	padding-left: 20px;
 }
 
 .list-group.list-group-root > .list-group > .list-group > .list-group-item {
-	padding-left: 45px;
+	padding-left: 30px;
+}
+
+.list-group-item.active {
+	background: #eeeeff;
 }
 
 .list-group-item i {
@@ -59,6 +67,12 @@ body {
 
 .list-group-item i:hover {
 	color: #000000;
+}
+
+.sidebar a {
+	font-size: 90%;
+	color: #000000;
+	border: none;
 }
 
 .caption-index-1, .caption-index-2, .caption-index-3, .caption-index-4, .caption-index-5, .caption-index-6 {
@@ -81,43 +95,6 @@ pre, pre.highlight {
 	font-size: 14px;
 	border: #cccccc 1px solid;
 	background: #eeeeee;
-}
-
-/* settings for list items in sidebar */
-.list-group.list-group-root {
-  padding: 0;
-  overflow: hidden;
-}
-
-.list-group.list-group-root .list-group {
-  margin-bottom: 0;
-}
-
-.list-group.list-group-root .list-group-item {
-  border-radius: 0;
-  border-width: 1px 0 0 0;
-}
-
-.list-group.list-group-root > .list-group-item:first-child {
-  border-top-width: 0;
-}
-
-.list-group.list-group-root > .list-group > .list-group-item {
-  padding-left: 30px;
-}
-
-.list-group.list-group-root > .list-group > .list-group > .list-group-item {
-  padding-left: 45px;
-}
-
-.list-group-item {
-  margin-right: 5px;
-}
-
-.sidebar a {
-	font-size: 90%;
-	color: #000000;
-	border: none;
 }
 
 /* settings for syntax highlighting */

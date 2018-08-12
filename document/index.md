@@ -5,7 +5,7 @@ title: document
 ---
 <!-- ----------------------------------------------------------------------- -->
 
-<h2 name="documents"><i class="fas fa-book-open mr-2" style="width: 1.5em"></i>Manual</h2>
+<h2><i class="fas fa-book-open mr-2" style="width: 1.5em"></i>Manual<a name="manual"></a></h2>
 
 <table class="table">
   <thead class="thead-light">
@@ -37,7 +37,7 @@ title: document
 
 
 <!-- ----------------------------------------------------------------------- -->
-<h2><i class="fas fa-file-alt mr-2" style="width: 1.5em"></i>Articles</h2>
+<h2><i class="fas fa-file-alt mr-2" style="width: 1.5em"></i>Article<a name="article"></a></h2>
 
 <table class="table">
 <thead class="thead-light">
@@ -65,7 +65,7 @@ title: document
 
 
 <!-- ----------------------------------------------------------------------- -->
-<h2 name="presentation"><i class="fas fa-chalkboard-teacher mr-2" style="width: 1.5em"></i>Presentation</h2>
+<h2><i class="fas fa-chalkboard-teacher mr-2" style="width: 1.5em"></i>Presentation<a name="presentation"></a></h2>
 
 <table class="table">
 <thead class="thead-light">
@@ -90,7 +90,7 @@ Introduction to Gura Programming Language
 
 
 <!-- ----------------------------------------------------------------------- -->
-<h2><i class="fas fa-code mr-2" style="width: 1.5em"></i>Sample Code</h2>
+<h2><i class="fas fa-code mr-2" style="width: 1.5em"></i>Sample Code<a name="sample-code"></a></h2>
 
 <p>Sample codes of Gura are stored in
   <a href="https://github.com/gura-lang/gura/tree/master/sample"
