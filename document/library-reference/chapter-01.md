@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: ""
 nextpage: chapter-02.html
 ---

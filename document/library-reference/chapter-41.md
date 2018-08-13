@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-40.html
 nextpage: chapter-42.html
 ---
@@ -9,12 +10,12 @@ nextpage: chapter-42.html
 <h1><span class="caption-index-1">41</span><a name="anchor-41"></a>msico Module</h1>
 <h2><span class="caption-index-2">41.1</span><a name="anchor-41-1"></a>Overview</h2>
 <p>
-The <code>msico</code> module provides measures to read/write image data in Microsoft Icon file format. To utilize it, import the <code>msico</code> module using <code>import</code> function.
+The <code class="highlighter-rouge">msico</code> module provides measures to read/write image data in Microsoft Icon file format. To utilize it, import the <code class="highlighter-rouge">msico</code> module using <code class="highlighter-rouge">import</code> function.
 </p>
 <p>
 Below is an example to read an ICO file:
 </p>
-<pre><code>import(msico)
+<pre class="highlight"><code>import(msico)
 img = image('foo.ico')
 </code></pre>
 <p>
@@ -22,19 +23,19 @@ This module has been implemented referring to the specification: <a href="http:/
 </p>
 <h2><span class="caption-index-2">41.2</span><a name="anchor-41-2"></a>Exntension to Function's Capability</h2>
 <p>
-This module extends the capability of function <code>image()</code> and instance method <code>image#write()</code> so that they can read/write ICO files.
+This module extends the capability of function <code class="highlighter-rouge">image()</code> and instance method <code class="highlighter-rouge">image#write()</code> so that they can read/write ICO files.
 </p>
 <p>
-When function <code>image()</code> is provided with a stream that satisfies the following conditions, it would recognize the stream as a ICO file.
+When function <code class="highlighter-rouge">image()</code> is provided with a stream that satisfies the following conditions, it would recognize the stream as a ICO file.
 </p>
 <ul>
-<li>The identifier of the stream ends with a suffix "<code>.ico</code>".</li>
+<li>The identifier of the stream ends with a suffix "<code class="highlighter-rouge">.ico</code>".</li>
 </ul>
 <p>
-When instance method <code>image#write()</code> is provided with a stream that satisfies the following condition, it would write image data in ICO format.
+When instance method <code class="highlighter-rouge">image#write()</code> is provided with a stream that satisfies the following condition, it would write image data in ICO format.
 </p>
 <ul>
-<li>The identifier of the stream ends with a suffix "<code>.ico</code>".</li>
+<li>The identifier of the stream ends with a suffix "<code class="highlighter-rouge">.ico</code>".</li>
 </ul>
 <h2><span class="caption-index-2">41.3</span><a name="anchor-41-3"></a>msico.content Class</h2>
 <h3><span class="caption-index-3">41.3.1</span><a name="anchor-41-3-1"></a>Constructor</h3>
@@ -56,7 +57,7 @@ Writes an ICO image to a stream.
 </p>
 <h2><span class="caption-index-2">41.4</span><a name="anchor-41-4"></a>Extension to image Class</h2>
 <p>
-This module extends the <code>image</code> class with methods described here.
+This module extends the <code class="highlighter-rouge">image</code> class with methods described here.
 </p>
 <p>
 <div><strong style="text-decoration:underline">image#read@msico</strong></div>

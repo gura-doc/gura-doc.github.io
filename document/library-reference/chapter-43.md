@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-42.html
 nextpage: chapter-44.html
 ---
@@ -9,7 +10,7 @@ nextpage: chapter-44.html
 <h1><span class="caption-index-1">43</span><a name="anchor-43"></a>opengl Module</h1>
 <h2><span class="caption-index-2">43.1</span><a name="anchor-43-1"></a>Overview</h2>
 <p>
-The <code>opengl</code> module provides functions of OpenGL library.
+The <code class="highlighter-rouge">opengl</code> module provides functions of OpenGL library.
 </p>
 <h2><span class="caption-index-2">43.2</span><a name="anchor-43-2"></a>Module Function</h2>
 <p>

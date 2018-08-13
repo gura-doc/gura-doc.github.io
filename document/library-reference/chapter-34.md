@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-33.html
 nextpage: chapter-35.html
 ---
@@ -9,7 +10,7 @@ nextpage: chapter-35.html
 <h1><span class="caption-index-1">34</span><a name="anchor-34"></a>midi Module</h1>
 <h2><span class="caption-index-2">34.1</span><a name="anchor-34-1"></a>Overview</h2>
 <p>
-The <code>midi</code> module provides measures to read/write MIDI files. To utilize it, import the <code>midi</code> module using <code>import</code> function.
+The <code class="highlighter-rouge">midi</code> module provides measures to read/write MIDI files. To utilize it, import the <code class="highlighter-rouge">midi</code> module using <code class="highlighter-rouge">import</code> function.
 </p>
 <h2><span class="caption-index-2">34.2</span><a name="anchor-34-2"></a>Module Function</h2>
 <h2><span class="caption-index-2">34.3</span><a name="anchor-34-3"></a>midi.event Class</h2>
@@ -17,7 +18,7 @@ The <code>midi</code> module provides measures to read/write MIDI files. To util
 <p>
 <div><strong style="text-decoration:underline">midi.track#seek</strong></div>
 <div style="margin-bottom:1em"><code>midi.track#seek(offset:number, origin?:symbol):reduce</code></div>
-Moves the insertion point in the track at which the next event is inserted. If <code>origin</code> is omitted or set to <code>`set</code>, the insertion point will be set to absolute offset from the beginning. If <code>origin</code> is set to <code>`cur</code>, the insertion point will be moved by offset from the current position.
+Moves the insertion point in the track at which the next event is inserted. If <code class="highlighter-rouge">origin</code> is omitted or set to <code class="highlighter-rouge">`set</code>, the insertion point will be set to absolute offset from the beginning. If <code class="highlighter-rouge">origin</code> is set to <code class="highlighter-rouge">`cur</code>, the insertion point will be moved by offset from the current position.
 </p>
 <p>
 <div><strong style="text-decoration:underline">midi.track#tell</strong></div>
@@ -27,15 +28,15 @@ Returns the current insertion point in the track.
 <p>
 <div><strong style="text-decoration:underline">midi.track#erase</strong></div>
 <div style="margin-bottom:1em"><code>midi.track#erase(n?:number):reduce</code></div>
-Deletes an event at the current insertion point in the track. The argument <code>n</code> specifies the number of events to be deleted. If <code>n</code> is omitted, one event will be deleted.
+Deletes an event at the current insertion point in the track. The argument <code class="highlighter-rouge">n</code> specifies the number of events to be deleted. If <code class="highlighter-rouge">n</code> is omitted, one event will be deleted.
 </p>
 <p>
 <div><strong style="text-decoration:underline">midi.track#mml</strong></div>
 <div style="margin-bottom:1em"><code>midi.track#mml(str:string, max_velocity?:number):map:reduce</code></div>
-Parses MML in the string <code>str</code> and inserts resulted MIDI events at the current insertion point in the track.
+Parses MML in the string <code class="highlighter-rouge">str</code> and inserts resulted MIDI events at the current insertion point in the track.
 </p>
 <p>
-The argument <code>max_velocity</code> specifies the maximum number of velocity in the MML. If omitted, it will be set to 127.
+The argument <code class="highlighter-rouge">max_velocity</code> specifies the maximum number of velocity in the MML. If omitted, it will be set to 127.
 </p>
 <p>
 <div><strong style="text-decoration:underline">midi.track#note_off</strong></div>

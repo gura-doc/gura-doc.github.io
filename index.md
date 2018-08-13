@@ -5,17 +5,18 @@ title: top
 ---
 <div class="jumbotron">
   <div class="container-fluid">
-	<h1 class="display-4">Gura Programming Language</h1>
+	<h1 class="display-4">Gura Programming Language
+	  <span class="float-right">
+		<a class="btn btn-secondary" href="/download/">
+		  <i class="fas fa-download mr-2"></i>Download
+		</a>
+		<a class="btn btn-secondary" href="https://github.com/gura-lang/gura">
+		  <i class="fab fa-github mr-2"></i>View on GitHub
+		</a>
+	  </span>
+	</h1>
 	<p class="lead">
 	  A programming language that comes with powerful operation on iterators.
-	</p>
-	<p>
-	  <a class="btn btn-primary" href="/download/">
-		<i class="fas fa-download mr-2"></i>Download
-	  </a>
-	  <a class="btn btn-primary ml-2" href="https://github.com/gura-lang/gura">
-		<i class="fab fa-github mr-2"></i>View on GitHub
-	  </a>
 	</p>
   </div>
 </div>

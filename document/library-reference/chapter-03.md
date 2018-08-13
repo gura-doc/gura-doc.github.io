@@ -2,13 +2,14 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-02.html
 nextpage: chapter-04.html
 ---
 {% raw %}
 <h1><span class="caption-index-1">3</span><a name="anchor-3"></a>Predefined Variables</h1>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Variable</th>

@@ -4,9 +4,10 @@ import(markdown)
 Renderer@jekyll = class(markdown.Renderer@html) {
 	tmpl@headerForPage:public = R'''
 	---
-	layout: page
+	layout: document
 	lang: en
 	title: ${title}
+	doctitle: ${title}
 	prevpage: ${prevPage}
 	nextpage: ${nextPage}
 	---
@@ -139,9 +140,6 @@ output@pdf(doc:markdown.document, baseName:string, title:string, author:string, 
 }
 
 output@jekyllnavi(doc:markdown.document, dirNameOut:string, title:string) = {
-	tmpl@header = R'''
-	<div class="sidebar-header font-weight-bold mb-2 mt-2 pt-2 pb-2 rounded">${title}</div>
-	'''T
 	itemListRoot = []
 	itemStack = []
 	itemList = itemListRoot
@@ -165,7 +163,6 @@ output@jekyllnavi(doc:markdown.document, dirNameOut:string, title:string) = {
 	fileNameNavi = path.join(dirNameOut, 'navi.html')
 	println('rendering ', path.filename(fileNameNavi))
 	open(fileNameNavi, 'w') {|out|
-		tmpl@header.render(out)
 		out.println('<div classs="list-group">')
 		printNaviItems(out, itemListRoot)
 		out.println('</div>')

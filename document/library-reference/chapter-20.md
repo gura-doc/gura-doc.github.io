@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-19.html
 nextpage: chapter-21.html
 ---
@@ -9,7 +10,7 @@ nextpage: chapter-21.html
 <h1><span class="caption-index-1">20</span><a name="anchor-20"></a>freetype Module</h1>
 <h2><span class="caption-index-2">20.1</span><a name="anchor-20-1"></a>Overview</h2>
 <p>
-The <code>freetype</code> module provices measures to access vectorized font data using freetype library. To utilize it, import the <code>freetype</code> module using <code>import</code> function.
+The <code class="highlighter-rouge">freetype</code> module provices measures to access vectorized font data using freetype library. To utilize it, import the <code class="highlighter-rouge">freetype</code> module using <code class="highlighter-rouge">import</code> function.
 </p>
 <h2><span class="caption-index-2">20.2</span><a name="anchor-20-2"></a>Module Function</h2>
 <p>
@@ -174,7 +175,7 @@ Draws a text on the image.
 </p>
 <h2><span class="caption-index-2">20.26</span><a name="anchor-20-26"></a>Extension to image Class</h2>
 <p>
-This module extends the <code>image</code> class with methods described here.
+This module extends the <code class="highlighter-rouge">image</code> class with methods described here.
 </p>
 <p>
 <div><strong style="text-decoration:underline">image#drawtext</strong></div>

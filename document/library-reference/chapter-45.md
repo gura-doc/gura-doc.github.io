@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-44.html
 nextpage: chapter-46.html
 ---
@@ -9,22 +10,22 @@ nextpage: chapter-46.html
 <h1><span class="caption-index-1">45</span><a name="anchor-45"></a>path Module</h1>
 <h2><span class="caption-index-2">45.1</span><a name="anchor-45-1"></a>Overview</h2>
 <p>
-The <code>path</code> module provides functions related to path operations. This is a built-in module, so you can use it without being imported.
+The <code class="highlighter-rouge">path</code> module provides functions related to path operations. This is a built-in module, so you can use it without being imported.
 </p>
 <p>
 Below is an example to list path names that exist in the current directory.
 </p>
-<pre><code>println(path.dir('.'))
+<pre class="highlight"><code>println(path.dir('.'))
 </code></pre>
 <p>
 Below is an example to list path names that exist in the current directory and its child directories.
 </p>
-<pre><code>println(path.walk('.'))
+<pre class="highlight"><code>println(path.walk('.'))
 </code></pre>
 <p>
-Below is an example to list path names that matches a wild card pattern "<code>*.txt</code>".
+Below is an example to list path names that matches a wild card pattern "<code class="highlighter-rouge">*.txt</code>".
 </p>
-<pre><code>println(path.glob('*.txt'))
+<pre class="highlight"><code>println(path.glob('*.txt'))
 </code></pre>
 <h2><span class="caption-index-2">45.2</span><a name="anchor-45-2"></a>Module Function</h2>
 <p>
@@ -53,24 +54,24 @@ Returns a path name after eliminating its bottom part.
 Creates an iterator that lists item names in the specified directory. If pathname is omitted, the current directory shall be listed.
 </p>
 <p>
-Though the default sensitiveness of character cases during pattern matching depends on the target directory, it can be changed by attributes <code>:case</code> for case-sensitive and <code>:icase</code> for case-insensitive.
+Though the default sensitiveness of character cases during pattern matching depends on the target directory, it can be changed by attributes <code class="highlighter-rouge">:case</code> for case-sensitive and <code class="highlighter-rouge">:icase</code> for case-insensitive.
 </p>
 <p>
 In default, this returns an iterator as its result value. Specifying the following attributes would customize the returned value:
 </p>
 <ul>
-<li><code>:iter</code> .. An iterator. This is the default behavior.</li>
-<li><code>:xiter</code> .. An iterator that eliminates <code>nil</code> from its elements.</li>
-<li><code>:list</code> .. A list.</li>
-<li><code>:xlist</code> .. A list that eliminates <code>nil</code> from its elements.</li>
-<li><code>:set</code> ..  A list that eliminates duplicated values from its elements.</li>
-<li><code>:xset</code> .. A list that eliminates duplicated values and <code>nil</code> from its elements.</li>
+<li><code class="highlighter-rouge">:iter</code> .. An iterator. This is the default behavior.</li>
+<li><code class="highlighter-rouge">:xiter</code> .. An iterator that eliminates <code class="highlighter-rouge">nil</code> from its elements.</li>
+<li><code class="highlighter-rouge">:list</code> .. A list.</li>
+<li><code class="highlighter-rouge">:xlist</code> .. A list that eliminates <code class="highlighter-rouge">nil</code> from its elements.</li>
+<li><code class="highlighter-rouge">:set</code> ..  A list that eliminates duplicated values from its elements.</li>
+<li><code class="highlighter-rouge">:xset</code> .. A list that eliminates duplicated values and <code class="highlighter-rouge">nil</code> from its elements.</li>
 </ul>
 <p>
 See the chapter of Mapping Process in Gura Language Manual for the detail.
 </p>
 <p>
-If a block is specified, it would be evaluated repeatingly with block parameters <code>|value, idx:number|</code> where <code>value</code> is the iterated value and <code>idx</code> the loop index starting from zero. In this case, the last evaluated value of the block would be the result value. If one of the attributes listed above is specified, an iterator or a list of the evaluated value would be returned.
+If a block is specified, it would be evaluated repeatingly with block parameters <code class="highlighter-rouge">|value, idx:number|</code> where <code class="highlighter-rouge">value</code> is the iterated value and <code class="highlighter-rouge">idx</code> the loop index starting from zero. In this case, the last evaluated value of the block would be the result value. If one of the attributes listed above is specified, an iterator or a list of the evaluated value would be returned.
 </p>
 <p>
 <div><strong style="text-decoration:underline">path.dirname</strong></div>
@@ -98,24 +99,24 @@ Splits a pathname by a directory separator and returns a file name part.
 Creates an iterator for item names that match with a pattern supporting UNIX shell-style wild cards. In default, case of characters is distinguished.
 </p>
 <p>
-Though the default sensitiveness of character cases during pattern matching depends on the current platform, it can be changed by attributes <code>:case</code> for case-sensitive and <code>:icase</code> for case-insensitive.
+Though the default sensitiveness of character cases during pattern matching depends on the current platform, it can be changed by attributes <code class="highlighter-rouge">:case</code> for case-sensitive and <code class="highlighter-rouge">:icase</code> for case-insensitive.
 </p>
 <p>
 In default, this returns an iterator as its result value. Specifying the following attributes would customize the returned value:
 </p>
 <ul>
-<li><code>:iter</code> .. An iterator. This is the default behavior.</li>
-<li><code>:xiter</code> .. An iterator that eliminates <code>nil</code> from its elements.</li>
-<li><code>:list</code> .. A list.</li>
-<li><code>:xlist</code> .. A list that eliminates <code>nil</code> from its elements.</li>
-<li><code>:set</code> ..  A list that eliminates duplicated values from its elements.</li>
-<li><code>:xset</code> .. A list that eliminates duplicated values and <code>nil</code> from its elements.</li>
+<li><code class="highlighter-rouge">:iter</code> .. An iterator. This is the default behavior.</li>
+<li><code class="highlighter-rouge">:xiter</code> .. An iterator that eliminates <code class="highlighter-rouge">nil</code> from its elements.</li>
+<li><code class="highlighter-rouge">:list</code> .. A list.</li>
+<li><code class="highlighter-rouge">:xlist</code> .. A list that eliminates <code class="highlighter-rouge">nil</code> from its elements.</li>
+<li><code class="highlighter-rouge">:set</code> ..  A list that eliminates duplicated values from its elements.</li>
+<li><code class="highlighter-rouge">:xset</code> .. A list that eliminates duplicated values and <code class="highlighter-rouge">nil</code> from its elements.</li>
 </ul>
 <p>
 See the chapter of Mapping Process in Gura Language Manual for the detail.
 </p>
 <p>
-If a block is specified, it would be evaluated repeatingly with block parameters <code>|value, idx:number|</code> where <code>value</code> is the iterated value and <code>idx</code> the loop index starting from zero. In this case, the last evaluated value of the block would be the result value. If one of the attributes listed above is specified, an iterator or a list of the evaluated value would be returned.
+If a block is specified, it would be evaluated repeatingly with block parameters <code class="highlighter-rouge">|value, idx:number|</code> where <code class="highlighter-rouge">value</code> is the iterated value and <code class="highlighter-rouge">idx</code> the loop index starting from zero. In this case, the last evaluated value of the block would be the result value. If one of the attributes listed above is specified, an iterator or a list of the evaluated value would be returned.
 </p>
 <p>
 <div><strong style="text-decoration:underline">path.join</strong></div>
@@ -128,7 +129,7 @@ Returns a path name that joins given strings with directory separators.
 Returns true if a name matches with a pattern that supports UNIX shell-style wild cards.
 </p>
 <p>
-Though the default sensitiveness of character cases depends on the current platform, it can be changed by attributes <code>:case</code> for case-sensitive and <code>:icase</code> for case-insensitive.
+Though the default sensitiveness of character cases depends on the current platform, it can be changed by attributes <code class="highlighter-rouge">:case</code> for case-sensitive and <code class="highlighter-rouge">:icase</code> for case-insensitive.
 </p>
 <p>
 <div><strong style="text-decoration:underline">path.regulate</strong></div>
@@ -153,27 +154,27 @@ Returns a stat object associated with the specified item.
 <p>
 <div><strong style="text-decoration:underline">path.walk</strong></div>
 <div style="margin-bottom:1em"><code>path.walk(directory?:directory, maxdepth?:number, pattern*:string):flat:map:[case,dir,file,icase,stat] {block?}</code></div>
-Creates an iterator that recursively lists item names under the specified directory. If <code>directory</code> is omitted, search starts at the current directory.
+Creates an iterator that recursively lists item names under the specified directory. If <code class="highlighter-rouge">directory</code> is omitted, search starts at the current directory.
 </p>
 <p>
-Though the default sensitiveness of character cases during pattern matching depends on the target directory, it can be changed by attributes <code>:case</code> for case-sensitive and <code>:icase</code> for case-insensitive.
+Though the default sensitiveness of character cases during pattern matching depends on the target directory, it can be changed by attributes <code class="highlighter-rouge">:case</code> for case-sensitive and <code class="highlighter-rouge">:icase</code> for case-insensitive.
 </p>
 <p>
 In default, this returns an iterator as its result value. Specifying the following attributes would customize the returned value:
 </p>
 <ul>
-<li><code>:iter</code> .. An iterator. This is the default behavior.</li>
-<li><code>:xiter</code> .. An iterator that eliminates <code>nil</code> from its elements.</li>
-<li><code>:list</code> .. A list.</li>
-<li><code>:xlist</code> .. A list that eliminates <code>nil</code> from its elements.</li>
-<li><code>:set</code> ..  A list that eliminates duplicated values from its elements.</li>
-<li><code>:xset</code> .. A list that eliminates duplicated values and <code>nil</code> from its elements.</li>
+<li><code class="highlighter-rouge">:iter</code> .. An iterator. This is the default behavior.</li>
+<li><code class="highlighter-rouge">:xiter</code> .. An iterator that eliminates <code class="highlighter-rouge">nil</code> from its elements.</li>
+<li><code class="highlighter-rouge">:list</code> .. A list.</li>
+<li><code class="highlighter-rouge">:xlist</code> .. A list that eliminates <code class="highlighter-rouge">nil</code> from its elements.</li>
+<li><code class="highlighter-rouge">:set</code> ..  A list that eliminates duplicated values from its elements.</li>
+<li><code class="highlighter-rouge">:xset</code> .. A list that eliminates duplicated values and <code class="highlighter-rouge">nil</code> from its elements.</li>
 </ul>
 <p>
 See the chapter of Mapping Process in Gura Language Manual for the detail.
 </p>
 <p>
-If a block is specified, it would be evaluated repeatingly with block parameters <code>|value, idx:number|</code> where <code>value</code> is the iterated value and <code>idx</code> the loop index starting from zero. In this case, the last evaluated value of the block would be the result value. If one of the attributes listed above is specified, an iterator or a list of the evaluated value would be returned.
+If a block is specified, it would be evaluated repeatingly with block parameters <code class="highlighter-rouge">|value, idx:number|</code> where <code class="highlighter-rouge">value</code> is the iterated value and <code class="highlighter-rouge">idx</code> the loop index starting from zero. In this case, the last evaluated value of the block would be the result value. If one of the attributes listed above is specified, an iterator or a list of the evaluated value would be returned.
 </p>
 <p />
 

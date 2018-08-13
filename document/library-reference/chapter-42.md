@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-41.html
 nextpage: chapter-43.html
 ---
@@ -9,21 +10,21 @@ nextpage: chapter-43.html
 <h1><span class="caption-index-1">42</span><a name="anchor-42"></a>mtp Module</h1>
 <h2><span class="caption-index-2">42.1</span><a name="anchor-42-1"></a>Overview</h2>
 <p>
-The <code>mtp</code> module provides measures to read/write data on a mobile platform like an Android device.
+The <code class="highlighter-rouge">mtp</code> module provides measures to read/write data on a mobile platform like an Android device.
 </p>
 <h2><span class="caption-index-2">42.2</span><a name="anchor-42-2"></a>Module Function</h2>
 <p>
 <div><strong style="text-decoration:underline">mtp.detect_devices</strong></div>
 <div style="margin-bottom:1em"><code>mtp.detect_devices() {block?}</code></div>
-Detects MTP devices and returns a list of <code>mtp.device</code> instances.
+Detects MTP devices and returns a list of <code class="highlighter-rouge">mtp.device</code> instances.
 </p>
 <h2><span class="caption-index-2">42.3</span><a name="anchor-42-3"></a>mtp.device Class</h2>
 <h3><span class="caption-index-3">42.3.1</span><a name="anchor-42-3-1"></a>Property</h3>
 <p>
-A <code>mtp.device</code> instance has the following properties:
+A <code class="highlighter-rouge">mtp.device</code> instance has the following properties:
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Property</th>
@@ -69,7 +70,7 @@ Manufacturer name.</td>
 R</td>
 
 <td>
-Returns a list of <code>mtp.storage</code> instances.</td>
+Returns a list of <code class="highlighter-rouge">mtp.storage</code> instances.</td>
 </tr>
 
 
@@ -79,10 +80,10 @@ Returns a list of <code>mtp.storage</code> instances.</td>
 <h2><span class="caption-index-2">42.4</span><a name="anchor-42-4"></a>mtp.storage Class</h2>
 <h3><span class="caption-index-3">42.4.1</span><a name="anchor-42-4-1"></a>Property</h3>
 <p>
-A <code>mtp.storage</code> instance has the following properties:
+A <code class="highlighter-rouge">mtp.storage</code> instance has the following properties:
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Property</th>
@@ -104,7 +105,7 @@ Note</th>
 R</td>
 
 <td>
-Returns one of the symbols: <code>`ReadWrite</code>, <code>`ReadOnly</code>, <code>`ReadOnlyWithObjectDeletion</code></td>
+Returns one of the symbols: <code class="highlighter-rouge">`ReadWrite</code>, <code class="highlighter-rouge">`ReadOnly</code>, <code class="highlighter-rouge">`ReadOnlyWithObjectDeletion</code></td>
 </tr>
 
 <tr>
@@ -116,7 +117,7 @@ Returns one of the symbols: <code>`ReadWrite</code>, <code>`ReadOnly</code>, <co
 R</td>
 
 <td>
-Returns one of the syhmbols: <code>`Undefined</code>, <code>`GenericFlat</code>, <code>`GenericHierarchical</code>, <code>`DCF</code></td>
+Returns one of the syhmbols: <code class="highlighter-rouge">`Undefined</code>, <code class="highlighter-rouge">`GenericFlat</code>, <code class="highlighter-rouge">`GenericHierarchical</code>, <code class="highlighter-rouge">`DCF</code></td>
 </tr>
 
 <tr>
@@ -176,7 +177,7 @@ Storage description.</td>
 R</td>
 
 <td>
-Returns one of the symbols: <code>`Undefined</code>, <code>`FixedROM</code>, <code>`RemovableROM</code>, <code>`FixedRAM</code>, <code>`RemovableRAM</code></td>
+Returns one of the symbols: <code class="highlighter-rouge">`Undefined</code>, <code class="highlighter-rouge">`FixedROM</code>, <code class="highlighter-rouge">`RemovableROM</code>, <code class="highlighter-rouge">`FixedRAM</code>, <code class="highlighter-rouge">`RemovableRAM</code></td>
 </tr>
 
 <tr>
@@ -219,10 +220,10 @@ Volume identifier.</td>
 <h2><span class="caption-index-2">42.5</span><a name="anchor-42-5"></a>mtp.stat Class</h2>
 <h3><span class="caption-index-3">42.5.1</span><a name="anchor-42-5-1"></a>Property</h3>
 <p>
-A <code>mtp.stat</code> instance has the following properties:
+A <code class="highlighter-rouge">mtp.stat</code> instance has the following properties:
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Property</th>
@@ -268,7 +269,7 @@ Filename.</td>
 R</td>
 
 <td>
-Returns <code>true</code> for a directory and <code>false</code> for a file.</td>
+Returns <code class="highlighter-rouge">true</code> for a directory and <code class="highlighter-rouge">false</code> for a file.</td>
 </tr>
 
 <tr>
@@ -280,7 +281,7 @@ Returns <code>true</code> for a directory and <code>false</code> for a file.</td
 R</td>
 
 <td>
-Returns a <code>datetime</code> instance indicating the modification time stamp.</td>
+Returns a <code class="highlighter-rouge">datetime</code> instance indicating the modification time stamp.</td>
 </tr>
 
 <tr>

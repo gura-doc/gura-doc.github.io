@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-39.html
 nextpage: chapter-41.html
 ---
@@ -9,12 +10,12 @@ nextpage: chapter-41.html
 <h1><span class="caption-index-1">40</span><a name="anchor-40"></a>model.stl Module</h1>
 <h2><span class="caption-index-2">40.1</span><a name="anchor-40-1"></a>Overview</h2>
 <p>
-The <code>model.stl</code> module provides measures to read/write files in STL format for 3D models.
+The <code class="highlighter-rouge">model.stl</code> module provides measures to read/write files in STL format for 3D models.
 </p>
 <p>
 Below is an example to read a STL file and to print information of faces it contains.
 </p>
-<pre><code>solid = model.stl.solid('example.stl')
+<pre class="highlight"><code>solid = model.stl.solid('example.stl')
 println(solid.name || solid.header)
 solid.faces.each {|face|
     printf('normal:  %g, %g, %g\n', face.normal.x, face.normal.y, face.normal.z)
@@ -25,11 +26,11 @@ solid.faces.each {|face|
 </code></pre>
 <h2><span class="caption-index-2">40.2</span><a name="anchor-40-2"></a>model.stl.face Class</h2>
 <p>
-An instance of <code>model.stl.face</code> class provides properties of face that consists of one normal vector and three vertices.
+An instance of <code class="highlighter-rouge">model.stl.face</code> class provides properties of face that consists of one normal vector and three vertices.
 </p>
 <h3><span class="caption-index-3">40.2.1</span><a name="anchor-40-2-1"></a>Property</h3>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Property</th>
@@ -99,11 +100,11 @@ R</td>
 </p>
 <h2><span class="caption-index-2">40.3</span><a name="anchor-40-3"></a>model.stl.solid Class</h2>
 <p>
-An instance of <code>model.stl.solid</code> class represents a top-level data in STL format.
+An instance of <code class="highlighter-rouge">model.stl.solid</code> class represents a top-level data in STL format.
 </p>
 <h3><span class="caption-index-3">40.3.1</span><a name="anchor-40-3-1"></a>Property</h3>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 Property</th>
@@ -162,10 +163,10 @@ An iterator that returns instances of <code>model.stl.face</code>.</td>
 <p>
 <div><strong style="text-decoration:underline">stl.solid</strong></div>
 <div style="margin-bottom:1em"><code>stl.solid(stream:stream) {block?}</code></div>
-Parses a file in STL format from <code>stream</code> and creates an instance of <code>model.stl.solid</code> that contains an iterator of <code>model.stl.face</code> representing faces in the STL. It can read both binary and ASCII format of STL.
+Parses a file in STL format from <code class="highlighter-rouge">stream</code> and creates an instance of <code class="highlighter-rouge">model.stl.solid</code> that contains an iterator of <code class="highlighter-rouge">model.stl.face</code> representing faces in the STL. It can read both binary and ASCII format of STL.
 </p>
 <p>
-If <code>block</code> is specified, it would be evaluated with a block parameter <code>|solid:model.stl.solid|</code>, where <code>solid</code> is the created instance. In this case, the block's result would become the function's returned value.
+If <code class="highlighter-rouge">block</code> is specified, it would be evaluated with a block parameter <code class="highlighter-rouge">|solid:model.stl.solid|</code>, where <code class="highlighter-rouge">solid</code> is the created instance. In this case, the block's result would become the function's returned value.
 </p>
 <p />
 

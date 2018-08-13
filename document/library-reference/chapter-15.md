@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-14.html
 nextpage: chapter-16.html
 ---
@@ -9,7 +10,7 @@ nextpage: chapter-16.html
 <h1><span class="caption-index-1">15</span><a name="anchor-15"></a>curl Module</h1>
 <h2><span class="caption-index-2">15.1</span><a name="anchor-15-1"></a>Overview</h2>
 <p>
-The <code>curl</code> module provices measures to access Internet resources using cURL library. To utilize it, import the <code>curl</code> module using <code>import</code> function.
+The <code class="highlighter-rouge">curl</code> module provices measures to access Internet resources using cURL library. To utilize it, import the <code class="highlighter-rouge">curl</code> module using <code class="highlighter-rouge">import</code> function.
 </p>
 <h2><span class="caption-index-2">15.2</span><a name="anchor-15-2"></a>Module Function</h2>
 <p>

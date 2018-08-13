@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-26.html
 nextpage: chapter-28.html
 ---
@@ -9,18 +10,18 @@ nextpage: chapter-28.html
 <h1><span class="caption-index-1">27</span><a name="anchor-27"></a>gzip Module</h1>
 <h2><span class="caption-index-2">27.1</span><a name="anchor-27-1"></a>Overview</h2>
 <p>
-The <code>gzip</code> module provides measures to read/write GZIP files. To utilize it, import the <code>gzip</code> module using <code>import</code> function.
+The <code class="highlighter-rouge">gzip</code> module provides measures to read/write GZIP files. To utilize it, import the <code class="highlighter-rouge">gzip</code> module using <code class="highlighter-rouge">import</code> function.
 </p>
 <p>
 Below is an example to read data from a GZIP file and write its uncompressed data to another file.
 </p>
-<pre><code>import(gzip)
+<pre class="highlight"><code>import(gzip)
 gzip.reader('foo.dat.gz').copyto('foo.dat')
 </code></pre>
 <p>
 Below is an example to read data from a file and write its compressed data to a GZIP file.
 </p>
-<pre><code>import(gzip)
+<pre class="highlight"><code>import(gzip)
 gzip.writer('foo.dat.gz').copyfrom('foo.dat')
 </code></pre>
 <h2><span class="caption-index-2">27.2</span><a name="anchor-27-2"></a>Module Function</h2>
@@ -36,7 +37,7 @@ gzip.writer('foo.dat.gz').copyfrom('foo.dat')
 </p>
 <h2><span class="caption-index-2">27.3</span><a name="anchor-27-3"></a>Extension to stream Class</h2>
 <p>
-This module extends the <code>stream</code> class with methods described here.
+This module extends the <code class="highlighter-rouge">stream</code> class with methods described here.
 </p>
 <p>
 <div><strong style="text-decoration:underline">stream#reader@gzip</strong></div>

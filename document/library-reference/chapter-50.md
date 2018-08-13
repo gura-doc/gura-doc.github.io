@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-49.html
 nextpage: chapter-51.html
 ---
@@ -9,7 +10,7 @@ nextpage: chapter-51.html
 <h1><span class="caption-index-1">50</span><a name="anchor-50"></a>sdl2 Module</h1>
 <h2><span class="caption-index-2">50.1</span><a name="anchor-50-1"></a>Overview</h2>
 <p>
-The <code>sdl2</code> module provices functions of SDL2 library.
+The <code class="highlighter-rouge">sdl2</code> module provices functions of SDL2 library.
 </p>
 <h2><span class="caption-index-2">50.2</span><a name="anchor-50-2"></a>Module Function</h2>
 <p>
@@ -21,21 +22,21 @@ Use this function to initialize the SDL library. This must be called before usin
 The Event Handling, File I/O, and Threading subsystems are initialized by default. You must specifically initialize other subsystems if you use them in your application.
 </p>
 <p>
-<code>flags</code> may be any of the following OR'd together:
+<code class="highlighter-rouge">flags</code> may be any of the following OR'd together:
 </p>
 <ul>
-<li><code>sdl2.INIT_TIMER</code> .. timer subsystem</li>
-<li><code>sdl2.INIT_AUDIO</code> .. audio subsystem</li>
-<li><code>sdl2.INIT_VIDEO</code> .. video subsystem</li>
-<li><code>sdl2.INIT_JOYSTICK</code> .. joystick subsystem</li>
-<li><code>sdl2.INIT_HAPTIC</code> .. haptic (force feedback) subsystem</li>
-<li><code>sdl2.INIT_GAMECONTROLLER</code> .. controller subsystem</li>
-<li><code>sdl2.INIT_EVENTS</code> .. events subsystem</li>
-<li><code>sdl2.INIT_EVERYTHING</code> .. all of the above subsystems</li>
-<li><code>sdl2.INIT_NOPARACHUTE</code> .. compatibility; this flag is ignored</li>
+<li><code class="highlighter-rouge">sdl2.INIT_TIMER</code> .. timer subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_AUDIO</code> .. audio subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_VIDEO</code> .. video subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_JOYSTICK</code> .. joystick subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_HAPTIC</code> .. haptic (force feedback) subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_GAMECONTROLLER</code> .. controller subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_EVENTS</code> .. events subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_EVERYTHING</code> .. all of the above subsystems</li>
+<li><code class="highlighter-rouge">sdl2.INIT_NOPARACHUTE</code> .. compatibility; this flag is ignored</li>
 </ul>
 <p>
-If you want to initialize subsystems separately you would call <code>SDL_Init(0)</code> followed by <code>SDL_InitSubSystem()</code> with the desired subsystem flag.
+If you want to initialize subsystems separately you would call <code class="highlighter-rouge">SDL_Init(0)</code> followed by <code class="highlighter-rouge">SDL_InitSubSystem()</code> with the desired subsystem flag.
 </p>
 <p>
 <div><strong style="text-decoration:underline">sdl2.InitSubSystem</strong></div>
@@ -43,24 +44,24 @@ If you want to initialize subsystems separately you would call <code>SDL_Init(0)
 Use this function to initialize specific SDL subsystems.
 </p>
 <p>
-After SDL has been initialized with <code>SDL_Init()</code> you may initialize uninitialized subsystems with <code>SDL_InitSubSystem()</code>.
+After SDL has been initialized with <code class="highlighter-rouge">SDL_Init()</code> you may initialize uninitialized subsystems with <code class="highlighter-rouge">SDL_InitSubSystem()</code>.
 </p>
 <p>
-These are the flags which may be passed to <code>SDL_InitSubSystem()</code> and may be OR'd together to initialize multiple subsystems simultaneously.
+These are the flags which may be passed to <code class="highlighter-rouge">SDL_InitSubSystem()</code> and may be OR'd together to initialize multiple subsystems simultaneously.
 </p>
 <ul>
-<li><code>sdl2.INIT_TIMER</code> .. timer subsystem</li>
-<li><code>sdl2.INIT_AUDIO</code> .. audio subsystem</li>
-<li><code>sdl2.INIT_VIDEO</code> .. video subsystem</li>
-<li><code>sdl2.INIT_JOYSTICK</code> .. joystick subsystem</li>
-<li><code>sdl2.INIT_HAPTIC</code> .. haptic (force feedback) subsystem</li>
-<li><code>sdl2.INIT_GAMECONTROLLER</code> .. controller subsystem</li>
-<li><code>sdl2.INIT_EVENTS</code> .. events subsystem</li>
-<li><code>sdl2.INIT_EVERYTHING</code> .. all of the above subsystems</li>
-<li><code>sdl2.INIT_NOPARACHUTE</code> .. compatibility; this flag is ignored</li>
+<li><code class="highlighter-rouge">sdl2.INIT_TIMER</code> .. timer subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_AUDIO</code> .. audio subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_VIDEO</code> .. video subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_JOYSTICK</code> .. joystick subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_HAPTIC</code> .. haptic (force feedback) subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_GAMECONTROLLER</code> .. controller subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_EVENTS</code> .. events subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_EVERYTHING</code> .. all of the above subsystems</li>
+<li><code class="highlighter-rouge">sdl2.INIT_NOPARACHUTE</code> .. compatibility; this flag is ignored</li>
 </ul>
 <p>
-If you want to initialize subsystems separately you would call <code>SDL_Init(0)</code> followed by <code>SDL_InitSubSystem()</code> with the desired subsystem flag.
+If you want to initialize subsystems separately you would call <code class="highlighter-rouge">SDL_Init(0)</code> followed by <code class="highlighter-rouge">SDL_InitSubSystem()</code> with the desired subsystem flag.
 </p>
 <p>
 <div><strong style="text-decoration:underline">sdl2.Quit</strong></div>
@@ -68,13 +69,13 @@ If you want to initialize subsystems separately you would call <code>SDL_Init(0)
 Use this function to clean up all initialized subsystems. You should call it upon all exit conditions.
 </p>
 <p>
-You should call this function even if you have already shutdown each initialized subsystem with <code>SDL_QuitSubSystem()</code>.
+You should call this function even if you have already shutdown each initialized subsystem with <code class="highlighter-rouge">SDL_QuitSubSystem()</code>.
 </p>
 <p>
-If you start a subsystem using a call to that subsystem's init function (for example <code>SDL_VideoInit()</code>) instead of <code>SDL_Init()</code> or <code>SDL_InitSubSystem()</code>, then you must use that subsystem's quit function (<code>SDL_VideoQuit()</code>) to shut it down before calling <code>SDL_Quit()</code>.
+If you start a subsystem using a call to that subsystem's init function (for example <code class="highlighter-rouge">SDL_VideoInit()</code>) instead of <code class="highlighter-rouge">SDL_Init()</code> or <code class="highlighter-rouge">SDL_InitSubSystem()</code>, then you must use that subsystem's quit function (<code class="highlighter-rouge">SDL_VideoQuit()</code>) to shut it down before calling <code class="highlighter-rouge">SDL_Quit()</code>.
 </p>
 <p>
-You can use this function with <code>atexit()</code> to ensure that it is run when your application is shutdown, but it is not wise to do this from a library or other dynamically loaded code.
+You can use this function with <code class="highlighter-rouge">atexit()</code> to ensure that it is run when your application is shutdown, but it is not wise to do this from a library or other dynamically loaded code.
 </p>
 <p>
 <div><strong style="text-decoration:underline">sdl2.QuitSubSystem</strong></div>
@@ -82,29 +83,29 @@ You can use this function with <code>atexit()</code> to ensure that it is run wh
 Use this function to shut down specific SDL subsystems.
 </p>
 <p>
-These are the flags which may be passed to <code>SDL_QuitSubSystem()</code> and may be OR'd together to quit multiple subsystems simultaneously.
+These are the flags which may be passed to <code class="highlighter-rouge">SDL_QuitSubSystem()</code> and may be OR'd together to quit multiple subsystems simultaneously.
 </p>
 <ul>
-<li><code>sdl2.INIT_TIMER</code> .. timer subsystem</li>
-<li><code>sdl2.INIT_AUDIO</code> .. audio subsystem</li>
-<li><code>sdl2.INIT_VIDEO</code> .. video subsystem</li>
-<li><code>sdl2.INIT_JOYSTICK</code> .. joystick subsystem</li>
-<li><code>sdl2.INIT_HAPTIC</code> .. haptic (force feedback) subsystem</li>
-<li><code>sdl2.INIT_GAMECONTROLLER</code> .. controller subsystem</li>
-<li><code>sdl2.INIT_EVENTS</code> .. events subsystem</li>
-<li><code>sdl2.INIT_EVERYTHING</code> .. all of the above subsystems</li>
-<li><code>sdl2.INIT_NOPARACHUTE</code> .. compatibility; this flag is ignored</li>
+<li><code class="highlighter-rouge">sdl2.INIT_TIMER</code> .. timer subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_AUDIO</code> .. audio subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_VIDEO</code> .. video subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_JOYSTICK</code> .. joystick subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_HAPTIC</code> .. haptic (force feedback) subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_GAMECONTROLLER</code> .. controller subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_EVENTS</code> .. events subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_EVERYTHING</code> .. all of the above subsystems</li>
+<li><code class="highlighter-rouge">sdl2.INIT_NOPARACHUTE</code> .. compatibility; this flag is ignored</li>
 </ul>
 <p>
-If you want to initialize subsystems separately you would call <code>SDL_Init(0)</code> followed by <code>SDL_InitSubSystem()</code> with the desired subsystem flag.
+If you want to initialize subsystems separately you would call <code class="highlighter-rouge">SDL_Init(0)</code> followed by <code class="highlighter-rouge">SDL_InitSubSystem()</code> with the desired subsystem flag.
 </p>
 <p>
 <div><strong style="text-decoration:underline">sdl2.SetMainReady</strong></div>
 <div style="margin-bottom:1em"><code>sdl2.SetMainReady():void</code></div>
-Use this function to circumvent failure of <code>SDL_Init()</code> when not using <code>SDL_main()</code> as an entry point.
+Use this function to circumvent failure of <code class="highlighter-rouge">SDL_Init()</code> when not using <code class="highlighter-rouge">SDL_main()</code> as an entry point.
 </p>
 <p>
-This function is defined in SDL_main.h, along with the preprocessor rule to redefine <code>main()</code> as <code>SDL_main()</code>. Thus to ensure that your <code>main()</code> function will not be changed it is necessary to define <code>SDL_MAIN_HANDLED</code> before including SDL.h.
+This function is defined in SDL_main.h, along with the preprocessor rule to redefine <code class="highlighter-rouge">main()</code> as <code class="highlighter-rouge">SDL_main()</code>. Thus to ensure that your <code class="highlighter-rouge">main()</code> function will not be changed it is necessary to define <code class="highlighter-rouge">SDL_MAIN_HANDLED</code> before including SDL.h.
 </p>
 <p>
 <div><strong style="text-decoration:underline">sdl2.WasInit</strong></div>
@@ -112,21 +113,21 @@ This function is defined in SDL_main.h, along with the preprocessor rule to rede
 Use this function to return a mask of the specified subsystems which have previously been initialized.
 </p>
 <p>
-These are the flags which may be passed to <code>SDL_WasInit()</code> and may be OR'd together to query multiple subsystems simultaneously.
+These are the flags which may be passed to <code class="highlighter-rouge">SDL_WasInit()</code> and may be OR'd together to query multiple subsystems simultaneously.
 </p>
 <ul>
-<li><code>sdl2.INIT_TIMER</code> .. timer subsystem</li>
-<li><code>sdl2.INIT_AUDIO</code> .. audio subsystem</li>
-<li><code>sdl2.INIT_VIDEO</code> .. video subsystem</li>
-<li><code>sdl2.INIT_JOYSTICK</code> .. joystick subsystem</li>
-<li><code>sdl2.INIT_HAPTIC</code> .. haptic (force feedback) subsystem</li>
-<li><code>sdl2.INIT_GAMECONTROLLER</code> .. controller subsystem</li>
-<li><code>sdl2.INIT_EVENTS</code> .. events subsystem</li>
-<li><code>sdl2.INIT_EVERYTHING</code> .. all of the above subsystems</li>
-<li><code>sdl2.INIT_NOPARACHUTE</code> .. compatibility; this flag is ignored</li>
+<li><code class="highlighter-rouge">sdl2.INIT_TIMER</code> .. timer subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_AUDIO</code> .. audio subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_VIDEO</code> .. video subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_JOYSTICK</code> .. joystick subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_HAPTIC</code> .. haptic (force feedback) subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_GAMECONTROLLER</code> .. controller subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_EVENTS</code> .. events subsystem</li>
+<li><code class="highlighter-rouge">sdl2.INIT_EVERYTHING</code> .. all of the above subsystems</li>
+<li><code class="highlighter-rouge">sdl2.INIT_NOPARACHUTE</code> .. compatibility; this flag is ignored</li>
 </ul>
 <p>
-If you want to initialize subsystems separately you would call <code>SDL_Init(0)</code> followed by <code>SDL_InitSubSystem()</code> with the desired subsystem flag.
+If you want to initialize subsystems separately you would call <code class="highlighter-rouge">SDL_Init(0)</code> followed by <code class="highlighter-rouge">SDL_InitSubSystem()</code> with the desired subsystem flag.
 </p>
 <p>
 <div><strong style="text-decoration:underline">sdl2.AddHintCallback</strong></div>
@@ -169,13 +170,13 @@ Use this function to clear any previous error message.
 Use this function to retrieve a message about the last error that occurred.
 </p>
 <p>
-Returns a message with information about the specific error that occurred, or an empty string if there hasn't been an error since the last call to <code>SDL_ClearError()</code>. Without calling <code>SDL_ClearError()</code>, the message is only applicable when an SDL function has signaled an error. You must check the return values of SDL function calls to determine when to appropriately call <code>SDL_GetError()</code>.
+Returns a message with information about the specific error that occurred, or an empty string if there hasn't been an error since the last call to <code class="highlighter-rouge">SDL_ClearError()</code>. Without calling <code class="highlighter-rouge">SDL_ClearError()</code>, the message is only applicable when an SDL function has signaled an error. You must check the return values of SDL function calls to determine when to appropriately call <code class="highlighter-rouge">SDL_GetError()</code>.
 </p>
 <p>
 This string is statically allocated and must not be freed by the application.
 </p>
 <p>
-It is possible for multiple errors to occur before calling <code>SDL_GetError()</code>. Only the last error is returned.
+It is possible for multiple errors to occur before calling <code class="highlighter-rouge">SDL_GetError()</code>. Only the last error is returned.
 </p>
 <p>
 <div><strong style="text-decoration:underline">sdl2.SetError</strong></div>

@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-58.html
 nextpage: chapter-60.html
 ---
@@ -11,7 +12,7 @@ nextpage: chapter-60.html
 <h2><span class="caption-index-2">59.2</span><a name="anchor-59-2"></a>Module Function</h2>
 <h2><span class="caption-index-2">59.3</span><a name="anchor-59-3"></a>Extension to audio Class</h2>
 <p>
-This module extends the <code>audio</code> class with methods described here.
+This module extends the <code class="highlighter-rouge">audio</code> class with methods described here.
 </p>
 <p>
 <div><strong style="text-decoration:underline">audio#read@wav</strong></div>

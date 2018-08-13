@@ -2,13 +2,14 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-56.html
 nextpage: chapter-58.html
 ---
 {% raw %}
 <h1><span class="caption-index-1">57</span><a name="anchor-57"></a>units Module</h1>
 <p>
-The <code>units</code> module provides functions to convert physical units into another.
+The <code class="highlighter-rouge">units</code> module provides functions to convert physical units into another.
 </p>
 <h2><span class="caption-index-2">57.1</span><a name="anchor-57-1"></a>Module Function</h2>
 <p>

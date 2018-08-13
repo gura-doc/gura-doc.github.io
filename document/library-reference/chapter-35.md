@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-34.html
 nextpage: chapter-36.html
 ---
@@ -11,7 +12,7 @@ nextpage: chapter-36.html
 <h2><span class="caption-index-2">35.2</span><a name="anchor-35-2"></a>ml.linear.feature Class</h2>
 <h3><span class="caption-index-3">35.2.1</span><a name="anchor-35-2-1"></a>Property</h3>
 <p>
-A <code>ml.linear.feature</code> instance has the following properties:
+A <code class="highlighter-rouge">ml.linear.feature</code> instance has the following properties:
 </p>
 <h3><span class="caption-index-3">35.2.2</span><a name="anchor-35-2-2"></a>Constructor</h3>
 <p>
@@ -23,7 +24,7 @@ Creates an instance of ml.linear.feature.
 <h2><span class="caption-index-2">35.3</span><a name="anchor-35-3"></a>ml.linear.model Class</h2>
 <h3><span class="caption-index-3">35.3.1</span><a name="anchor-35-3-1"></a>Property</h3>
 <p>
-A <code>ml.linear.model</code> instance has the following properties:
+A <code class="highlighter-rouge">ml.linear.model</code> instance has the following properties:
 </p>
 <h3><span class="caption-index-3">35.3.2</span><a name="anchor-35-3-2"></a>Method</h3>
 <p>
@@ -64,7 +65,7 @@ A <code>ml.linear.model</code> instance has the following properties:
 <h2><span class="caption-index-2">35.4</span><a name="anchor-35-4"></a>ml.linear.parameter Class</h2>
 <h3><span class="caption-index-3">35.4.1</span><a name="anchor-35-4-1"></a>Property</h3>
 <p>
-A <code>ml.linear.parameter</code> instance has the following properties:
+A <code class="highlighter-rouge">ml.linear.parameter</code> instance has the following properties:
 </p>
 <h3><span class="caption-index-3">35.4.2</span><a name="anchor-35-4-2"></a>Constructor</h3>
 <p>
@@ -81,7 +82,7 @@ Creates an instance of ml.linear.parameter.
 <h2><span class="caption-index-2">35.5</span><a name="anchor-35-5"></a>ml.linear.problem Class</h2>
 <h3><span class="caption-index-3">35.5.1</span><a name="anchor-35-5-1"></a>Property</h3>
 <p>
-A <code>ml.linear.problem</code> instance has the following properties:
+A <code class="highlighter-rouge">ml.linear.problem</code> instance has the following properties:
 </p>
 <h3><span class="caption-index-3">35.5.2</span><a name="anchor-35-5-2"></a>Constructor</h3>
 <p>
@@ -98,7 +99,7 @@ Creates an instance of ml.linear.problem.
 <h2><span class="caption-index-2">35.6</span><a name="anchor-35-6"></a>ml.linear.sample Class</h2>
 <h3><span class="caption-index-3">35.6.1</span><a name="anchor-35-6-1"></a>Property</h3>
 <p>
-A <code>ml.linear.sample</code> instance has the following properties:
+A <code class="highlighter-rouge">ml.linear.sample</code> instance has the following properties:
 </p>
 <h3><span class="caption-index-3">35.6.2</span><a name="anchor-35-6-2"></a>Constructor</h3>
 <p>

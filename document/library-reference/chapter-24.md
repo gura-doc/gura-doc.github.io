@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-23.html
 nextpage: chapter-25.html
 ---
@@ -9,18 +10,18 @@ nextpage: chapter-25.html
 <h1><span class="caption-index-1">24</span><a name="anchor-24"></a>glut Module</h1>
 <h2><span class="caption-index-2">24.1</span><a name="anchor-24-1"></a>Overview</h2>
 <p>
-The <code>glut</code> module provides functions of GLUT library.
+The <code class="highlighter-rouge">glut</code> module provides functions of GLUT library.
 </p>
 <h2><span class="caption-index-2">24.2</span><a name="anchor-24-2"></a>Module Function</h2>
 <p>
 <div><strong style="text-decoration:underline">glut.glutInit</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutInit(argv[]:string) {block?}</code></div>
-<code>glutInit</code> is used to initialize the GLUT library.
+<code class="highlighter-rouge">glutInit</code> is used to initialize the GLUT library.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutInitDisplayMode</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutInitDisplayMode(mode:number):map:void</code></div>
-<code>glutInitDisplayMode</code> sets the <em>initial display mode</em>.
+<code class="highlighter-rouge">glutInitDisplayMode</code> sets the <em>initial display mode</em>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutInitDisplayString</strong></div>
@@ -30,37 +31,37 @@ The <code>glut</code> module provides functions of GLUT library.
 <p>
 <div><strong style="text-decoration:underline">glut.glutInitWindowPosition</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutInitWindowPosition(x:number, y:number):map:void</code></div>
-<code>glutInitWindowPosition</code> sets the initial window position.	
+<code class="highlighter-rouge">glutInitWindowPosition</code> sets the initial window position.	
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutInitWindowSize</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutInitWindowSize(width:number, height:number):map:void</code></div>
-<code>glutInitWindowSize</code> sets the initial window size.	
+<code class="highlighter-rouge">glutInitWindowSize</code> sets the initial window size.	
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutMainLoop</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutMainLoop():void</code></div>
-<code>glutMainLoop</code> enters the GLUT event processing loop.
+<code class="highlighter-rouge">glutMainLoop</code> enters the GLUT event processing loop.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutCreateWindow</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutCreateWindow(title:string):map {block?}</code></div>
-<code>glutCreateWindow</code> creates a top-level window.
+<code class="highlighter-rouge">glutCreateWindow</code> creates a top-level window.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutCreateSubWindow</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutCreateSubWindow(win:number, x:number, y:number, width:number, height:number):map {block?}</code></div>
-<code>glutCreateSubWindow</code> creates a subwindow.
+<code class="highlighter-rouge">glutCreateSubWindow</code> creates a subwindow.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutDestroyWindow</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutDestroyWindow(win:number):map:void</code></div>
-<code>glutDestroyWindow</code> destroys the specified window.
+<code class="highlighter-rouge">glutDestroyWindow</code> destroys the specified window.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutPostRedisplay</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutPostRedisplay():void</code></div>
-<code>glutPostRedisplay marks the *current window* as needing to be redisplayed.</code>
+<code class="highlighter-rouge">glutPostRedisplay marks the *current window* as needing to be redisplayed.</code>
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutPostWindowRedisplay</strong></div>
@@ -70,37 +71,37 @@ The <code>glut</code> module provides functions of GLUT library.
 <p>
 <div><strong style="text-decoration:underline">glut.glutSwapBuffers</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutSwapBuffers():void</code></div>
-<code>glutSwapBuffers</code> swaps the buffers of the <em>current window</em> if double buffered.
+<code class="highlighter-rouge">glutSwapBuffers</code> swaps the buffers of the <em>current window</em> if double buffered.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutGetWindow</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutGetWindow() {block?}</code></div>
-<code>glutGetWindow</code> returns the identifier of the <em>current window</em>.
+<code class="highlighter-rouge">glutGetWindow</code> returns the identifier of the <em>current window</em>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutSetWindow</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutSetWindow(win:number):map:void</code></div>
-<code>glutSetWindow</code> sets the <em>current window</em>.
+<code class="highlighter-rouge">glutSetWindow</code> sets the <em>current window</em>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutSetWindowTitle</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutSetWindowTitle(title:string):map:void</code></div>
-<code>glutSetWindowTitle</code> changes the window title of the current top-level window.
+<code class="highlighter-rouge">glutSetWindowTitle</code> changes the window title of the current top-level window.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutSetIconTitle</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutSetIconTitle(title:string):map:void</code></div>
-<code>glutSetIconTitle</code> changes the icon title of the current top-level window.
+<code class="highlighter-rouge">glutSetIconTitle</code> changes the icon title of the current top-level window.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutPositionWindow</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutPositionWindow(x:number, y:number):map:void</code></div>
-<code>glutPositionWindow</code> requests a change to the position of the <em>current window</em>.
+<code class="highlighter-rouge">glutPositionWindow</code> requests a change to the position of the <em>current window</em>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutReshapeWindow</strong></div>
 <div style="margin-bottom:1em"><code>glut.glutReshapeWindow(width:number, height:number):map:void</code></div>
-<code>glutReshapeWindow</code> requests a change to the size of the <em>current window</em>.
+<code class="highlighter-rouge">glutReshapeWindow</code> requests a change to the size of the <em>current window</em>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">glut.glutPopWindow</strong></div>

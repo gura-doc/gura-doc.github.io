@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-43.html
 nextpage: chapter-45.html
 ---
@@ -9,7 +10,7 @@ nextpage: chapter-45.html
 <h1><span class="caption-index-1">44</span><a name="anchor-44"></a>os Module</h1>
 <h2><span class="caption-index-2">44.1</span><a name="anchor-44-1"></a>Overview</h2>
 <p>
-The <code>os</code> module provides functions that are specific to each OS environment. This is a built-in module, so you can use it without being imported.
+The <code class="highlighter-rouge">os</code> module provides functions that are specific to each OS environment. This is a built-in module, so you can use it without being imported.
 </p>
 <h2><span class="caption-index-2">44.2</span><a name="anchor-44-2"></a>Module Function</h2>
 <p>
@@ -18,7 +19,7 @@ The <code>os</code> module provides functions that are specific to each OS envir
 Returns the time duration in second since the system has started.
 </p>
 <p>
-If <code>block</code> is specified, it would calculate how much time has been spent during evaluating the block.
+If <code class="highlighter-rouge">block</code> is specified, it would calculate how much time has been spent during evaluating the block.
 </p>
 <p>
 <div><strong style="text-decoration:underline">os.exec</strong></div>
@@ -43,7 +44,7 @@ Set the value of an environment variable.
 <p>
 <div><strong style="text-decoration:underline">os.redirect</strong></div>
 <div style="margin-bottom:1em"><code>os.redirect(stdin:stream:nil:r, stdout:stream:nil:w, stderr?:stream:w) {block?}</code></div>
-Modifies variables <code>os.stdin</code>, <code>os.stdout</code> and <code>os.stderr</code> with values of arguments. When <code>block</code> is specified, the modification only has effect within the block.
+Modifies variables <code class="highlighter-rouge">os.stdin</code>, <code class="highlighter-rouge">os.stdout</code> and <code class="highlighter-rouge">os.stderr</code> with values of arguments. When <code class="highlighter-rouge">block</code> is specified, the modification only has effect within the block.
 </p>
 <p>
 <div><strong style="text-decoration:underline">os.sleep</strong></div>

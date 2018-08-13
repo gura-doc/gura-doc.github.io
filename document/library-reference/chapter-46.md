@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-45.html
 nextpage: chapter-47.html
 ---
@@ -9,35 +10,35 @@ nextpage: chapter-47.html
 <h1><span class="caption-index-1">46</span><a name="anchor-46"></a>png Module</h1>
 <h2><span class="caption-index-2">46.1</span><a name="anchor-46-1"></a>Overview</h2>
 <p>
-The <code>png</code> module provides measures to read/write image data in PNG format. To utilize it, import the <code>png</code> module using <code>import</code> function.
+The <code class="highlighter-rouge">png</code> module provides measures to read/write image data in PNG format. To utilize it, import the <code class="highlighter-rouge">png</code> module using <code class="highlighter-rouge">import</code> function.
 </p>
 <p>
 Below is an example to read a PNG file:
 </p>
-<pre><code>import(png)
+<pre class="highlight"><code>import(png)
 img = image('foo.png')
 </code></pre>
 <h2><span class="caption-index-2">46.2</span><a name="anchor-46-2"></a>Exntension to Function's Capability</h2>
 <p>
-This module extends the capability of function <code>image()</code> and instance method <code>image#write()</code> so that they can read/write PNG files.
+This module extends the capability of function <code class="highlighter-rouge">image()</code> and instance method <code class="highlighter-rouge">image#write()</code> so that they can read/write PNG files.
 </p>
 <p>
-When function <code>image()</code> is provided with a stream that satisfies the following conditions, it would recognize the stream as a PNG file.
+When function <code class="highlighter-rouge">image()</code> is provided with a stream that satisfies the following conditions, it would recognize the stream as a PNG file.
 </p>
 <ul>
-<li>The identifier of the stream ends with a suffix "<code>.png</code>".</li>
-<li>The stream data begins with a byte sequence "<code>\x89\x50\x4e\x47\x0d\x0a\x1a\x0a</code>".</li>
+<li>The identifier of the stream ends with a suffix "<code class="highlighter-rouge">.png</code>".</li>
+<li>The stream data begins with a byte sequence "<code class="highlighter-rouge">\x89\x50\x4e\x47\x0d\x0a\x1a\x0a</code>".</li>
 </ul>
 <p>
-When instance method <code>image#write()</code> is provided with a stream that satisfies the following condition, it would write image data in PNG format.
+When instance method <code class="highlighter-rouge">image#write()</code> is provided with a stream that satisfies the following condition, it would write image data in PNG format.
 </p>
 <ul>
-<li>The identifier of the stream ends with a suffix "<code>.png</code>".</li>
+<li>The identifier of the stream ends with a suffix "<code class="highlighter-rouge">.png</code>".</li>
 </ul>
 <h2><span class="caption-index-2">46.3</span><a name="anchor-46-3"></a>Module Function</h2>
 <h2><span class="caption-index-2">46.4</span><a name="anchor-46-4"></a>Extension to image Class</h2>
 <p>
-This module extends the <code>image</code> class with methods described here.
+This module extends the <code class="highlighter-rouge">image</code> class with methods described here.
 </p>
 <p>
 <div><strong style="text-decoration:underline">image#read@png</strong></div>

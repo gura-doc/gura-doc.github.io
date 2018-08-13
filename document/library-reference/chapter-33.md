@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-32.html
 nextpage: chapter-34.html
 ---
@@ -9,7 +10,7 @@ nextpage: chapter-34.html
 <h1><span class="caption-index-1">33</span><a name="anchor-33"></a>math Module</h1>
 <h2><span class="caption-index-2">33.1</span><a name="anchor-33-1"></a>Overview</h2>
 <p>
-The <code>math</code> module provices functions for mathematical calculation. This is a built-in module, so you can use it without being imported.
+The <code class="highlighter-rouge">math</code> module provices functions for mathematical calculation. This is a built-in module, so you can use it without being imported.
 </p>
 <h2><span class="caption-index-2">33.2</span><a name="anchor-33-2"></a>Module Function</h2>
 <p>
@@ -23,7 +24,7 @@ Returns an absolute value.
 Returns an inverse cosine value.
 </p>
 <p>
-In default, the result is returned in radian. Specifying an attribute <code>:deg</code> would return that in degree.
+In default, the result is returned in radian. Specifying an attribute <code class="highlighter-rouge">:deg</code> would return that in degree.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.arg</strong></div>
@@ -31,7 +32,7 @@ In default, the result is returned in radian. Specifying an attribute <code>:deg
 Returns an argument, an angle from the real-axis in the complex plane, of a complex number.
 </p>
 <p>
-In default, the angle value is returned in radian. Specifying an attribute <code>:deg</code> would return that in degree.
+In default, the angle value is returned in radian. Specifying an attribute <code class="highlighter-rouge">:deg</code> would return that in degree.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.asin</strong></div>
@@ -39,7 +40,7 @@ In default, the angle value is returned in radian. Specifying an attribute <code
 Returns an inverse sine value.
 </p>
 <p>
-In default, the result is returned in radian. Specifying an attribute <code>:deg</code> would return that in degree.
+In default, the result is returned in radian. Specifying an attribute <code class="highlighter-rouge">:deg</code> would return that in degree.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.atan</strong></div>
@@ -52,7 +53,7 @@ Returns an inverse tangent value.
 Returns an inverse tangent value of a fraction of num1 and num2.
 </p>
 <p>
-In default, the result is returned in radian. Specifying an attribute <code>:deg</code> would return that in degree.
+In default, the result is returned in radian. Specifying an attribute <code class="highlighter-rouge">:deg</code> would return that in degree.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.bezier</strong></div>
@@ -75,7 +76,7 @@ Returns a conjugate of a complex number.
 Returns a cosine value.
 </p>
 <p>
-In default, the given argument is treated as a radian number. Specifying an attribute <code>:deg</code> would treat that as a degree number.
+In default, the given argument is treated as a radian number. Specifying an attribute <code class="highlighter-rouge">:deg</code> would treat that as a degree number.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.cosh</strong></div>
@@ -85,33 +86,33 @@ Returns a hyperbolic cosine value.
 <p>
 <div><strong style="text-decoration:underline">math.covariance</strong></div>
 <div style="margin-bottom:1em"><code>math.covariance(a, b)</code></div>
-Returns a covariance between the <code>a</code> and <code>b</code>.
+Returns a covariance between the <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.cross</strong></div>
 <div style="margin-bottom:1em"><code>math.cross (a, b)</code></div>
-Calculates a cross product between <code>a</code> and <code>b</code>.
+Calculates a cross product between <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.delta</strong></div>
 <div style="margin-bottom:1em"><code>math.delta(num):map</code></div>
-Evaluates a delta function with a given argument <code>num</code> that returns <code>1</code> when <code>num == 0</code> and <code>0</code> otherwise.
+Evaluates a delta function with a given argument <code class="highlighter-rouge">num</code> that returns <code class="highlighter-rouge">1</code> when <code class="highlighter-rouge">num == 0</code> and <code class="highlighter-rouge">0</code> otherwise.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.diff</strong></div>
 <div style="margin-bottom:1em"><code>math.diff(expr:expr, var:symbol):map {block?}</code></div>
-Calculates a mathematical differential expression of the given <code>expr</code> by a variable <code>var</code>.
+Calculates a mathematical differential expression of the given <code class="highlighter-rouge">expr</code> by a variable <code class="highlighter-rouge">var</code>.
 </p>
 <p>
-If <code>block</code> is specified, it would be evaluated with a block parameter <code>|rtn:expr|</code>, where <code>rtn</code> is the created instance. In this case, the block's result would become the function's returned value.
+If <code class="highlighter-rouge">block</code> is specified, it would be evaluated with a block parameter <code class="highlighter-rouge">|rtn:expr|</code>, where <code class="highlighter-rouge">rtn</code> is the created instance. In this case, the block's result would become the function's returned value.
 </p>
 <p>
-Example: <code>math.diff(</code>(math.sin(x 2)), <code>x)</code>**
+Example: <code class="highlighter-rouge">math.diff(</code>(math.sin(x 2)), <code class="highlighter-rouge">x)</code>**
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.dot</strong></div>
 <div style="margin-bottom:1em"><code>math.dot(a, b)</code></div>
-Calculates a dot product between <code>a</code> and <code>b</code>.
+Calculates a dot product between <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.exp</strong></div>
@@ -156,7 +157,7 @@ Returns a least common multiple among two or more numbers.
 <p>
 <div><strong style="text-decoration:underline">math.least_square</strong></div>
 <div style="margin-bottom:1em"><code>math.least_square(x:iterator, y:iterator, dim:number =&gt; 1, var:symbol =&gt; `x)</code></div>
-Takes two iterators <code>x</code> and <code>y</code> that return coordinate of points and returns a function that fits them using least square metho. You can specify the fitting curve's dimension by an argument <code>dim</code>, which default value is one. The variable symbol used in the function is <code>x</code>, which can be changed by specifying an argument <code>var</code>.
+Takes two iterators <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> that return coordinate of points and returns a function that fits them using least square metho. You can specify the fitting curve's dimension by an argument <code class="highlighter-rouge">dim</code>, which default value is one. The variable symbol used in the function is <code class="highlighter-rouge">x</code>, which can be changed by specifying an argument <code class="highlighter-rouge">var</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.log</strong></div>
@@ -176,10 +177,10 @@ Returns a norm value of a complex number.
 <p>
 <div><strong style="text-decoration:underline">math.optimize</strong></div>
 <div style="margin-bottom:1em"><code>math.optimize(expr:expr):map {block?}</code></div>
-Returns an optimized expression of the given argument <code>expr</code>, which needs to be made up of mathematical elements.
+Returns an optimized expression of the given argument <code class="highlighter-rouge">expr</code>, which needs to be made up of mathematical elements.
 </p>
 <p>
-If <code>block</code> is specified, it would be evaluated with a block parameter <code>|rtn:expr|</code>, where <code>rtn</code> is the created instance. In this case, the block's result would become the function's returned value.
+If <code class="highlighter-rouge">block</code> is specified, it would be evaluated with a block parameter <code class="highlighter-rouge">|rtn:expr|</code>, where <code class="highlighter-rouge">rtn</code> is the created instance. In this case, the block's result would become the function's returned value.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.real</strong></div>
@@ -189,7 +190,7 @@ Returns a real part of a complex number.
 <p>
 <div><strong style="text-decoration:underline">math.relu</strong></div>
 <div style="margin-bottom:1em"><code>math.relu(num):map</code></div>
-Evaluates a rectified linear unit function with a given argument <code>num</code> that returns <code>num</code> when <code>num &gt;= 0</code> and <code>0</code> otherwise.
+Evaluates a rectified linear unit function with a given argument <code class="highlighter-rouge">num</code> that returns <code class="highlighter-rouge">num</code> when <code class="highlighter-rouge">num &gt;= 0</code> and <code class="highlighter-rouge">0</code> otherwise.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.sin</strong></div>
@@ -197,7 +198,7 @@ Evaluates a rectified linear unit function with a given argument <code>num</code
 Returns a sine value.
 </p>
 <p>
-In default, the given argument is treated as a radian number. Specifying an attribute <code>:deg</code> would treat that as a degree number.
+In default, the given argument is treated as a radian number. Specifying an attribute <code class="highlighter-rouge">:deg</code> would treat that as a degree number.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.sinh</strong></div>
@@ -215,7 +216,7 @@ Returns a square root value.
 Returns a tangent value.
 </p>
 <p>
-In default, the given argument is treated as a radian number. Specifying an attribute <code>:deg</code> would treat that as a degree number.
+In default, the given argument is treated as a radian number. Specifying an attribute <code class="highlighter-rouge">:deg</code> would treat that as a degree number.
 </p>
 <p>
 <div><strong style="text-decoration:underline">math.tanh</strong></div>
@@ -225,7 +226,7 @@ Returns a hyperbolic tangent value.
 <p>
 <div><strong style="text-decoration:underline">math.unitstep</strong></div>
 <div style="margin-bottom:1em"><code>math.unitstep(num):map</code></div>
-Evaluates a unit step function with a given argument <code>num</code> that returns <code>1</code> when <code>num &gt;= 0</code> and <code>0</code> otherwise.
+Evaluates a unit step function with a given argument <code class="highlighter-rouge">num</code> that returns <code class="highlighter-rouge">1</code> when <code class="highlighter-rouge">num &gt;= 0</code> and <code class="highlighter-rouge">0</code> otherwise.
 </p>
 <p />
 

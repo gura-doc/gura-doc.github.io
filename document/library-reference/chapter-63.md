@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-62.html
 nextpage: ""
 ---
@@ -9,12 +10,12 @@ nextpage: ""
 <h1><span class="caption-index-1">63</span><a name="anchor-63"></a>yaml Module</h1>
 <h2><span class="caption-index-2">63.1</span><a name="anchor-63-1"></a>Overview</h2>
 <p>
-The <code>yaml</code> module provides measures to read/write YAML files. You can use this module as a measure to serialize and deserialize objects that consists of <code>list</code>, <code>dict</code> and <code>string</code> instances.
+The <code class="highlighter-rouge">yaml</code> module provides measures to read/write YAML files. You can use this module as a measure to serialize and deserialize objects that consists of <code class="highlighter-rouge">list</code>, <code class="highlighter-rouge">dict</code> and <code class="highlighter-rouge">string</code> instances.
 </p>
 <p>
 Below is an example to reconstruct values from YAML text:
 </p>
-<pre><code>txt = '''
+<pre class="highlight"><code>txt = '''
 key1:
   - item-A
   - item-B
@@ -36,7 +37,7 @@ x = yaml.parse(txt)
 The below table shows how YAML data types correspond to Gura's value types each other:
 </p>
 <p>
-<table>
+<table class="table">
 <tr>
 <th>
 YAML Data Type</th>
@@ -72,22 +73,22 @@ scalar</td>
 <p>
 <div><strong style="text-decoration:underline">yaml.compose</strong></div>
 <div style="margin-bottom:1em"><code>yaml.compose(obj)</code></div>
-Composes YAML text to represent the content of <code>obj</code> that consists of <code>list</code>, <code>dict</code> and <code>string</code> instances.
+Composes YAML text to represent the content of <code class="highlighter-rouge">obj</code> that consists of <code class="highlighter-rouge">list</code>, <code class="highlighter-rouge">dict</code> and <code class="highlighter-rouge">string</code> instances.
 </p>
 <p>
 <div><strong style="text-decoration:underline">yaml.parse</strong></div>
 <div style="margin-bottom:1em"><code>yaml.parse(str:string)</code></div>
-Parses YAML text in <code>str</code> and returns a composition of <code>list</code>, <code>dict</code> and <code>string</code> instances.
+Parses YAML text in <code class="highlighter-rouge">str</code> and returns a composition of <code class="highlighter-rouge">list</code>, <code class="highlighter-rouge">dict</code> and <code class="highlighter-rouge">string</code> instances.
 </p>
 <p>
 <div><strong style="text-decoration:underline">yaml.read</strong></div>
 <div style="margin-bottom:1em"><code>yaml.read(stream:stream:r)</code></div>
-Parses YAML text from <code>stream</code> and returns a composition of <code>list</code>, <code>dict</code> and <code>string</code> instances.
+Parses YAML text from <code class="highlighter-rouge">stream</code> and returns a composition of <code class="highlighter-rouge">list</code>, <code class="highlighter-rouge">dict</code> and <code class="highlighter-rouge">string</code> instances.
 </p>
 <p>
 <div><strong style="text-decoration:underline">yaml.write</strong></div>
 <div style="margin-bottom:1em"><code>yaml.write(stream:stream:w, obj):reduce</code></div>
-Composes YAML text to represent the content of <code>obj</code> that consists of <code>list</code>, <code>dict</code> and <code>string</code> instances and writes the result to <code>stream</code>.
+Composes YAML text to represent the content of <code class="highlighter-rouge">obj</code> that consists of <code class="highlighter-rouge">list</code>, <code class="highlighter-rouge">dict</code> and <code class="highlighter-rouge">string</code> instances and writes the result to <code class="highlighter-rouge">stream</code>.
 </p>
 <h2><span class="caption-index-2">63.4</span><a name="anchor-63-4"></a>Thanks</h2>
 <p>

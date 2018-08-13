@@ -2,6 +2,7 @@
 layout: page
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 prevpage: chapter-09.html
 nextpage: chapter-11.html
 ---
@@ -9,7 +10,7 @@ nextpage: chapter-11.html
 <h1><span class="caption-index-1">10</span><a name="anchor-10"></a>cairo Module</h1>
 <h2><span class="caption-index-2">10.1</span><a name="anchor-10-1"></a>Overview</h2>
 <p>
-The <code>cairo</code> module provides methods to draw 2-D graphics using Cairo library. Official site of Cairo is <a href="http://cairographics.org/">http://cairographics.org/</a>.
+The <code class="highlighter-rouge">cairo</code> module provides methods to draw 2-D graphics using Cairo library. Official site of Cairo is <a href="http://cairographics.org/">http://cairographics.org/</a>.
 </p>
 <h2><span class="caption-index-2">10.2</span><a name="anchor-10-2"></a>Drawing</h2>
 <h3><span class="caption-index-3">10.2.1</span><a name="anchor-10-2-1"></a>cairo.context - The cairo drawing context</h3>
@@ -22,37 +23,37 @@ Checks whether an error has previously occurred for this context.
 <p>
 <div><strong style="text-decoration:underline">cairo.context#save</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#save():reduce {block?}</code></div>
-Makes a copy of the current state of cr and saves it on an internal stack of saved states for cr. When <code>cairo.context#restore()</code> is called, cr will be restored to the saved state. Multiple calls to <code>cairo.context#save()</code> and <code>cairo.context#restore()</code> can be nested; each call to <code>cairo.context#restore()</code> restores the state from the matching paired <code>cairo.context#save()</code>.
+Makes a copy of the current state of cr and saves it on an internal stack of saved states for cr. When <code class="highlighter-rouge">cairo.context#restore()</code> is called, cr will be restored to the saved state. Multiple calls to <code class="highlighter-rouge">cairo.context#save()</code> and <code class="highlighter-rouge">cairo.context#restore()</code> can be nested; each call to <code class="highlighter-rouge">cairo.context#restore()</code> restores the state from the matching paired <code class="highlighter-rouge">cairo.context#save()</code>.
 </p>
 <p>
-It isn't necessary to clear all saved states before a cairo_t is freed. If the reference count of a cairo_t drops to zero in response to a call to <code>cairo.context#destroy()</code>, any saved states will be freed along with the <code>cairo_t</code>.
+It isn't necessary to clear all saved states before a cairo_t is freed. If the reference count of a cairo_t drops to zero in response to a call to <code class="highlighter-rouge">cairo.context#destroy()</code>, any saved states will be freed along with the <code class="highlighter-rouge">cairo_t</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#restore</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#restore():reduce</code></div>
-Restores cr to the state saved by a preceding call to <code>cairo.context#save()</code> and removes that state from the stack of saved states.
+Restores cr to the state saved by a preceding call to <code class="highlighter-rouge">cairo.context#save()</code> and removes that state from the stack of saved states.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#get_target</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#get_target()</code></div>
-Gets the target surface for the cairo context as passed to <code>cairo.context</code> constructor.
+Gets the target surface for the cairo context as passed to <code class="highlighter-rouge">cairo.context</code> constructor.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#push_group</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#push_group():reduce</code></div>
-Temporarily redirects drawing to an intermediate surface known as a group. The redirection lasts until the group is completed by a call to <code>cairo.context#pop_group()</code> or <code>cairo.context#pop_group_to_source()</code>. These calls provide the result of any drawing to the group as a pattern, (either as an explicit object, or set as the source pattern).
+Temporarily redirects drawing to an intermediate surface known as a group. The redirection lasts until the group is completed by a call to <code class="highlighter-rouge">cairo.context#pop_group()</code> or <code class="highlighter-rouge">cairo.context#pop_group_to_source()</code>. These calls provide the result of any drawing to the group as a pattern, (either as an explicit object, or set as the source pattern).
 </p>
 <p>
 This group functionality can be convenient for performing intermediate compositing. One common use of a group is to render objects as opaque within the group, (so that they occlude each other), and then blend the result with translucence onto the destination.
 </p>
 <p>
-Groups can be nested arbitrarily deep by making balanced calls to <code>cairo.context#push_group()</code>/<code>cairo.context#pop_group()</code>. Each call pushes/pops the new target group onto/from a stack.
+Groups can be nested arbitrarily deep by making balanced calls to <code class="highlighter-rouge">cairo.context#push_group()</code>/<code class="highlighter-rouge">cairo.context#pop_group()</code>. Each call pushes/pops the new target group onto/from a stack.
 </p>
 <p>
-The <code>cairo.context#push_group()</code> function calls cairo_save() so that any changes to the graphics state will not be visible outside the group, (the pop_group functions call cairo_restore()).
+The <code class="highlighter-rouge">cairo.context#push_group()</code> function calls cairo_save() so that any changes to the graphics state will not be visible outside the group, (the pop_group functions call cairo_restore()).
 </p>
 <p>
-By default the intermediate group will have a content type of <code>cairo.CONTENT_COLOR_ALPHA</code>. Other content types can be chosen for the group by using <code>cairo.context#push_group_with_content()</code> instead.
+By default the intermediate group will have a content type of <code class="highlighter-rouge">cairo.CONTENT_COLOR_ALPHA</code>. Other content types can be chosen for the group by using <code class="highlighter-rouge">cairo.context#push_group_with_content()</code> instead.
 </p>
 <p>
 As an example, here is how one might fill and stroke a path with translucence, but without any portion of the fill being visible under the stroke:
@@ -60,31 +61,31 @@ As an example, here is how one might fill and stroke a path with translucence, b
 <p>
 <div><strong style="text-decoration:underline">cairo.context#push_group_with_content</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#push_group_with_content(content:number):reduce</code></div>
-Temporarily redirects drawing to an intermediate surface known as a group. The redirection lasts until the group is completed by a call to <code>cairo.context#pop_group()</code> or <code>cairo.context#pop_group_to_source()</code>. These calls provide the result of any drawing to the group as a pattern, (either as an explicit object, or set as the source pattern).
+Temporarily redirects drawing to an intermediate surface known as a group. The redirection lasts until the group is completed by a call to <code class="highlighter-rouge">cairo.context#pop_group()</code> or <code class="highlighter-rouge">cairo.context#pop_group_to_source()</code>. These calls provide the result of any drawing to the group as a pattern, (either as an explicit object, or set as the source pattern).
 </p>
 <p>
-The group will have a content type of content. The ability to control this content type is the only distinction between this function and <code>cairo.context#push_group()</code> which you should see for a more detailed description of group rendering.
+The group will have a content type of content. The ability to control this content type is the only distinction between this function and <code class="highlighter-rouge">cairo.context#push_group()</code> which you should see for a more detailed description of group rendering.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#pop_group</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#pop_group() {block?}</code></div>
-Terminates the redirection begun by a call to <code>cairo.context#push_group()</code> or <code>cairo.context#push_group_with_content()</code> and returns a new pattern containing the results of all drawing operations performed to the group.
+Terminates the redirection begun by a call to <code class="highlighter-rouge">cairo.context#push_group()</code> or <code class="highlighter-rouge">cairo.context#push_group_with_content()</code> and returns a new pattern containing the results of all drawing operations performed to the group.
 </p>
 <p>
-The <code>cairo.context#pop_group()</code> function calls cairo_restore(), (balancing a call to <code>cairo_save()</code> by the <code>push_group</code> function), so that any changes to the graphics state will not be visible outside the group.
+The <code class="highlighter-rouge">cairo.context#pop_group()</code> function calls cairo_restore(), (balancing a call to <code class="highlighter-rouge">cairo_save()</code> by the <code class="highlighter-rouge">push_group</code> function), so that any changes to the graphics state will not be visible outside the group.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#pop_group_to_source</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#pop_group_to_source():reduce</code></div>
-Terminates the redirection begun by a call to <code>cairo.context#push_group()</code> or <code>cairo.context#push_group_with_content()</code> and installs the resulting pattern as the source pattern in the given cairo context.
+Terminates the redirection begun by a call to <code class="highlighter-rouge">cairo.context#push_group()</code> or <code class="highlighter-rouge">cairo.context#push_group_with_content()</code> and installs the resulting pattern as the source pattern in the given cairo context.
 </p>
 <p>
-The <code>cairo.context#pop_group()</code> function calls cairo_restore(), (balancing a call to cairo_save() by the push_group function), so that any changes to the graphics state will not be visible outside the group.
+The <code class="highlighter-rouge">cairo.context#pop_group()</code> function calls cairo_restore(), (balancing a call to cairo_save() by the push_group function), so that any changes to the graphics state will not be visible outside the group.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#get_group_target</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#get_group_target() {block?}</code></div>
-Gets the current destination surface for the context. This is either the original target surface as passed to <code>cairo.context</code> constructor or the target surface for the current group as started by the most recent call to <code>cairo.context#push_group()</code> or <code>cairo.context#push_group_with_content()</code>.
+Gets the current destination surface for the context. This is either the original target surface as passed to <code class="highlighter-rouge">cairo.context</code> constructor or the target surface for the current group as started by the most recent call to <code class="highlighter-rouge">cairo.context#push_group()</code> or <code class="highlighter-rouge">cairo.context#push_group_with_content()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#set_source_rgb</strong></div>
@@ -95,7 +96,7 @@ Sets the source pattern within cr to an opaque color. This opaque color will the
 The color components are floating point numbers in the range 0 to 1. If the values passed in are outside that range, they will be clamped.
 </p>
 <p>
-The default source pattern is opaque black, (that is, it is equivalent to <code>cr.set_source_rgb(0.0, 0.0, 0.0))</code>.
+The default source pattern is opaque black, (that is, it is equivalent to <code class="highlighter-rouge">cr.set_source_rgb(0.0, 0.0, 0.0))</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#set_source_rgba</strong></div>
@@ -106,7 +107,7 @@ Sets the source pattern within cr to a translucent color. This color will then b
 The color and alpha components are floating point numbers in the range 0 to 1. If the values passed in are outside that range, they will be clamped.
 </p>
 <p>
-The default source pattern is opaque black, (that is, it is equivalent to <code>cr.set_source_rgba(0.0, 0.0, 0.0, 1.0))</code>.
+The default source pattern is opaque black, (that is, it is equivalent to <code class="highlighter-rouge">cr.set_source_rgba(0.0, 0.0, 0.0, 1.0))</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#set_source</strong></div>
@@ -114,50 +115,50 @@ The default source pattern is opaque black, (that is, it is equivalent to <code>
 Sets the source pattern within cr to source. This pattern will then be used for any subsequent drawing operation until a new source pattern is set.
 </p>
 <p>
-Note: The pattern's transformation matrix will be locked to the user space in effect at the time of <code>cairo.context#set_source()</code>. This means that further modifications of the current transformation matrix will not affect the source pattern. See <code>cairo.pattern#set_matrix()</code>.
+Note: The pattern's transformation matrix will be locked to the user space in effect at the time of <code class="highlighter-rouge">cairo.context#set_source()</code>. This means that further modifications of the current transformation matrix will not affect the source pattern. See <code class="highlighter-rouge">cairo.pattern#set_matrix()</code>.
 </p>
 <p>
-The default source pattern is a solid pattern that is opaque black, (that is, it is equivalent to <code>cr.set_source_rgb(0.0, 0.0, 0.0))</code>.
+The default source pattern is a solid pattern that is opaque black, (that is, it is equivalent to <code class="highlighter-rouge">cr.set_source_rgb(0.0, 0.0, 0.0))</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#set_source_surface</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#set_source_surface(surface:cairo.surface, x:number, y:number):reduce</code></div>
-This is a convenience function for creating a pattern from <code>surface</code> and setting it as the source in <code>cr</code> with <code>cairo.context#set_source()</code>.
+This is a convenience function for creating a pattern from <code class="highlighter-rouge">surface</code> and setting it as the source in <code class="highlighter-rouge">cr</code> with <code class="highlighter-rouge">cairo.context#set_source()</code>.
 </p>
 <p>
-The <code>x</code> and <code>y</code> parameters give the user-space coordinate at which the surface origin should appear. (The surface origin is its upper-left corner before any transformation has been applied.) The x and y parameters are negated and then set as translation values in the pattern matrix.
+The <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> parameters give the user-space coordinate at which the surface origin should appear. (The surface origin is its upper-left corner before any transformation has been applied.) The x and y parameters are negated and then set as translation values in the pattern matrix.
 </p>
 <p>
-Other than the initial translation pattern matrix, as described above, all other pattern attributes, (such as its extend mode), are set to the default values as in <code>cairo.pattern.create_for_surface()</code>. The resulting pattern can be queried with <code>cairo.context#get_source()</code> so that these attributes can be modified if desired, (eg. to create a repeating pattern with <code>cairo.pattern#set_extend()</code>).
+Other than the initial translation pattern matrix, as described above, all other pattern attributes, (such as its extend mode), are set to the default values as in <code class="highlighter-rouge">cairo.pattern.create_for_surface()</code>. The resulting pattern can be queried with <code class="highlighter-rouge">cairo.context#get_source()</code> so that these attributes can be modified if desired, (eg. to create a repeating pattern with <code class="highlighter-rouge">cairo.pattern#set_extend()</code>).
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#get_source</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#get_source() {block?}</code></div>
-Gets the current source pattern for <code>cr</code>.
+Gets the current source pattern for <code class="highlighter-rouge">cr</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#set_antialias</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#set_antialias(antialias:number):reduce</code></div>
-Set the antialiasing mode of the rasterizer used for drawing shapes. This value is a hint, and a particular backend may or may not support a particular value. At the current time, no backend supports <code>cairo.ANTIALIAS_SUBPIXEL</code> when drawing shapes.
+Set the antialiasing mode of the rasterizer used for drawing shapes. This value is a hint, and a particular backend may or may not support a particular value. At the current time, no backend supports <code class="highlighter-rouge">cairo.ANTIALIAS_SUBPIXEL</code> when drawing shapes.
 </p>
 <p>
-Note that this option does not affect text rendering, instead see <code>cairo.font_options#set_antialias()</code>.
+Note that this option does not affect text rendering, instead see <code class="highlighter-rouge">cairo.font_options#set_antialias()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#get_antialias</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#get_antialias()</code></div>
-Gets the current shape antialiasing mode, as set by <code>cairo.context#set_antialias()</code>.
+Gets the current shape antialiasing mode, as set by <code class="highlighter-rouge">cairo.context#set_antialias()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#set_dash</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#set_dash(dashes[]:number, offset:number):reduce</code></div>
-Sets the dash pattern to be used by <code>cairo.context#stroke()</code>. A dash pattern is specified by dashes, an array of positive values. Each value provides the length of alternate "on" and "off" portions of the stroke. The offset specifies an offset into the pattern at which the stroke begins.
+Sets the dash pattern to be used by <code class="highlighter-rouge">cairo.context#stroke()</code>. A dash pattern is specified by dashes, an array of positive values. Each value provides the length of alternate "on" and "off" portions of the stroke. The offset specifies an offset into the pattern at which the stroke begins.
 </p>
 <p>
-Each "on" segment will have caps applied as if the segment were a separate sub-path. In particular, it is valid to use an "on" length of 0.0 with <code>cairo.LINE_CAP_ROUND</code> or <code>cairo.LINE_CAP_SQUARE</code> in order to distributed dots or squares along a path.
+Each "on" segment will have caps applied as if the segment were a separate sub-path. In particular, it is valid to use an "on" length of 0.0 with <code class="highlighter-rouge">cairo.LINE_CAP_ROUND</code> or <code class="highlighter-rouge">cairo.LINE_CAP_SQUARE</code> in order to distributed dots or squares along a path.
 </p>
 <p>
-Note: The length values are in user-space units as evaluated at the time of stroking. This is not necessarily the same as the user space at the time of <code>cairo.context#set_dash()</code>.
+Note: The length values are in user-space units as evaluated at the time of stroking. This is not necessarily the same as the user space at the time of <code class="highlighter-rouge">cairo.context#set_dash()</code>.
 </p>
 <p>
 If length of dashes is 0 dashing is disabled.
@@ -166,7 +167,7 @@ If length of dashes is 0 dashing is disabled.
 If length of dashes is 1 a symmetric pattern is assumed with alternating on and off portions of the size specified by the single value in dashes.
 </p>
 <p>
-If any value in dashes is negative, or if all values are 0, then cr will be put into an error state with a status of <code>cairo.STATUS_INVALID_DASH</code>.
+If any value in dashes is negative, or if all values are 0, then cr will be put into an error state with a status of <code class="highlighter-rouge">cairo.STATUS_INVALID_DASH</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#get_dash</strong></div>
@@ -176,47 +177,47 @@ Gets the current dash array.
 <p>
 <div><strong style="text-decoration:underline">cairo.context#set_fill_rule</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#set_fill_rule(fill_rule:number):reduce</code></div>
-Set the current fill rule within the cairo context. The fill rule is used to determine which regions are inside or outside a complex (potentially self-intersecting) path. The current fill rule affects both <code>cairo.context#fill()</code> and <code>cairo.context#clip()</code>. See cairo_fill_rule_t for details on the semantics of each available fill rule.
+Set the current fill rule within the cairo context. The fill rule is used to determine which regions are inside or outside a complex (potentially self-intersecting) path. The current fill rule affects both <code class="highlighter-rouge">cairo.context#fill()</code> and <code class="highlighter-rouge">cairo.context#clip()</code>. See cairo_fill_rule_t for details on the semantics of each available fill rule.
 </p>
 <p>
-The default fill rule is <code>cairo.FILL_RULE_WINDING</code>.
+The default fill rule is <code class="highlighter-rouge">cairo.FILL_RULE_WINDING</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#get_fill_rule</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#get_fill_rule()</code></div>
-Gets the current fill rule, as set by <code>cairo.context#set_fill_rule()</code>.
+Gets the current fill rule, as set by <code class="highlighter-rouge">cairo.context#set_fill_rule()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#set_line_cap</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#set_line_cap(line_cap:number):reduce</code></div>
-Sets the current line cap style within the cairo context. See <code>cairo_line_cap_t</code> for details about how the available line cap styles are drawn.
+Sets the current line cap style within the cairo context. See <code class="highlighter-rouge">cairo_line_cap_t</code> for details about how the available line cap styles are drawn.
 </p>
 <p>
-As with the other stroke parameters, the current line cap style is examined by <code>cairo.context#stroke()</code>, <code>cairo.context#stroke_extents()</code>, and <code>cairo.context#stroke_to_path()</code>, but does not have any effect during path construction.
+As with the other stroke parameters, the current line cap style is examined by <code class="highlighter-rouge">cairo.context#stroke()</code>, <code class="highlighter-rouge">cairo.context#stroke_extents()</code>, and <code class="highlighter-rouge">cairo.context#stroke_to_path()</code>, but does not have any effect during path construction.
 </p>
 <p>
-The default line cap style is <code>cairo.LINE_CAP_BUTT</code>.
+The default line cap style is <code class="highlighter-rouge">cairo.LINE_CAP_BUTT</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#get_line_cap</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#get_line_cap()</code></div>
-Gets the current line cap style, as set by <code>cairo.context#set_line_cap()</code>.
+Gets the current line cap style, as set by <code class="highlighter-rouge">cairo.context#set_line_cap()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#set_line_join</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#set_line_join(line_join:number):reduce</code></div>
-Sets the current line join style within the cairo context. See <code>cairo_line_join_t</code> for details about how the available line join styles are drawn.
+Sets the current line join style within the cairo context. See <code class="highlighter-rouge">cairo_line_join_t</code> for details about how the available line join styles are drawn.
 </p>
 <p>
-As with the other stroke parameters, the current line join style is examined by <code>cairo.context#stroke()</code>, <code>cairo.context#stroke_extents()</code>, and <code>cairo.context#stroke_to_path()</code>, but does not have any effect during path construction.
+As with the other stroke parameters, the current line join style is examined by <code class="highlighter-rouge">cairo.context#stroke()</code>, <code class="highlighter-rouge">cairo.context#stroke_extents()</code>, and <code class="highlighter-rouge">cairo.context#stroke_to_path()</code>, but does not have any effect during path construction.
 </p>
 <p>
-The default line join style is <code>cairo.LINE_JOIN_MITER</code>.
+The default line join style is <code class="highlighter-rouge">cairo.LINE_JOIN_MITER</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#get_line_join</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#get_line_join()</code></div>
-Gets the current line join style, as set by <code>cairo.context#set_line_join()</code>.
+Gets the current line join style, as set by <code class="highlighter-rouge">cairo.context#set_line_join()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#set_line_width</strong></div>
@@ -224,10 +225,10 @@ Gets the current line join style, as set by <code>cairo.context#set_line_join()<
 Sets the current line width within the cairo context. The line width value specifies the diameter of a pen that is circular in user space, (though device-space pen may be an ellipse in general due to scaling/shear/rotation of the CTM).
 </p>
 <p>
-Note: When the description above refers to user space and CTM it refers to the user space and CTM in effect at the time of the stroking operation, not the user space and CTM in effect at the time of the call to <code>cairo.context#set_line_width()</code>. The simplest usage makes both of these spaces identical. That is, if there is no change to the CTM between a call to <code>cairo.context#set_line_width()</code> and the stroking operation, then one can just pass user-space values to <code>cairo.context#set_line_width()</code> and ignore this note.
+Note: When the description above refers to user space and CTM it refers to the user space and CTM in effect at the time of the stroking operation, not the user space and CTM in effect at the time of the call to <code class="highlighter-rouge">cairo.context#set_line_width()</code>. The simplest usage makes both of these spaces identical. That is, if there is no change to the CTM between a call to <code class="highlighter-rouge">cairo.context#set_line_width()</code> and the stroking operation, then one can just pass user-space values to <code class="highlighter-rouge">cairo.context#set_line_width()</code> and ignore this note.
 </p>
 <p>
-As with the other stroke parameters, the current line width is examined by <code>cairo.context#stroke()</code>, <code>cairo.context#stroke_extents()</code>, and <code>cairo.context#stroke_to_path()</code>, but does not have any effect during path construction.
+As with the other stroke parameters, the current line width is examined by <code class="highlighter-rouge">cairo.context#stroke()</code>, <code class="highlighter-rouge">cairo.context#stroke_extents()</code>, and <code class="highlighter-rouge">cairo.context#stroke_to_path()</code>, but does not have any effect during path construction.
 </p>
 <p>
 The default line width value is 2.0.
@@ -235,7 +236,7 @@ The default line width value is 2.0.
 <p>
 <div><strong style="text-decoration:underline">cairo.context#get_line_width</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#get_line_width()</code></div>
-This function returns the current line width value exactly as set by <code>cairo.context#set_line_width()</code>. Note that the value is unchanged even if the CTM has changed between the calls to <code>cairo.context#set_line_width()</code> and <code>cairo.context#get_line_width()</code>.
+This function returns the current line width value exactly as set by <code class="highlighter-rouge">cairo.context#set_line_width()</code>. Note that the value is unchanged even if the CTM has changed between the calls to <code class="highlighter-rouge">cairo.context#set_line_width()</code> and <code class="highlighter-rouge">cairo.context#get_line_width()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#set_miter_limit</strong></div>
@@ -243,10 +244,10 @@ This function returns the current line width value exactly as set by <code>cairo
 Sets the current miter limit within the cairo context.
 </p>
 <p>
-If the current line join style is set to <code>cairo.LINE_JOIN_MITER</code> (see <code>cairo.context#set_line_join()</code>), the miter limit is used to determine whether the lines should be joined with a bevel instead of a miter. Cairo divides the length of the miter by the line width. If the result is greater than the miter limit, the style is converted to a bevel.
+If the current line join style is set to <code class="highlighter-rouge">cairo.LINE_JOIN_MITER</code> (see <code class="highlighter-rouge">cairo.context#set_line_join()</code>), the miter limit is used to determine whether the lines should be joined with a bevel instead of a miter. Cairo divides the length of the miter by the line width. If the result is greater than the miter limit, the style is converted to a bevel.
 </p>
 <p>
-As with the other stroke parameters, the current line miter limit is examined by <code>cairo.context#stroke()</code>, <code>cairo.context#stroke_extents()</code>, and <code>cairo.context#stroke_to_path()</code>, but does not have any effect during path construction.
+As with the other stroke parameters, the current line miter limit is examined by <code class="highlighter-rouge">cairo.context#stroke()</code>, <code class="highlighter-rouge">cairo.context#stroke_extents()</code>, and <code class="highlighter-rouge">cairo.context#stroke_to_path()</code>, but does not have any effect during path construction.
 </p>
 <p>
 The default miter limit value is 10.0, which will convert joins with interior angles less than 11 degrees to bevels instead of miters. For reference, a miter limit of 2.0 makes the miter cutoff at 60 degrees, and a miter limit of 1.414 makes the cutoff at 90 degrees.
@@ -262,10 +263,10 @@ Gets the current miter limit, as set by cairo.context#set_miter_limit().
 <p>
 <div><strong style="text-decoration:underline">cairo.context#set_operator</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#set_operator(op:number):reduce</code></div>
-Sets the compositing operator to be used for all drawing operations. See <code>cairo_operator_t</code> for details on the semantics of each available compositing operator.
+Sets the compositing operator to be used for all drawing operations. See <code class="highlighter-rouge">cairo_operator_t</code> for details on the semantics of each available compositing operator.
 </p>
 <p>
-The default operator is <code>cairo.OPERATOR_OVER</code>.
+The default operator is <code class="highlighter-rouge">cairo.OPERATOR_OVER</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#get_operator</strong></div>
@@ -280,32 +281,32 @@ Sets the tolerance used when converting paths into trapezoids. Curved segments o
 <p>
 <div><strong style="text-decoration:underline">cairo.context#get_tolerance</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#get_tolerance()</code></div>
-Gets the current tolerance value, as set by <code>cairo.context#set_tolerance()</code>.
+Gets the current tolerance value, as set by <code class="highlighter-rouge">cairo.context#set_tolerance()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#clip</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#clip():reduce</code></div>
-Establishes a new clip region by intersecting the current clip region with the current path as it would be filled by <code>cairo.context#fill()</code> and according to the current fill rule (see <code>cairo.context#set_fill_rule()</code>).
+Establishes a new clip region by intersecting the current clip region with the current path as it would be filled by <code class="highlighter-rouge">cairo.context#fill()</code> and according to the current fill rule (see <code class="highlighter-rouge">cairo.context#set_fill_rule()</code>).
 </p>
 <p>
-After <code>cairo.context#clip()</code>, the current path will be cleared from the cairo context.
+After <code class="highlighter-rouge">cairo.context#clip()</code>, the current path will be cleared from the cairo context.
 </p>
 <p>
 The current clip region affects all drawing operations by effectively masking out any changes to the surface that are outside the current clip region.
 </p>
 <p>
-Calling <code>cairo.context#clip()</code> can only make the clip region smaller, never larger. But the current clip is part of the graphics state, so a temporary restriction of the clip region can be achieved by calling <code>cairo.context#clip()</code> within a <code>cairo.context#save()</code>/<code>cairo.context#restore()</code> pair. The only other means of increasing the size of the clip region is <code>cairo.context#reset_clip()</code>.
+Calling <code class="highlighter-rouge">cairo.context#clip()</code> can only make the clip region smaller, never larger. But the current clip is part of the graphics state, so a temporary restriction of the clip region can be achieved by calling <code class="highlighter-rouge">cairo.context#clip()</code> within a <code class="highlighter-rouge">cairo.context#save()</code>/<code class="highlighter-rouge">cairo.context#restore()</code> pair. The only other means of increasing the size of the clip region is <code class="highlighter-rouge">cairo.context#reset_clip()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#clip_preserve</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#clip_preserve():reduce</code></div>
-Establishes a new clip region by intersecting the current clip region with the current path as it would be filled by <code>cairo.context#fill()</code> and according to the current fill rule (see <code>cairo.context#set_fill_rule()</code>). Unlike <code>cairo.context#clip()</code>, <code>cairo.context#clip_preserve()</code> preserves the path within the cairo context.
+Establishes a new clip region by intersecting the current clip region with the current path as it would be filled by <code class="highlighter-rouge">cairo.context#fill()</code> and according to the current fill rule (see <code class="highlighter-rouge">cairo.context#set_fill_rule()</code>). Unlike <code class="highlighter-rouge">cairo.context#clip()</code>, <code class="highlighter-rouge">cairo.context#clip_preserve()</code> preserves the path within the cairo context.
 </p>
 <p>
 The current clip region affects all drawing operations by effectively masking out any changes to the surface that are outside the current clip region.
 </p>
 <p>
-Calling <code>cairo.context#clip_preserve()</code> can only make the clip region smaller, never larger. But the current clip is part of the graphics state, so a temporary restriction of the clip region can be achieved by calling <code>cairo.context#clip_preserve()</code> within a <code>cairo.context#save()</code>/<code>cairo.context#restore()</code> pair. The only other means of increasing the size of the clip region is <code>cairo.context#reset_clip()</code>.
+Calling <code class="highlighter-rouge">cairo.context#clip_preserve()</code> can only make the clip region smaller, never larger. But the current clip is part of the graphics state, so a temporary restriction of the clip region can be achieved by calling <code class="highlighter-rouge">cairo.context#clip_preserve()</code> within a <code class="highlighter-rouge">cairo.context#save()</code>/<code class="highlighter-rouge">cairo.context#restore()</code> pair. The only other means of increasing the size of the clip region is <code class="highlighter-rouge">cairo.context#reset_clip()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#clip_extents</strong></div>
@@ -315,10 +316,10 @@ Computes a bounding box in user coordinates covering the area inside the current
 <p>
 <div><strong style="text-decoration:underline">cairo.context#in_clip</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#in_clip(x:number, y:number)</code></div>
-Tests whether the given point is inside the area that would be visible through the current clip, i.e. the area that would be filled by a <code>cairo.context#paint()</code> operation.
+Tests whether the given point is inside the area that would be visible through the current clip, i.e. the area that would be filled by a <code class="highlighter-rouge">cairo.context#paint()</code> operation.
 </p>
 <p>
-See <code>cairo.context#clip()</code>, and <code>cairo.context#clip_preserve()</code>.
+See <code class="highlighter-rouge">cairo.context#clip()</code>, and <code class="highlighter-rouge">cairo.context#clip_preserve()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#reset_clip</strong></div>
@@ -326,7 +327,7 @@ See <code>cairo.context#clip()</code>, and <code>cairo.context#clip_preserve()</
 Reset the current clip region to its original, unrestricted state. That is, set the clip region to an infinitely large shape containing the target surface. Equivalently, if infinity is too hard to grasp, one can imagine the clip region being reset to the exact bounds of the target surface.
 </p>
 <p>
-Note that code meant to be reusable should not call <code>cairo.context#reset_clip()</code> as it will cause results unexpected by higher-level code which calls <code>cairo.context#clip()</code>. Consider using <code>cairo.context#save()</code> and <code>cairo.context#restore()</code> around <code>cairo.context#clip()</code> as a more robust means of temporarily restricting the clip region.
+Note that code meant to be reusable should not call <code class="highlighter-rouge">cairo.context#reset_clip()</code> as it will cause results unexpected by higher-level code which calls <code class="highlighter-rouge">cairo.context#clip()</code>. Consider using <code class="highlighter-rouge">cairo.context#save()</code> and <code class="highlighter-rouge">cairo.context#restore()</code> around <code class="highlighter-rouge">cairo.context#clip()</code> as a more robust means of temporarily restricting the clip region.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#copy_clip_rectangle_list</strong></div>
@@ -334,42 +335,42 @@ Note that code meant to be reusable should not call <code>cairo.context#reset_cl
 Gets the current clip region as a list of rectangles in user coordinates.
 </p>
 <p>
-The status in the list may be <code>cairo.STATUS_CLIP_NOT_REPRESENTABLE</code> to indicate that the clip region cannot be represented as a list of user-space rectangles. The status may have other values to indicate other errors.
+The status in the list may be <code class="highlighter-rouge">cairo.STATUS_CLIP_NOT_REPRESENTABLE</code> to indicate that the clip region cannot be represented as a list of user-space rectangles. The status may have other values to indicate other errors.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#fill</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#fill():reduce</code></div>
-A drawing operator that fills the current path according to the current fill rule, (each sub-path is implicitly closed before being filled). After <code>cairo.context#fill()</code>, the current path will be cleared from the cairo context. See <code>cairo.context#set_fill_rule()</code> and <code>cairo.context#fill_preserve()</code>.
+A drawing operator that fills the current path according to the current fill rule, (each sub-path is implicitly closed before being filled). After <code class="highlighter-rouge">cairo.context#fill()</code>, the current path will be cleared from the cairo context. See <code class="highlighter-rouge">cairo.context#set_fill_rule()</code> and <code class="highlighter-rouge">cairo.context#fill_preserve()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#fill_preserve</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#fill_preserve():reduce</code></div>
-A drawing operator that fills the current path according to the current fill rule, (each sub-path is implicitly closed before being filled). Unlike <code>cairo.context#fill()</code>, <code>cairo.context#fill_preserve()</code> preserves the path within the cairo context.
+A drawing operator that fills the current path according to the current fill rule, (each sub-path is implicitly closed before being filled). Unlike <code class="highlighter-rouge">cairo.context#fill()</code>, <code class="highlighter-rouge">cairo.context#fill_preserve()</code> preserves the path within the cairo context.
 </p>
 <p>
-See <code>cairo.context#set_fill_rule()</code> and <code>cairo.context#fill()</code>.
+See <code class="highlighter-rouge">cairo.context#set_fill_rule()</code> and <code class="highlighter-rouge">cairo.context#fill()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#fill_extents</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#fill_extents():reduce</code></div>
-Computes a bounding box in user coordinates covering the area that would be affected, (the "inked" area), by a <code>cairo.context#fill()</code> operation given the current path and fill parameters. If the current path is empty, returns an empty rectangle ((0,0), (0,0)). Surface dimensions and clipping are not taken into account.
+Computes a bounding box in user coordinates covering the area that would be affected, (the "inked" area), by a <code class="highlighter-rouge">cairo.context#fill()</code> operation given the current path and fill parameters. If the current path is empty, returns an empty rectangle ((0,0), (0,0)). Surface dimensions and clipping are not taken into account.
 </p>
 <p>
-Contrast with <code>cairo.context#path_extents()</code>, which is similar, but returns non-zero extents for some paths with no inked area, (such as a simple line segment).
+Contrast with <code class="highlighter-rouge">cairo.context#path_extents()</code>, which is similar, but returns non-zero extents for some paths with no inked area, (such as a simple line segment).
 </p>
 <p>
-Note that <code>cairo.context#fill_extents()</code> must necessarily do more work to compute the precise inked areas in light of the fill rule, so <code>cairo.context#path_extents()</code> may be more desirable for sake of performance if the non-inked path extents are desired.
+Note that <code class="highlighter-rouge">cairo.context#fill_extents()</code> must necessarily do more work to compute the precise inked areas in light of the fill rule, so <code class="highlighter-rouge">cairo.context#path_extents()</code> may be more desirable for sake of performance if the non-inked path extents are desired.
 </p>
 <p>
-See <code>cairo.context#fill()</code>, <code>cairo.context#set_fill_rule()</code> and <code>cairo.context#fill_preserve()</code>.
+See <code class="highlighter-rouge">cairo.context#fill()</code>, <code class="highlighter-rouge">cairo.context#set_fill_rule()</code> and <code class="highlighter-rouge">cairo.context#fill_preserve()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#in_fill</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#in_fill(x:number, y:number)</code></div>
-Tests whether the given point is inside the area that would be affected by a <code>cairo.context#fill()</code> operation given the current path and filling parameters. Surface dimensions and clipping are not taken into account.
+Tests whether the given point is inside the area that would be affected by a <code class="highlighter-rouge">cairo.context#fill()</code> operation given the current path and filling parameters. Surface dimensions and clipping are not taken into account.
 </p>
 <p>
-See <code>cairo.context#fill()</code>, <code>cairo.context#set_fill_rule()</code> and <code>cairo.context#fill_preserve()</code>.
+See <code class="highlighter-rouge">cairo.context#fill()</code>, <code class="highlighter-rouge">cairo.context#set_fill_rule()</code> and <code class="highlighter-rouge">cairo.context#fill_preserve()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#mask</strong></div>
@@ -394,25 +395,25 @@ A drawing operator that paints the current source everywhere within the current 
 <p>
 <div><strong style="text-decoration:underline">cairo.context#stroke</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#stroke():reduce</code></div>
-A drawing operator that strokes the current path according to the current line width, line join, line cap, and dash settings. After <code>cairo.context#stroke()</code>, the current path will be cleared from the cairo context. See <code>cairo.context#set_line_width()</code>, <code>cairo.context#set_line_join()</code>, <code>cairo.context#set_line_cap()</code>, <code>cairo.context#set_dash()</code>, and <code>cairo.context#stroke_preserve()</code>.
+A drawing operator that strokes the current path according to the current line width, line join, line cap, and dash settings. After <code class="highlighter-rouge">cairo.context#stroke()</code>, the current path will be cleared from the cairo context. See <code class="highlighter-rouge">cairo.context#set_line_width()</code>, <code class="highlighter-rouge">cairo.context#set_line_join()</code>, <code class="highlighter-rouge">cairo.context#set_line_cap()</code>, <code class="highlighter-rouge">cairo.context#set_dash()</code>, and <code class="highlighter-rouge">cairo.context#stroke_preserve()</code>.
 </p>
 <p>
 Note: Degenerate segments and sub-paths are treated specially and provide a useful result. These can result in two different situations:
 </p>
 <ol>
-<li>Zero-length "on" segments set in cairo.context#set_dash(). If the cap style is <code>cairo.LINE_CAP_ROUND</code> or <code>cairo.LINE_CAP_SQUARE</code> then these segments will be drawn as circular dots or squares respectively. In the case of <code>cairo.LINE_CAP_SQUARE</code>, the orientation of the squares is determined by the direction of the underlying path.</li>
-<li>A sub-path created by <code>cairo.context#move_to()</code> followed by either a <code>cairo.context#close_path()</code> or one or more calls to <code>cairo.context#line_to()</code> to the same coordinate as the <code>cairo.context#move_to()</code>. If the cap style is <code>cairo.LINE_CAP_ROUND</code> then these sub-paths will be drawn as circular dots. Note that in the case of <code>cairo.LINE_CAP_SQUARE</code> a degenerate sub-path will not be drawn at all, (since the correct orientation is indeterminate).</li>
+<li>Zero-length "on" segments set in cairo.context#set_dash(). If the cap style is <code class="highlighter-rouge">cairo.LINE_CAP_ROUND</code> or <code class="highlighter-rouge">cairo.LINE_CAP_SQUARE</code> then these segments will be drawn as circular dots or squares respectively. In the case of <code class="highlighter-rouge">cairo.LINE_CAP_SQUARE</code>, the orientation of the squares is determined by the direction of the underlying path.</li>
+<li>A sub-path created by <code class="highlighter-rouge">cairo.context#move_to()</code> followed by either a <code class="highlighter-rouge">cairo.context#close_path()</code> or one or more calls to <code class="highlighter-rouge">cairo.context#line_to()</code> to the same coordinate as the <code class="highlighter-rouge">cairo.context#move_to()</code>. If the cap style is <code class="highlighter-rouge">cairo.LINE_CAP_ROUND</code> then these sub-paths will be drawn as circular dots. Note that in the case of <code class="highlighter-rouge">cairo.LINE_CAP_SQUARE</code> a degenerate sub-path will not be drawn at all, (since the correct orientation is indeterminate).</li>
 </ol>
 <p>
-In no case will a cap style of <code>cairo.LINE_CAP_BUTT</code> cause anything to be drawn in the case of either degenerate segments or sub-paths.
+In no case will a cap style of <code class="highlighter-rouge">cairo.LINE_CAP_BUTT</code> cause anything to be drawn in the case of either degenerate segments or sub-paths.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#stroke_preserve</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#stroke_preserve():reduce</code></div>
-A drawing operator that strokes the current path according to the current line width, line join, line cap, and dash settings. Unlike <code>cairo.context#stroke()</code>, <code>cairo.context#stroke_preserve()</code> preserves the path within the cairo context.
+A drawing operator that strokes the current path according to the current line width, line join, line cap, and dash settings. Unlike <code class="highlighter-rouge">cairo.context#stroke()</code>, <code class="highlighter-rouge">cairo.context#stroke_preserve()</code> preserves the path within the cairo context.
 </p>
 <p>
-See <code>cairo.context#set_line_width()</code>, <code>cairo.context#set_line_join()</code>, <code>cairo.context#set_line_cap()</code>, <code>cairo.context#set_dash()</code>, and <code>cairo.context#stroke_preserve()</code>.
+See <code class="highlighter-rouge">cairo.context#set_line_width()</code>, <code class="highlighter-rouge">cairo.context#set_line_join()</code>, <code class="highlighter-rouge">cairo.context#set_line_cap()</code>, <code class="highlighter-rouge">cairo.context#set_dash()</code>, and <code class="highlighter-rouge">cairo.context#stroke_preserve()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#stroke_extents</strong></div>
@@ -420,118 +421,118 @@ See <code>cairo.context#set_line_width()</code>, <code>cairo.context#set_line_jo
 Computes a bounding box in user coordinates covering the area that would be affected, (the "inked" area), by a cairo.context#stroke() operation given the current path and stroke parameters. If the current path is empty, returns an empty rectangle ((0,0), (0,0)). Surface dimensions and clipping are not taken into account.
 </p>
 <p>
-Note that if the line width is set to exactly zero, then <code>cairo.context#stroke_extents()</code> will return an empty rectangle. Contrast with <code>cairo.context#path_extents()</code> which can be used to compute the non-empty bounds as the line width approaches zero.
+Note that if the line width is set to exactly zero, then <code class="highlighter-rouge">cairo.context#stroke_extents()</code> will return an empty rectangle. Contrast with <code class="highlighter-rouge">cairo.context#path_extents()</code> which can be used to compute the non-empty bounds as the line width approaches zero.
 </p>
 <p>
-Note that <code>cairo.context#stroke_extents()</code> must necessarily do more work to compute the precise inked areas in light of the stroke parameters, so <code>cairo.context#path_extents()</code> may be more desirable for sake of performance if non-inked path extents are desired.
+Note that <code class="highlighter-rouge">cairo.context#stroke_extents()</code> must necessarily do more work to compute the precise inked areas in light of the stroke parameters, so <code class="highlighter-rouge">cairo.context#path_extents()</code> may be more desirable for sake of performance if non-inked path extents are desired.
 </p>
 <p>
-See <code>cairo.context#stroke()</code>, <code>cairo.context#set_line_width()</code>, <code>cairo.context#set_line_join()</code>, <code>cairo.context#set_line_cap()</code>, <code>cairo.context#set_dash()</code>, and <code>cairo.context#stroke_preserve()</code>.
+See <code class="highlighter-rouge">cairo.context#stroke()</code>, <code class="highlighter-rouge">cairo.context#set_line_width()</code>, <code class="highlighter-rouge">cairo.context#set_line_join()</code>, <code class="highlighter-rouge">cairo.context#set_line_cap()</code>, <code class="highlighter-rouge">cairo.context#set_dash()</code>, and <code class="highlighter-rouge">cairo.context#stroke_preserve()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#in_stroke</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#in_stroke(x:number, y:number)</code></div>
-Tests whether the given point is inside the area that would be affected by a <code>cairo.context#stroke()</code> operation given the current path and stroking parameters. Surface dimensions and clipping are not taken into account. See <code>cairo.context#stroke()</code>, <code>cairo.context#set_line_width()</code>, <code>cairo.context#set_line_join()</code>, <code>cairo.context#set_line_cap()</code>, <code>cairo.context#_set_dash()</code>, and <code>cairo.context#stroke_preserve()</code>.
+Tests whether the given point is inside the area that would be affected by a <code class="highlighter-rouge">cairo.context#stroke()</code> operation given the current path and stroking parameters. Surface dimensions and clipping are not taken into account. See <code class="highlighter-rouge">cairo.context#stroke()</code>, <code class="highlighter-rouge">cairo.context#set_line_width()</code>, <code class="highlighter-rouge">cairo.context#set_line_join()</code>, <code class="highlighter-rouge">cairo.context#set_line_cap()</code>, <code class="highlighter-rouge">cairo.context#_set_dash()</code>, and <code class="highlighter-rouge">cairo.context#stroke_preserve()</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#copy_page</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#copy_page():reduce</code></div>
-Emits the current page for backends that support multiple pages, but doesn't clear it, so, the contents of the current page will be retained for the next page too. Use <code>cairo.cairo#show_page()</code> if you want to get an empty page after the emission.
+Emits the current page for backends that support multiple pages, but doesn't clear it, so, the contents of the current page will be retained for the next page too. Use <code class="highlighter-rouge">cairo.cairo#show_page()</code> if you want to get an empty page after the emission.
 </p>
 <p>
-This is a convenience function that simply calls <code>cairo.context#surface_copy_page()</code> on cr's target.
+This is a convenience function that simply calls <code class="highlighter-rouge">cairo.context#surface_copy_page()</code> on cr's target.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#show_page</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#show_page():reduce</code></div>
-Emits and clears the current page for backends that support multiple pages. Use <code>cairo.context#copy_page()</code> if you don't want to clear the page.
+Emits and clears the current page for backends that support multiple pages. Use <code class="highlighter-rouge">cairo.context#copy_page()</code> if you don't want to clear the page.
 </p>
 <p>
-This is a convenience function that simply calls <code>cairo.context#surface_show_page()</code> on cr's target.
+This is a convenience function that simply calls <code class="highlighter-rouge">cairo.context#surface_show_page()</code> on cr's target.
 </p>
 <h4><span class="caption-index-4">10.2.1.2</span><a name="anchor-10-2-1-2"></a>Types and Values</h4>
 <p>
-<code>cairo.antialias</code>
+<code class="highlighter-rouge">cairo.antialias</code>
 </p>
 <ul>
-<li><code>cairo.ANTIALIAS_DEFAULT</code></li>
-<li><code>cairo.ANTIALIAS_NONE</code></li>
-<li><code>cairo.ANTIALIAS_GRAY</code></li>
-<li><code>cairo.ANTIALIAS_SUBPIXEL</code></li>
-<li><code>cairo.ANTIALIAS_FAST</code></li>
-<li><code>cairo.ANTIALIAS_GOOD</code></li>
-<li><code>cairo.ANTIALIAS_BEST</code></li>
+<li><code class="highlighter-rouge">cairo.ANTIALIAS_DEFAULT</code></li>
+<li><code class="highlighter-rouge">cairo.ANTIALIAS_NONE</code></li>
+<li><code class="highlighter-rouge">cairo.ANTIALIAS_GRAY</code></li>
+<li><code class="highlighter-rouge">cairo.ANTIALIAS_SUBPIXEL</code></li>
+<li><code class="highlighter-rouge">cairo.ANTIALIAS_FAST</code></li>
+<li><code class="highlighter-rouge">cairo.ANTIALIAS_GOOD</code></li>
+<li><code class="highlighter-rouge">cairo.ANTIALIAS_BEST</code></li>
 </ul>
 <p>
-<code>cairo.fill_fule</code>
+<code class="highlighter-rouge">cairo.fill_fule</code>
 </p>
 <ul>
-<li><code>cairo.FILL_RULE_WINDING</code></li>
-<li><code>cairo.FILL_RULE_EVEN_ODD</code></li>
+<li><code class="highlighter-rouge">cairo.FILL_RULE_WINDING</code></li>
+<li><code class="highlighter-rouge">cairo.FILL_RULE_EVEN_ODD</code></li>
 </ul>
 <p>
-<code>cairo.line_cap</code>
+<code class="highlighter-rouge">cairo.line_cap</code>
 </p>
 <ul>
-<li><code>cairo.LINE_CAP_BUTT</code></li>
-<li><code>cairo.LINE_CAP_ROUND</code></li>
-<li><code>cairo.LINE_CAP_SQUARE</code></li>
+<li><code class="highlighter-rouge">cairo.LINE_CAP_BUTT</code></li>
+<li><code class="highlighter-rouge">cairo.LINE_CAP_ROUND</code></li>
+<li><code class="highlighter-rouge">cairo.LINE_CAP_SQUARE</code></li>
 </ul>
 <p>
-<code>cairo.line_join</code>
+<code class="highlighter-rouge">cairo.line_join</code>
 </p>
 <ul>
-<li><code>cairo.LINE_JOIN_MITER</code></li>
-<li><code>cairo.LINE_JOIN_ROUND</code></li>
-<li><code>cairo.LINE_JOIN_BEVEL</code></li>
+<li><code class="highlighter-rouge">cairo.LINE_JOIN_MITER</code></li>
+<li><code class="highlighter-rouge">cairo.LINE_JOIN_ROUND</code></li>
+<li><code class="highlighter-rouge">cairo.LINE_JOIN_BEVEL</code></li>
 </ul>
 <p>
-<code>cairo.operator</code>
+<code class="highlighter-rouge">cairo.operator</code>
 </p>
 <ul>
-<li><code>cairo.OPERATOR_CLEAR</code></li>
-<li><code>cairo.OPERATOR_SOURCE</code></li>
-<li><code>cairo.OPERATOR_OVER</code></li>
-<li><code>cairo.OPERATOR_IN</code></li>
-<li><code>cairo.OPERATOR_OUT</code></li>
-<li><code>cairo.OPERATOR_ATOP</code></li>
-<li><code>cairo.OPERATOR_DEST</code></li>
-<li><code>cairo.OPERATOR_DEST_OVER</code></li>
-<li><code>cairo.OPERATOR_DEST_IN</code></li>
-<li><code>cairo.OPERATOR_DEST_OUT</code></li>
-<li><code>cairo.OPERATOR_DEST_ATOP</code></li>
-<li><code>cairo.OPERATOR_XOR</code></li>
-<li><code>cairo.OPERATOR_ADD</code></li>
-<li><code>cairo.OPERATOR_SATURATE</code></li>
-<li><code>cairo.OPERATOR_MULTIPLY</code></li>
-<li><code>cairo.OPERATOR_SCREEN</code></li>
-<li><code>cairo.OPERATOR_OVERLAY</code></li>
-<li><code>cairo.OPERATOR_DARKEN</code></li>
-<li><code>cairo.OPERATOR_LIGHTEN</code></li>
-<li><code>cairo.OPERATOR_COLOR_DODGE</code></li>
-<li><code>cairo.OPERATOR_COLOR_BURN</code></li>
-<li><code>cairo.OPERATOR_HARD_LIGHT</code></li>
-<li><code>cairo.OPERATOR_SOFT_LIGHT</code></li>
-<li><code>cairo.OPERATOR_DIFFERENCE</code></li>
-<li><code>cairo.OPERATOR_EXCLUSION</code></li>
-<li><code>cairo.OPERATOR_HSL_HUE</code></li>
-<li><code>cairo.OPERATOR_HSL_SATURATION</code></li>
-<li><code>cairo.OPERATOR_HSL_COLOR</code></li>
-<li><code>cairo.OPERATOR_HSL_LUMINOSITY</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_CLEAR</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_SOURCE</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_OVER</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_IN</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_OUT</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_ATOP</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_DEST</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_DEST_OVER</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_DEST_IN</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_DEST_OUT</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_DEST_ATOP</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_XOR</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_ADD</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_SATURATE</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_MULTIPLY</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_SCREEN</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_OVERLAY</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_DARKEN</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_LIGHTEN</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_COLOR_DODGE</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_COLOR_BURN</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_HARD_LIGHT</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_SOFT_LIGHT</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_DIFFERENCE</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_EXCLUSION</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_HSL_HUE</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_HSL_SATURATION</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_HSL_COLOR</code></li>
+<li><code class="highlighter-rouge">cairo.OPERATOR_HSL_LUMINOSITY</code></li>
 </ul>
 <h3><span class="caption-index-3">10.2.2</span><a name="anchor-10-2-2"></a>Paths - Creating paths and manipulating path data</h3>
 <h4><span class="caption-index-4">10.2.2.1</span><a name="anchor-10-2-2-1"></a>Functions</h4>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#copy_path</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#copy_path()</code></div>
-Creates a copy of the current path and returns it to the user as a <code>cairo.path</code>. See <code>cairo_path_data_t</code> for hints on how to iterate over the returned data structure.
+Creates a copy of the current path and returns it to the user as a <code class="highlighter-rouge">cairo.path</code>. See <code class="highlighter-rouge">cairo_path_data_t</code> for hints on how to iterate over the returned data structure.
 </p>
 <p>
 The result will have no data (data==nullptr and num_data==0), if either of the following conditions hold:
 </p>
 <ol>
-<li>If there is insufficient memory to copy the path. In this case path-&gt;status will be set to <code>cairo.STATUS_NO_MEMORY</code>.</li>
-<li>If cr is already in an error state. In this case <code>path.status</code> will contain the same status that would be returned by <code>cairo.context#status()</code>.</li>
+<li>If there is insufficient memory to copy the path. In this case path-&gt;status will be set to <code class="highlighter-rouge">cairo.STATUS_NO_MEMORY</code>.</li>
+<li>If cr is already in an error state. In this case <code class="highlighter-rouge">path.status</code> will contain the same status that would be returned by <code class="highlighter-rouge">cairo.context#status()</code>.</li>
 </ol>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#copy_path_flat</strong></div>
@@ -539,19 +540,19 @@ The result will have no data (data==nullptr and num_data==0), if either of the f
 Gets a flattened copy of the current path and returns it to the user as a cairo.path. See cairo_path_data_t for hints on how to iterate over the returned data structure.
 </p>
 <p>
-This function is like <code>cairo.context#copy_path()</code> except that any curves in the path will be approximated with piecewise-linear approximations, (accurate to within the current tolerance value). That is, the result is guaranteed to not have any elements of type <code>cairo.PATH_CURVE_TO</code> which will instead be replaced by a series of <code>cairo.PATH_LINE_TO</code> elements.
+This function is like <code class="highlighter-rouge">cairo.context#copy_path()</code> except that any curves in the path will be approximated with piecewise-linear approximations, (accurate to within the current tolerance value). That is, the result is guaranteed to not have any elements of type <code class="highlighter-rouge">cairo.PATH_CURVE_TO</code> which will instead be replaced by a series of <code class="highlighter-rouge">cairo.PATH_LINE_TO</code> elements.
 </p>
 <p>
 The result will have no data (data==nullptr and num_data==0), if either of the following conditions hold:
 </p>
 <ol>
-<li>If there is insufficient memory to copy the path. In this case path.status will be set to <code>cairo.STATUS_NO_MEMORY</code>.</li>
-<li>If cr is already in an error state. In this case path-&gt;status will contain the same status that would be returned by <code>cairo.context#status()</code>.</li>
+<li>If there is insufficient memory to copy the path. In this case path.status will be set to <code class="highlighter-rouge">cairo.STATUS_NO_MEMORY</code>.</li>
+<li>If cr is already in an error state. In this case path-&gt;status will contain the same status that would be returned by <code class="highlighter-rouge">cairo.context#status()</code>.</li>
 </ol>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#append_path</strong></div>
 <div style="margin-bottom:1em"><code>cairo.context#append_path(path:cairo.path):reduce</code></div>
-Append the path onto the current path. The path may be either the return value from one of <code>cairo.context#copy_path()</code> or <code>cairo.context#copy_path_flat()</code> or it may be constructed manually. See <code>cairo.path</code> for details on how the path data structure should be initialized, and note that <code>path.status</code> must be initialized to <code>cairo.STATUS_SUCCESS</code>.
+Append the path onto the current path. The path may be either the return value from one of <code class="highlighter-rouge">cairo.context#copy_path()</code> or <code class="highlighter-rouge">cairo.context#copy_path_flat()</code> or it may be constructed manually. See <code class="highlighter-rouge">cairo.path</code> for details on how the path data structure should be initialized, and note that <code class="highlighter-rouge">path.status</code> must be initialized to <code class="highlighter-rouge">cairo.STATUS_SUCCESS</code>.
 </p>
 <p>
 <div><strong style="text-decoration:underline">cairo.context#has_current_point</strong></div>
@@ -944,44 +945,44 @@ This function returns the type a pattern. See cairo_pattern_type_t for available
 </p>
 <h4><span class="caption-index-4">10.2.3.2</span><a name="anchor-10-2-3-2"></a>Types and Values</h4>
 <p>
-<code>cairo.extend</code>
+<code class="highlighter-rouge">cairo.extend</code>
 </p>
 <ul>
-<li><code>cairo.EXTEND_NONE</code></li>
-<li><code>cairo.EXTEND_REPEAT</code></li>
-<li><code>cairo.EXTEND_REFLECT</code></li>
-<li><code>cairo.EXTEND_PAD</code></li>
+<li><code class="highlighter-rouge">cairo.EXTEND_NONE</code></li>
+<li><code class="highlighter-rouge">cairo.EXTEND_REPEAT</code></li>
+<li><code class="highlighter-rouge">cairo.EXTEND_REFLECT</code></li>
+<li><code class="highlighter-rouge">cairo.EXTEND_PAD</code></li>
 </ul>
 <p>
-<code>cairo.filter</code>
+<code class="highlighter-rouge">cairo.filter</code>
 </p>
 <ul>
-<li><code>cairo.FILTER_FAST</code></li>
-<li><code>cairo.FILTER_GOOD</code></li>
-<li><code>cairo.FILTER_BEST</code></li>
-<li><code>cairo.FILTER_NEAREST</code></li>
-<li><code>cairo.FILTER_BILINEAR</code></li>
-<li><code>cairo.FILTER_GAUSSIAN</code></li>
+<li><code class="highlighter-rouge">cairo.FILTER_FAST</code></li>
+<li><code class="highlighter-rouge">cairo.FILTER_GOOD</code></li>
+<li><code class="highlighter-rouge">cairo.FILTER_BEST</code></li>
+<li><code class="highlighter-rouge">cairo.FILTER_NEAREST</code></li>
+<li><code class="highlighter-rouge">cairo.FILTER_BILINEAR</code></li>
+<li><code class="highlighter-rouge">cairo.FILTER_GAUSSIAN</code></li>
 </ul>
 <p>
-<code>cairo.pattern_type</code>
+<code class="highlighter-rouge">cairo.pattern_type</code>
 </p>
 <ul>
-<li><code>cairo.PATTERN_TYPE_SOLID</code></li>
-<li><code>cairo.PATTERN_TYPE_SURFACE</code></li>
-<li><code>cairo.PATTERN_TYPE_LINEAR</code></li>
-<li><code>cairo.PATTERN_TYPE_RADIAL</code></li>
-<li><code>cairo.PATTERN_TYPE_MESH</code></li>
-<li><code>cairo.PATTERN_TYPE_RASTER_SOURCE</code></li>
+<li><code class="highlighter-rouge">cairo.PATTERN_TYPE_SOLID</code></li>
+<li><code class="highlighter-rouge">cairo.PATTERN_TYPE_SURFACE</code></li>
+<li><code class="highlighter-rouge">cairo.PATTERN_TYPE_LINEAR</code></li>
+<li><code class="highlighter-rouge">cairo.PATTERN_TYPE_RADIAL</code></li>
+<li><code class="highlighter-rouge">cairo.PATTERN_TYPE_MESH</code></li>
+<li><code class="highlighter-rouge">cairo.PATTERN_TYPE_RASTER_SOURCE</code></li>
 </ul>
 <h3><span class="caption-index-3">10.2.4</span><a name="anchor-10-2-4"></a>Regions - Representing a pixel-aligned area</h3>
 <p>
-<code>cairo.region_overlap</code>
+<code class="highlighter-rouge">cairo.region_overlap</code>
 </p>
 <ul>
-<li><code>cairo.REGION_OVERLAP_IN</code></li>
-<li><code>cairo.REGION_OVERLAP_OUT</code></li>
-<li><code>cairo.REGION_OVERLAP_PART</code></li>
+<li><code class="highlighter-rouge">cairo.REGION_OVERLAP_IN</code></li>
+<li><code class="highlighter-rouge">cairo.REGION_OVERLAP_OUT</code></li>
+<li><code class="highlighter-rouge">cairo.REGION_OVERLAP_PART</code></li>
 </ul>
 <h4><span class="caption-index-4">10.2.4.1</span><a name="anchor-10-2-4-1"></a>Functions</h4>
 <p>
@@ -1526,11 +1527,7 @@ Note: Even if this function returns false, a cairo.context#show_text_glyphs() op
 <h4><span class="caption-index-4">10.4.13.1</span><a name="anchor-10-4-13-1"></a>Functions</h4>
 <h3><span class="caption-index-3">10.4.14</span><a name="anchor-10-4-14"></a>Script Surfaces - Rendering to replayable scripts</h3>
 <h4><span class="caption-index-4">10.4.14.1</span><a name="anchor-10-4-14-1"></a>Functions</h4>
-<h2><span class="caption-index-2">10.5</span><a name="anchor-10-5"></a>Utilities</h2>
-<h4><span class="caption-index-4">10.5.0.1</span><a name="anchor-10-5-0-1"></a>Functions</h4>
-<h3><span class="caption-index-3">10.5.1</span><a name="anchor-10-5-1"></a>cairo.matrix - Generic matrix operations</h3>
-<h4><span class="caption-index-4">10.5.1.1</span><a name="anchor-10-5-1-1"></a>Functions</h4>
-<h2><span class="caption-index-2">10.6</span><a name="anchor-10-6"></a>Thanks</h2>
+<h2><span class="caption-index-2">10.5</span><a name="anchor-10-5"></a>Thanks</h2>
 <p>
 This module uses Cairo library which is distributed in the following site:
 </p>

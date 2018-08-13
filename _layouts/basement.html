@@ -39,13 +39,18 @@
 		  </li>
 		</ul>
 	  </div>
+	  {% if page.doctitle %}
+	  <div class="navbar-text navbar-left text-white bg-secondary rounded pr-4 pl-4">
+		{{ page.doctitle }}
+	  </div>
+	  {% endif %}
 	  {% if page.prevpage %}
 	  {% if page.prevpage == "" %}
-	  <span class="btn btn-secondary disabled" href="{{ page.prevpage }}">
+	  <span class="btn btn-secondary disabled ml-3" href="{{ page.prevpage }}">
 		<i class="fas fa-chevron-circle-left mr-2"></i><span class="small">Prev</span>
 	  </span>
 	  {% else %}
-	  <a class="btn btn-secondary active" href="{{ page.prevpage }}">
+	  <a class="btn btn-secondary active ml-3" href="{{ page.prevpage }}">
 		<i class="fas fa-chevron-circle-left mr-2"></i><span class="small">Prev</span>
 	  </a>
 	  {% endif %}

@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: document
 lang: en
 title: Gura Language Manual
+doctitle: Gura Language Manual
 prevpage: chapter-18.html
 nextpage: chapter-20.html
 ---
