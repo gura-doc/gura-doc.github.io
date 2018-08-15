@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: document
 lang: en
 title: Gura Library Reference
 doctitle: Gura Library Reference

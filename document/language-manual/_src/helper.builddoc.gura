@@ -91,7 +91,11 @@ NaviItem = struct(level:number, indices[]:number, anchorName:string, text:string
 printNaviItems(out:stream:w, itemList[]:NaviItem) = {
 	tmpl@naviItem = R'''
 	<span class="list-group-item border-0${if (item.level == 0) {' py-2 font-weight-bold'} else {' py-1'}}{% if page.url contains "/${fileNameHTML}" %} active{% endif %}">
+	{% if page.url contains "/${fileNameHTML}" %}
+	<a name="${"#" + item.anchorName}"></a>${item.indices.head(item.level + 1).join('.')} ${item.text}
+	{% else %}
 	<a href="${fileNameHTML}${if (item.level > 0) { "#" + item.anchorName }}">${item.indices.head(item.level + 1).join('.')} ${item.text}</a>
+	{% endif %}
 	</span>
 	'''T
 	tmpl@naviGroupBegin = R'''
@@ -109,16 +113,6 @@ printNaviItems(out:stream:w, itemList[]:NaviItem) = {
 			tmpl@naviGroupBegin.render(out)
 			printNaviItems(out, item.itemList)
 			tmpl@naviGroupEnd.render(out)
-		}
-	}
-}
-
-printNaviItems2(out:stream:w, itemList[]:NaviItem) = {
-	out = sys.stdout
-	itemList.each {|item|
-		printf('%*s%s %s\n', item.level * 2, '', item.indices.head(item.level + 1).join('.'), item.text)
-		if (!item.itemList.isempty()) {
-			printNaviItems(out, item.itemList)
 		}
 	}
 }
@@ -144,12 +138,13 @@ output@jekyllnavi(doc:markdown.document, dirNameOut:string, title:string) = {
 	itemStack = []
 	itemList = itemListRoot
 	doc.render@toc {|level:number, indices[]:number, anchorName:string, text:string|
+		//printf('%*s%s\n', level * 2, '', text)
 		item = NaviItem(level, indices.clone(), anchorName, text)
 		if (!itemStack.isempty()) {
 			itemPrev = itemStack[-1]
 			if (level <= itemPrev.level) {
 				repeat (itemPrev.level - level + 1) {
-					itemStack.erase(-1)
+					try {itemStack.erase(-1) } catch { println('**** error ****') }
 				}
 				itemList = if (itemStack.isempty()) { itemListRoot } else { itemStack[-1].itemList }
 			} else {

@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: document
 lang: en
 title: Gura Language Manual
+doctitle: Gura Language Manual
 ---
 
 <h1>Gura Language Manual</h1>

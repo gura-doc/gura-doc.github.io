@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: document
 lang: en
 title: Gura Library Reference
+doctitle: Gura Library Reference
 ---
 
 <h1>Gura Library Reference</h1>
