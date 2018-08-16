@@ -15,7 +15,7 @@ title: document
   <tbody>
 	<tr>
 	  <td>
-		<a href="language-manual/index.html">Gura Language Manual</a>
+		<a href="/reference/language-manual/">Gura Language Manual</a>
 		<a href="https://github.com/gura-lang/gura/raw/master/doc/language-manual/gura-lang-e.pdf" class="float-right">
 		  <i class="far fa-file-pdf"></i> PDF
 		</a>
@@ -25,7 +25,7 @@ title: document
 
 	<tr>
 	  <td>
-		<a href="library-reference/index.html">Gura Library Reference</a>
+		<a href="/reference/library-reference/">Gura Library Reference</a>
 		<a href="https://github.com/gura-lang/gura/raw/master/doc/library-reference/gura-lib-e.pdf" class="float-right">
 		  <i class="far fa-file-pdf"></i> PDF
 		</a>
@@ -46,17 +46,17 @@ title: document
 
 <tbody>
 <tr>
-<td><a href="article/Comparison-between-Java8-and-Gura.html">Comparison between Java 8 and Gura</a></td>
+<td><a href="/article/Comparison-between-Java8-and-Gura/">Comparison between Java 8 and Gura</a></td>
 <td>English</td>
 </tr>
 
 <tr>
-<td><a href="article/Script-to-Generate-Prime-Numbers.html">Script to Generate Prime Numbers</a></td>
+<td><a href="/article/Script-to-Generate-Prime-Numbers/">Script to Generate Prime Numbers</a></td>
 <td>English</td>
 </tr>
 
 <tr>
-<td><a href="article/Database-Access.html">Database Access</a></td>
+<td><a href="/article/Database-Access/">Database Access</a></td>
 <td>English</td>
 </tr>
 </tbody>
