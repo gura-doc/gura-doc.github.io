@@ -7,7 +7,7 @@ prevpage: chapter-13.html
 nextpage: chapter-15.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">14</span><a name="anchor-14"></a>csv Module</h1>
+<h1><span class="caption-index-1">14</span>csv Module</h1>
 <h2><span class="caption-index-2">14.1</span><a name="anchor-14-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">csv</code> module provices measures to read/write CSV files. To utilize it, import the <code class="highlighter-rouge">csv</code> module using <code class="highlighter-rouge">import()</code> function.

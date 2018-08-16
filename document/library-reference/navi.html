@@ -1,15 +1,31 @@
 <div classs="list-group">
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-01.html" %} active{% endif %}">
-<a href="chapter-01.html">1 About This Reference</a>
+{% if page.url contains "/chapter-01.html" %}
+<a name="anchor-1"></a><a href="#">1 About This Reference</a>
+{% else %}
+<a href="chapter-01.html#anchor-1">1 About This Reference</a>
+{% endif %}
 </span>
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-02.html" %} active{% endif %}">
-<a href="chapter-02.html">2 Explanatory Note</a>
+{% if page.url contains "/chapter-02.html" %}
+<a name="anchor-2"></a><a href="#">2 Explanatory Note</a>
+{% else %}
+<a href="chapter-02.html#anchor-2">2 Explanatory Note</a>
+{% endif %}
 </span>
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-03.html" %} active{% endif %}">
-<a href="chapter-03.html">3 Predefined Variables</a>
+{% if page.url contains "/chapter-03.html" %}
+<a name="anchor-3"></a><a href="#">3 Predefined Variables</a>
+{% else %}
+<a href="chapter-03.html#anchor-3">3 Predefined Variables</a>
+{% endif %}
 </span>
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-04.html" %} active{% endif %}">
-<a href="chapter-04.html">4 Built-in Function</a>
+{% if page.url contains "/chapter-04.html" %}
+<a name="anchor-4"></a><a href="#">4 Built-in Function</a>
+{% else %}
+<a href="chapter-04.html#anchor-4">4 Built-in Function</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-04.html" %}
 <div class="list-group" id="naviitem-anchor-4">
@@ -55,7 +71,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-05.html" %} active{% endif %}">
-<a href="chapter-05.html">5 Built-in Class</a>
+{% if page.url contains "/chapter-05.html" %}
+<a name="anchor-5"></a><a href="#">5 Built-in Class</a>
+{% else %}
+<a href="chapter-05.html#anchor-5">5 Built-in Class</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-05.html" %}
 <div class="list-group" id="naviitem-anchor-5">
@@ -209,7 +229,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-06.html" %} active{% endif %}">
-<a href="chapter-06.html">6 argopt Module</a>
+{% if page.url contains "/chapter-06.html" %}
+<a name="anchor-6"></a><a href="#">6 argopt Module</a>
+{% else %}
+<a href="chapter-06.html#anchor-6">6 argopt Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-06.html" %}
 <div class="list-group" id="naviitem-anchor-6">
@@ -222,7 +246,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-07.html" %} active{% endif %}">
-<a href="chapter-07.html">7 base64 Module</a>
+{% if page.url contains "/chapter-07.html" %}
+<a name="anchor-7"></a><a href="#">7 base64 Module</a>
+{% else %}
+<a href="chapter-07.html#anchor-7">7 base64 Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-07.html" %}
 <div class="list-group" id="naviitem-anchor-7">
@@ -238,7 +266,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-08.html" %} active{% endif %}">
-<a href="chapter-08.html">8 bmp Module</a>
+{% if page.url contains "/chapter-08.html" %}
+<a name="anchor-8"></a><a href="#">8 bmp Module</a>
+{% else %}
+<a href="chapter-08.html#anchor-8">8 bmp Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-08.html" %}
 <div class="list-group" id="naviitem-anchor-8">
@@ -254,7 +286,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-09.html" %} active{% endif %}">
-<a href="chapter-09.html">9 bzip2 Module</a>
+{% if page.url contains "/chapter-09.html" %}
+<a name="anchor-9"></a><a href="#">9 bzip2 Module</a>
+{% else %}
+<a href="chapter-09.html#anchor-9">9 bzip2 Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-09.html" %}
 <div class="list-group" id="naviitem-anchor-9">
@@ -273,7 +309,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-10.html" %} active{% endif %}">
-<a href="chapter-10.html">10 cairo Module</a>
+{% if page.url contains "/chapter-10.html" %}
+<a name="anchor-10"></a><a href="#">10 cairo Module</a>
+{% else %}
+<a href="chapter-10.html#anchor-10">10 cairo Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-10.html" %}
 <div class="list-group" id="naviitem-anchor-10">
@@ -295,7 +335,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-11.html" %} active{% endif %}">
-<a href="chapter-11.html">11 calendar Module</a>
+{% if page.url contains "/chapter-11.html" %}
+<a name="anchor-11"></a><a href="#">11 calendar Module</a>
+{% else %}
+<a href="chapter-11.html#anchor-11">11 calendar Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-11.html" %}
 <div class="list-group" id="naviitem-anchor-11">
@@ -308,7 +352,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-12.html" %} active{% endif %}">
-<a href="chapter-12.html">12 cbridge Module</a>
+{% if page.url contains "/chapter-12.html" %}
+<a name="anchor-12"></a><a href="#">12 cbridge Module</a>
+{% else %}
+<a href="chapter-12.html#anchor-12">12 cbridge Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-12.html" %}
 <div class="list-group" id="naviitem-anchor-12">
@@ -318,7 +366,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-13.html" %} active{% endif %}">
-<a href="chapter-13.html">13 conio Module</a>
+{% if page.url contains "/chapter-13.html" %}
+<a name="anchor-13"></a><a href="#">13 conio Module</a>
+{% else %}
+<a href="chapter-13.html#anchor-13">13 conio Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-13.html" %}
 <div class="list-group" id="naviitem-anchor-13">
@@ -331,7 +383,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-14.html" %} active{% endif %}">
-<a href="chapter-14.html">14 csv Module</a>
+{% if page.url contains "/chapter-14.html" %}
+<a name="anchor-14"></a><a href="#">14 csv Module</a>
+{% else %}
+<a href="chapter-14.html#anchor-14">14 csv Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-14.html" %}
 <div class="list-group" id="naviitem-anchor-14">
@@ -350,7 +406,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-15.html" %} active{% endif %}">
-<a href="chapter-15.html">15 curl Module</a>
+{% if page.url contains "/chapter-15.html" %}
+<a name="anchor-15"></a><a href="#">15 curl Module</a>
+{% else %}
+<a href="chapter-15.html#anchor-15">15 curl Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-15.html" %}
 <div class="list-group" id="naviitem-anchor-15">
@@ -369,7 +429,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-16.html" %} active{% endif %}">
-<a href="chapter-16.html">16 diff Module</a>
+{% if page.url contains "/chapter-16.html" %}
+<a name="anchor-16"></a><a href="#">16 diff Module</a>
+{% else %}
+<a href="chapter-16.html#anchor-16">16 diff Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-16.html" %}
 <div class="list-group" id="naviitem-anchor-16">
@@ -400,7 +464,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-17.html" %} active{% endif %}">
-<a href="chapter-17.html">17 doxygen Module</a>
+{% if page.url contains "/chapter-17.html" %}
+<a name="anchor-17"></a><a href="#">17 doxygen Module</a>
+{% else %}
+<a href="chapter-17.html#anchor-17">17 doxygen Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-17.html" %}
 <div class="list-group" id="naviitem-anchor-17">
@@ -428,7 +496,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-18.html" %} active{% endif %}">
-<a href="chapter-18.html">18 example Module</a>
+{% if page.url contains "/chapter-18.html" %}
+<a name="anchor-18"></a><a href="#">18 example Module</a>
+{% else %}
+<a href="chapter-18.html#anchor-18">18 example Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-18.html" %}
 <div class="list-group" id="naviitem-anchor-18">
@@ -438,7 +510,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-19.html" %} active{% endif %}">
-<a href="chapter-19.html">19 fftw Module</a>
+{% if page.url contains "/chapter-19.html" %}
+<a name="anchor-19"></a><a href="#">19 fftw Module</a>
+{% else %}
+<a href="chapter-19.html#anchor-19">19 fftw Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-19.html" %}
 <div class="list-group" id="naviitem-anchor-19">
@@ -457,7 +533,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-20.html" %} active{% endif %}">
-<a href="chapter-20.html">20 freetype Module</a>
+{% if page.url contains "/chapter-20.html" %}
+<a name="anchor-20"></a><a href="#">20 freetype Module</a>
+{% else %}
+<a href="chapter-20.html#anchor-20">20 freetype Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-20.html" %}
 <div class="list-group" id="naviitem-anchor-20">
@@ -545,7 +625,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-21.html" %} active{% endif %}">
-<a href="chapter-21.html">21 fs Module</a>
+{% if page.url contains "/chapter-21.html" %}
+<a name="anchor-21"></a><a href="#">21 fs Module</a>
+{% else %}
+<a href="chapter-21.html#anchor-21">21 fs Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-21.html" %}
 <div class="list-group" id="naviitem-anchor-21">
@@ -561,7 +645,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-22.html" %} active{% endif %}">
-<a href="chapter-22.html">22 gif Module</a>
+{% if page.url contains "/chapter-22.html" %}
+<a name="anchor-22"></a><a href="#">22 gif Module</a>
+{% else %}
+<a href="chapter-22.html#anchor-22">22 gif Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-22.html" %}
 <div class="list-group" id="naviitem-anchor-22">
@@ -604,7 +692,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-23.html" %} active{% endif %}">
-<a href="chapter-23.html">23 glu Module</a>
+{% if page.url contains "/chapter-23.html" %}
+<a name="anchor-23"></a><a href="#">23 glu Module</a>
+{% else %}
+<a href="chapter-23.html#anchor-23">23 glu Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-23.html" %}
 <div class="list-group" id="naviitem-anchor-23">
@@ -617,7 +709,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-24.html" %} active{% endif %}">
-<a href="chapter-24.html">24 glut Module</a>
+{% if page.url contains "/chapter-24.html" %}
+<a name="anchor-24"></a><a href="#">24 glut Module</a>
+{% else %}
+<a href="chapter-24.html#anchor-24">24 glut Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-24.html" %}
 <div class="list-group" id="naviitem-anchor-24">
@@ -633,7 +729,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-25.html" %} active{% endif %}">
-<a href="chapter-25.html">25 gmp Module</a>
+{% if page.url contains "/chapter-25.html" %}
+<a name="anchor-25"></a><a href="#">25 gmp Module</a>
+{% else %}
+<a href="chapter-25.html#anchor-25">25 gmp Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-25.html" %}
 <div class="list-group" id="naviitem-anchor-25">
@@ -664,7 +764,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-26.html" %} active{% endif %}">
-<a href="chapter-26.html">26 gurcbuild Module</a>
+{% if page.url contains "/chapter-26.html" %}
+<a name="anchor-26"></a><a href="#">26 gurcbuild Module</a>
+{% else %}
+<a href="chapter-26.html#anchor-26">26 gurcbuild Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-26.html" %}
 <div class="list-group" id="naviitem-anchor-26">
@@ -674,7 +778,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-27.html" %} active{% endif %}">
-<a href="chapter-27.html">27 gzip Module</a>
+{% if page.url contains "/chapter-27.html" %}
+<a name="anchor-27"></a><a href="#">27 gzip Module</a>
+{% else %}
+<a href="chapter-27.html#anchor-27">27 gzip Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-27.html" %}
 <div class="list-group" id="naviitem-anchor-27">
@@ -693,7 +801,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-28.html" %} active{% endif %}">
-<a href="chapter-28.html">28 hash Module</a>
+{% if page.url contains "/chapter-28.html" %}
+<a name="anchor-28"></a><a href="#">28 hash Module</a>
+{% else %}
+<a href="chapter-28.html#anchor-28">28 hash Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-28.html" %}
 <div class="list-group" id="naviitem-anchor-28">
@@ -706,7 +818,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-29.html" %} active{% endif %}">
-<a href="chapter-29.html">29 http Module</a>
+{% if page.url contains "/chapter-29.html" %}
+<a name="anchor-29"></a><a href="#">29 http Module</a>
+{% else %}
+<a href="chapter-29.html#anchor-29">29 http Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-29.html" %}
 <div class="list-group" id="naviitem-anchor-29">
@@ -719,7 +835,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-30.html" %} active{% endif %}">
-<a href="chapter-30.html">30 jpeg Module</a>
+{% if page.url contains "/chapter-30.html" %}
+<a name="anchor-30"></a><a href="#">30 jpeg Module</a>
+{% else %}
+<a href="chapter-30.html#anchor-30">30 jpeg Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-30.html" %}
 <div class="list-group" id="naviitem-anchor-30">
@@ -747,7 +867,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-31.html" %} active{% endif %}">
-<a href="chapter-31.html">31 lexer Module</a>
+{% if page.url contains "/chapter-31.html" %}
+<a name="anchor-31"></a><a href="#">31 lexer Module</a>
+{% else %}
+<a href="chapter-31.html#anchor-31">31 lexer Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-31.html" %}
 <div class="list-group" id="naviitem-anchor-31">
@@ -760,7 +884,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-32.html" %} active{% endif %}">
-<a href="chapter-32.html">32 markdown Module</a>
+{% if page.url contains "/chapter-32.html" %}
+<a name="anchor-32"></a><a href="#">32 markdown Module</a>
+{% else %}
+<a href="chapter-32.html#anchor-32">32 markdown Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-32.html" %}
 <div class="list-group" id="naviitem-anchor-32">
@@ -782,7 +910,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-33.html" %} active{% endif %}">
-<a href="chapter-33.html">33 math Module</a>
+{% if page.url contains "/chapter-33.html" %}
+<a name="anchor-33"></a><a href="#">33 math Module</a>
+{% else %}
+<a href="chapter-33.html#anchor-33">33 math Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-33.html" %}
 <div class="list-group" id="naviitem-anchor-33">
@@ -795,7 +927,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-34.html" %} active{% endif %}">
-<a href="chapter-34.html">34 midi Module</a>
+{% if page.url contains "/chapter-34.html" %}
+<a name="anchor-34"></a><a href="#">34 midi Module</a>
+{% else %}
+<a href="chapter-34.html#anchor-34">34 midi Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-34.html" %}
 <div class="list-group" id="naviitem-anchor-34">
@@ -832,7 +968,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-35.html" %} active{% endif %}">
-<a href="chapter-35.html">35 ml.linear Module</a>
+{% if page.url contains "/chapter-35.html" %}
+<a name="anchor-35"></a><a href="#">35 ml.linear Module</a>
+{% else %}
+<a href="chapter-35.html#anchor-35">35 ml.linear Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-35.html" %}
 <div class="list-group" id="naviitem-anchor-35">
@@ -860,7 +1000,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-36.html" %} active{% endif %}">
-<a href="chapter-36.html">36 ml.mnist Module</a>
+{% if page.url contains "/chapter-36.html" %}
+<a name="anchor-36"></a><a href="#">36 ml.mnist Module</a>
+{% else %}
+<a href="chapter-36.html#anchor-36">36 ml.mnist Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-36.html" %}
 <div class="list-group" id="naviitem-anchor-36">
@@ -882,7 +1026,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-37.html" %} active{% endif %}">
-<a href="chapter-37.html">37 ml.svm Module</a>
+{% if page.url contains "/chapter-37.html" %}
+<a name="anchor-37"></a><a href="#">37 ml.svm Module</a>
+{% else %}
+<a href="chapter-37.html#anchor-37">37 ml.svm Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-37.html" %}
 <div class="list-group" id="naviitem-anchor-37">
@@ -892,7 +1040,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-38.html" %} active{% endif %}">
-<a href="chapter-38.html">38 modbuild Module</a>
+{% if page.url contains "/chapter-38.html" %}
+<a name="anchor-38"></a><a href="#">38 modbuild Module</a>
+{% else %}
+<a href="chapter-38.html#anchor-38">38 modbuild Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-38.html" %}
 <div class="list-group" id="naviitem-anchor-38">
@@ -902,7 +1054,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-39.html" %} active{% endif %}">
-<a href="chapter-39.html">39 model.obj Module</a>
+{% if page.url contains "/chapter-39.html" %}
+<a name="anchor-39"></a><a href="#">39 model.obj Module</a>
+{% else %}
+<a href="chapter-39.html#anchor-39">39 model.obj Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-39.html" %}
 <div class="list-group" id="naviitem-anchor-39">
@@ -912,7 +1068,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-40.html" %} active{% endif %}">
-<a href="chapter-40.html">40 model.stl Module</a>
+{% if page.url contains "/chapter-40.html" %}
+<a name="anchor-40"></a><a href="#">40 model.stl Module</a>
+{% else %}
+<a href="chapter-40.html#anchor-40">40 model.stl Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-40.html" %}
 <div class="list-group" id="naviitem-anchor-40">
@@ -928,7 +1088,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-41.html" %} active{% endif %}">
-<a href="chapter-41.html">41 msico Module</a>
+{% if page.url contains "/chapter-41.html" %}
+<a name="anchor-41"></a><a href="#">41 msico Module</a>
+{% else %}
+<a href="chapter-41.html#anchor-41">41 msico Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-41.html" %}
 <div class="list-group" id="naviitem-anchor-41">
@@ -947,7 +1111,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-42.html" %} active{% endif %}">
-<a href="chapter-42.html">42 mtp Module</a>
+{% if page.url contains "/chapter-42.html" %}
+<a name="anchor-42"></a><a href="#">42 mtp Module</a>
+{% else %}
+<a href="chapter-42.html#anchor-42">42 mtp Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-42.html" %}
 <div class="list-group" id="naviitem-anchor-42">
@@ -972,7 +1140,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-43.html" %} active{% endif %}">
-<a href="chapter-43.html">43 opengl Module</a>
+{% if page.url contains "/chapter-43.html" %}
+<a name="anchor-43"></a><a href="#">43 opengl Module</a>
+{% else %}
+<a href="chapter-43.html#anchor-43">43 opengl Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-43.html" %}
 <div class="list-group" id="naviitem-anchor-43">
@@ -985,7 +1157,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-44.html" %} active{% endif %}">
-<a href="chapter-44.html">44 os Module</a>
+{% if page.url contains "/chapter-44.html" %}
+<a name="anchor-44"></a><a href="#">44 os Module</a>
+{% else %}
+<a href="chapter-44.html#anchor-44">44 os Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-44.html" %}
 <div class="list-group" id="naviitem-anchor-44">
@@ -998,7 +1174,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-45.html" %} active{% endif %}">
-<a href="chapter-45.html">45 path Module</a>
+{% if page.url contains "/chapter-45.html" %}
+<a name="anchor-45"></a><a href="#">45 path Module</a>
+{% else %}
+<a href="chapter-45.html#anchor-45">45 path Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-45.html" %}
 <div class="list-group" id="naviitem-anchor-45">
@@ -1011,7 +1191,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-46.html" %} active{% endif %}">
-<a href="chapter-46.html">46 png Module</a>
+{% if page.url contains "/chapter-46.html" %}
+<a name="anchor-46"></a><a href="#">46 png Module</a>
+{% else %}
+<a href="chapter-46.html#anchor-46">46 png Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-46.html" %}
 <div class="list-group" id="naviitem-anchor-46">
@@ -1033,7 +1217,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-47.html" %} active{% endif %}">
-<a href="chapter-47.html">47 ppm Module</a>
+{% if page.url contains "/chapter-47.html" %}
+<a name="anchor-47"></a><a href="#">47 ppm Module</a>
+{% else %}
+<a href="chapter-47.html#anchor-47">47 ppm Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-47.html" %}
 <div class="list-group" id="naviitem-anchor-47">
@@ -1049,7 +1237,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-48.html" %} active{% endif %}">
-<a href="chapter-48.html">48 re Module</a>
+{% if page.url contains "/chapter-48.html" %}
+<a name="anchor-48"></a><a href="#">48 re Module</a>
+{% else %}
+<a href="chapter-48.html#anchor-48">48 re Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-48.html" %}
 <div class="list-group" id="naviitem-anchor-48">
@@ -1083,7 +1275,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-49.html" %} active{% endif %}">
-<a href="chapter-49.html">49 show Module</a>
+{% if page.url contains "/chapter-49.html" %}
+<a name="anchor-49"></a><a href="#">49 show Module</a>
+{% else %}
+<a href="chapter-49.html#anchor-49">49 show Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-49.html" %}
 <div class="list-group" id="naviitem-anchor-49">
@@ -1093,7 +1289,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-50.html" %} active{% endif %}">
-<a href="chapter-50.html">50 sdl2 Module</a>
+{% if page.url contains "/chapter-50.html" %}
+<a name="anchor-50"></a><a href="#">50 sdl2 Module</a>
+{% else %}
+<a href="chapter-50.html#anchor-50">50 sdl2 Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-50.html" %}
 <div class="list-group" id="naviitem-anchor-50">
@@ -1181,7 +1381,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-51.html" %} active{% endif %}">
-<a href="chapter-51.html">51 sed Module</a>
+{% if page.url contains "/chapter-51.html" %}
+<a name="anchor-51"></a><a href="#">51 sed Module</a>
+{% else %}
+<a href="chapter-51.html#anchor-51">51 sed Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-51.html" %}
 <div class="list-group" id="naviitem-anchor-51">
@@ -1191,7 +1395,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-52.html" %} active{% endif %}">
-<a href="chapter-52.html">52 sqlite3 Module</a>
+{% if page.url contains "/chapter-52.html" %}
+<a name="anchor-52"></a><a href="#">52 sqlite3 Module</a>
+{% else %}
+<a href="chapter-52.html#anchor-52">52 sqlite3 Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-52.html" %}
 <div class="list-group" id="naviitem-anchor-52">
@@ -1207,7 +1415,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-53.html" %} active{% endif %}">
-<a href="chapter-53.html">53 sys Module</a>
+{% if page.url contains "/chapter-53.html" %}
+<a name="anchor-53"></a><a href="#">53 sys Module</a>
+{% else %}
+<a href="chapter-53.html#anchor-53">53 sys Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-53.html" %}
 <div class="list-group" id="naviitem-anchor-53">
@@ -1223,7 +1435,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-54.html" %} active{% endif %}">
-<a href="chapter-54.html">54 tar Module</a>
+{% if page.url contains "/chapter-54.html" %}
+<a name="anchor-54"></a><a href="#">54 tar Module</a>
+{% else %}
+<a href="chapter-54.html#anchor-54">54 tar Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-54.html" %}
 <div class="list-group" id="naviitem-anchor-54">
@@ -1242,7 +1458,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-55.html" %} active{% endif %}">
-<a href="chapter-55.html">55 tiff Module</a>
+{% if page.url contains "/chapter-55.html" %}
+<a name="anchor-55"></a><a href="#">55 tiff Module</a>
+{% else %}
+<a href="chapter-55.html#anchor-55">55 tiff Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-55.html" %}
 <div class="list-group" id="naviitem-anchor-55">
@@ -1261,7 +1481,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-56.html" %} active{% endif %}">
-<a href="chapter-56.html">56 tokenizer Module</a>
+{% if page.url contains "/chapter-56.html" %}
+<a name="anchor-56"></a><a href="#">56 tokenizer Module</a>
+{% else %}
+<a href="chapter-56.html#anchor-56">56 tokenizer Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-56.html" %}
 <div class="list-group" id="naviitem-anchor-56">
@@ -1271,7 +1495,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-57.html" %} active{% endif %}">
-<a href="chapter-57.html">57 units Module</a>
+{% if page.url contains "/chapter-57.html" %}
+<a name="anchor-57"></a><a href="#">57 units Module</a>
+{% else %}
+<a href="chapter-57.html#anchor-57">57 units Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-57.html" %}
 <div class="list-group" id="naviitem-anchor-57">
@@ -1281,7 +1509,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-58.html" %} active{% endif %}">
-<a href="chapter-58.html">58 uuid Module</a>
+{% if page.url contains "/chapter-58.html" %}
+<a name="anchor-58"></a><a href="#">58 uuid Module</a>
+{% else %}
+<a href="chapter-58.html#anchor-58">58 uuid Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-58.html" %}
 <div class="list-group" id="naviitem-anchor-58">
@@ -1294,7 +1526,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-59.html" %} active{% endif %}">
-<a href="chapter-59.html">59 wav Module</a>
+{% if page.url contains "/chapter-59.html" %}
+<a name="anchor-59"></a><a href="#">59 wav Module</a>
+{% else %}
+<a href="chapter-59.html#anchor-59">59 wav Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-59.html" %}
 <div class="list-group" id="naviitem-anchor-59">
@@ -1310,7 +1546,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-60.html" %} active{% endif %}">
-<a href="chapter-60.html">60 wx Module</a>
+{% if page.url contains "/chapter-60.html" %}
+<a name="anchor-60"></a><a href="#">60 wx Module</a>
+{% else %}
+<a href="chapter-60.html#anchor-60">60 wx Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-60.html" %}
 <div class="list-group" id="naviitem-anchor-60">
@@ -1323,7 +1563,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-61.html" %} active{% endif %}">
-<a href="chapter-61.html">61 xml Module</a>
+{% if page.url contains "/chapter-61.html" %}
+<a name="anchor-61"></a><a href="#">61 xml Module</a>
+{% else %}
+<a href="chapter-61.html#anchor-61">61 xml Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-61.html" %}
 <div class="list-group" id="naviitem-anchor-61">
@@ -1348,7 +1592,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-62.html" %} active{% endif %}">
-<a href="chapter-62.html">62 xpm Module</a>
+{% if page.url contains "/chapter-62.html" %}
+<a name="anchor-62"></a><a href="#">62 xpm Module</a>
+{% else %}
+<a href="chapter-62.html#anchor-62">62 xpm Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-62.html" %}
 <div class="list-group" id="naviitem-anchor-62">
@@ -1361,7 +1609,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-63.html" %} active{% endif %}">
-<a href="chapter-63.html">63 yaml Module</a>
+{% if page.url contains "/chapter-63.html" %}
+<a name="anchor-63"></a><a href="#">63 yaml Module</a>
+{% else %}
+<a href="chapter-63.html#anchor-63">63 yaml Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-63.html" %}
 <div class="list-group" id="naviitem-anchor-63">
@@ -1380,7 +1632,11 @@
 </div>
 {% endif %}
 <span class="list-group-item border-0 py-2 font-weight-bold{% if page.url contains "/chapter-64.html" %} active{% endif %}">
-<a href="chapter-64.html">64 zip Module</a>
+{% if page.url contains "/chapter-64.html" %}
+<a name="anchor-64"></a><a href="#">64 zip Module</a>
+{% else %}
+<a href="chapter-64.html#anchor-64">64 zip Module</a>
+{% endif %}
 </span>
 {% if page.url contains "/chapter-64.html" %}
 <div class="list-group" id="naviitem-anchor-64">

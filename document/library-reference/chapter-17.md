@@ -7,7 +7,7 @@ prevpage: chapter-16.html
 nextpage: chapter-18.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">17</span><a name="anchor-17"></a>doxygen Module</h1>
+<h1><span class="caption-index-1">17</span>doxygen Module</h1>
 <h2><span class="caption-index-2">17.1</span><a name="anchor-17-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">doxygen</code> module provides measures to parse a document written in Doxygen syntax. To utilize it, import the <code class="highlighter-rouge">doxygen</code> module using <code class="highlighter-rouge">import</code> function.

@@ -1,6 +1,5 @@
 #!/usr/bin/env gura
-import(markdown)
-import(helper.builddoc)
+import(markdown.doctool)
 
 fileNamesSrc = [
 	'00-Introduction.md'
@@ -31,10 +30,10 @@ title = 'Gura Language Manual'
 author = 'Yutaka Saito'
 date = 'June 17th, 2017'
 
-helper.builddoc.checkArgument()
+markdown.doctool.checkArgument()
 doc = markdown.document()
 fileNamesSrc.each {|fileNameSrc|
 	println('reading: ', fileNameSrc)
 	doc.read(fileNameSrc)
 }
-helper.builddoc.output(doc, baseName, dirNameOut@jekyll, title, author, date, nChapters)
+markdown.doctool.output(doc, baseName, dirNameOut@jekyll, title, author, date, nChapters)

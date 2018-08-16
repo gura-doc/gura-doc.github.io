@@ -7,7 +7,7 @@ prevpage: chapter-35.html
 nextpage: chapter-37.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">36</span><a name="anchor-36"></a>ml.mnist Module</h1>
+<h1><span class="caption-index-1">36</span>ml.mnist Module</h1>
 <h2><span class="caption-index-2">36.1</span><a name="anchor-36-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">ml.mnist</code> module provides measures to read image database of handwritten digit called MNIST. MNIST data files are avaiable in: http://yann.lecun.com/exdb/mnist/.

@@ -7,7 +7,7 @@ prevpage: chapter-05.html
 nextpage: chapter-07.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">6</span><a name="anchor-6"></a>Environment</h1>
+<h1><span class="caption-index-1">6</span>Environment</h1>
 <h2><span class="caption-index-2">6.1</span><a name="anchor-6-1"></a>Overview</h2>
 <p>
 Environment is a container to store maps associating symbols and values and maps associating symbols and value types.

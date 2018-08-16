@@ -7,7 +7,7 @@ prevpage: chapter-14.html
 nextpage: chapter-16.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">15</span><a name="anchor-15"></a>File Operation</h1>
+<h1><span class="caption-index-1">15</span>File Operation</h1>
 <h2><span class="caption-index-2">15.1</span><a name="anchor-15-1"></a>Overview</h2>
 <p>
 Gura provides mechanism of <strong>Stream</strong> and <strong>Directory</strong> to work on files: Stream is prepared to read and write content of a file and Directory to retrieve lists of files stored in some containers. Here, a term "file" is not limited to what is stored in a file system of an OS. You can also use Stream and Directory to access files through networks and even ones stored in an archive files. Gura provides a generic framework to handle these resources so that you can expand the capabilities by importing Modules.

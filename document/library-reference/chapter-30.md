@@ -7,7 +7,7 @@ prevpage: chapter-29.html
 nextpage: chapter-31.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">30</span><a name="anchor-30"></a>jpeg Module</h1>
+<h1><span class="caption-index-1">30</span>jpeg Module</h1>
 <h2><span class="caption-index-2">30.1</span><a name="anchor-30-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">jpeg</code> module provides measures to read/write image data in JPEG format. To utilize it, import the <code class="highlighter-rouge">jpeg</code> module using <code class="highlighter-rouge">import</code> function.

@@ -7,7 +7,7 @@ prevpage: chapter-57.html
 nextpage: chapter-59.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">58</span><a name="anchor-58"></a>uuid Module</h1>
+<h1><span class="caption-index-1">58</span>uuid Module</h1>
 <h2><span class="caption-index-2">58.1</span><a name="anchor-58-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">uuid</code> module provides functions to generate UUIDs. To utilize it, import the <code class="highlighter-rouge">uuid</code> module using <code class="highlighter-rouge">import</code> function.

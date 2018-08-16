@@ -7,7 +7,7 @@ prevpage: ""
 nextpage: chapter-02.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">1</span><a name="anchor-1"></a>Introduction</h1>
+<h1><span class="caption-index-1">1</span>Introduction</h1>
 <p>
 We often see a process that applies some operation or transformation on multiple data stored in lists and then put the results into another list. Among them are includes plotting results of a mathematical function fed with sequence of numbers as its parameter and tansforming multiple records extracted from some database into a specific format.
 </p>

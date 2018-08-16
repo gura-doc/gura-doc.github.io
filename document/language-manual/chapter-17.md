@@ -7,7 +7,7 @@ prevpage: chapter-16.html
 nextpage: chapter-18.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">17</span><a name="anchor-17"></a>Image Operation</h1>
+<h1><span class="caption-index-1">17</span>Image Operation</h1>
 <h2><span class="caption-index-2">17.1</span><a name="anchor-17-1"></a>Overview</h2>
 <h2><span class="caption-index-2">17.2</span><a name="anchor-17-2"></a>Image Instance</h2>
 <p>

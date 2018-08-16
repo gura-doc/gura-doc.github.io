@@ -7,7 +7,7 @@ prevpage: chapter-15.html
 nextpage: chapter-17.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">16</span><a name="anchor-16"></a>diff Module</h1>
+<h1><span class="caption-index-1">16</span>diff Module</h1>
 <h2><span class="caption-index-2">16.1</span><a name="anchor-16-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">diff</code> module provices measures to detect differences between texts. To utilize it, import the <code class="highlighter-rouge">diff</code> module using <code class="highlighter-rouge">import</code> function.

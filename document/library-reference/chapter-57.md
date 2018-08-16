@@ -7,7 +7,7 @@ prevpage: chapter-56.html
 nextpage: chapter-58.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">57</span><a name="anchor-57"></a>units Module</h1>
+<h1><span class="caption-index-1">57</span>units Module</h1>
 <p>
 The <code class="highlighter-rouge">units</code> module provides functions to convert physical units into another.
 </p>

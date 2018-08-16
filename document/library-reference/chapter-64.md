@@ -7,7 +7,7 @@ prevpage: chapter-63.html
 nextpage: ""
 ---
 {% raw %}
-<h1><span class="caption-index-1">64</span><a name="anchor-64"></a>zip Module</h1>
+<h1><span class="caption-index-1">64</span>zip Module</h1>
 <h2><span class="caption-index-2">64.1</span><a name="anchor-64-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">zip</code> module provides measures to read/write ZIP files.

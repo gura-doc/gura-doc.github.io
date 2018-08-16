@@ -7,7 +7,7 @@ prevpage: chapter-28.html
 nextpage: chapter-30.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">29</span><a name="anchor-29"></a>http Module</h1>
+<h1><span class="caption-index-1">29</span>http Module</h1>
 <h2><span class="caption-index-2">29.1</span><a name="anchor-29-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">http</code> module provides measures to connect the Internet through HTTP protocol.

@@ -7,7 +7,7 @@ prevpage: chapter-01.html
 nextpage: chapter-03.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">2</span><a name="anchor-2"></a>Launch Program</h1>
+<h1><span class="caption-index-1">2</span>Launch Program</h1>
 <h2><span class="caption-index-2">2.1</span><a name="anchor-2-1"></a>Program Files</h2>
 <p>
 For Windows, there are two types of program files to launch Gura interpreter: <code class="highlighter-rouge">gura.exe</code> and <code class="highlighter-rouge">guraw.exe</code>. <code class="highlighter-rouge">guraw.exe</code> doesn't show command prompt window and you can use it to run a script with graphical user interface.

@@ -7,7 +7,7 @@ prevpage: chapter-09.html
 nextpage: chapter-11.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">10</span><a name="anchor-10"></a>Object Oriented Programming</h1>
+<h1><span class="caption-index-1">10</span>Object Oriented Programming</h1>
 <h2><span class="caption-index-2">10.1</span><a name="anchor-10-1"></a>Class and Instance</h2>
 <p>
 A <strong>class</strong> is a kind of environment that contains properties such as functions and variables, and has an ability to create <strong>instances</strong> that share these properties. A class is associated with a data type one by one, which means that all the values in a script are bound to certain classes. For example, a value <code class="highlighter-rouge">3.14</code> is associated with <code class="highlighter-rouge">number</code> class, and <code class="highlighter-rouge">'hello world'</code> with <code class="highlighter-rouge">string</code> class.

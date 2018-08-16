@@ -7,7 +7,7 @@ prevpage: chapter-26.html
 nextpage: chapter-28.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">27</span><a name="anchor-27"></a>gzip Module</h1>
+<h1><span class="caption-index-1">27</span>gzip Module</h1>
 <h2><span class="caption-index-2">27.1</span><a name="anchor-27-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">gzip</code> module provides measures to read/write GZIP files. To utilize it, import the <code class="highlighter-rouge">gzip</code> module using <code class="highlighter-rouge">import</code> function.

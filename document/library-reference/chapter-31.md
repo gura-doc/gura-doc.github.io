@@ -7,7 +7,7 @@ prevpage: chapter-30.html
 nextpage: chapter-32.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">31</span><a name="anchor-31"></a>lexer Module</h1>
+<h1><span class="caption-index-1">31</span>lexer Module</h1>
 <h2><span class="caption-index-2">31.1</span><a name="anchor-31-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">lexer</code> module provices functions that parse souces to generate tokens. This is a built-in module, so you can use it without being imported.

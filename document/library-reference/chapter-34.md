@@ -7,7 +7,7 @@ prevpage: chapter-33.html
 nextpage: chapter-35.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">34</span><a name="anchor-34"></a>midi Module</h1>
+<h1><span class="caption-index-1">34</span>midi Module</h1>
 <h2><span class="caption-index-2">34.1</span><a name="anchor-34-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">midi</code> module provides measures to read/write MIDI files. To utilize it, import the <code class="highlighter-rouge">midi</code> module using <code class="highlighter-rouge">import</code> function.

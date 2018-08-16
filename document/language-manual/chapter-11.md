@@ -7,7 +7,7 @@ prevpage: chapter-10.html
 nextpage: chapter-12.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">11</span><a name="anchor-11"></a>Mapping Process</h1>
+<h1><span class="caption-index-1">11</span>Mapping Process</h1>
 <h2><span class="caption-index-2">11.1</span><a name="anchor-11-1"></a>About This Chapter</h2>
 <p>
 This chapter explains about Gura's mapping process, Implicit Mapping and Member Mapping. In the documentation, following terms are used to describe species of values.

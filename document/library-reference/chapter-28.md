@@ -7,7 +7,7 @@ prevpage: chapter-27.html
 nextpage: chapter-29.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">28</span><a name="anchor-28"></a>hash Module</h1>
+<h1><span class="caption-index-1">28</span>hash Module</h1>
 <h2><span class="caption-index-2">28.1</span><a name="anchor-28-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">hash</code> module provides measures to calculate hash values of a data sequence in a stream. To utilize it, import the <code class="highlighter-rouge">hash</code> module using <code class="highlighter-rouge">import</code> function.

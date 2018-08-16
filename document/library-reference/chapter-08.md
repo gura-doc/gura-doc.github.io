@@ -7,7 +7,7 @@ prevpage: chapter-07.html
 nextpage: chapter-09.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">8</span><a name="anchor-8"></a>bmp Module</h1>
+<h1><span class="caption-index-1">8</span>bmp Module</h1>
 <h2><span class="caption-index-2">8.1</span><a name="anchor-8-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">bmp</code> module provides measures to read/write image data in Microsoft BMP format. To utilize it, import the <code class="highlighter-rouge">bmp</code> module using <code class="highlighter-rouge">import</code> function.

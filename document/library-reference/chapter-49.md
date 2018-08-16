@@ -7,7 +7,7 @@ prevpage: chapter-48.html
 nextpage: chapter-50.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">49</span><a name="anchor-49"></a>show Module</h1>
+<h1><span class="caption-index-1">49</span>show Module</h1>
 <p>
 The <code class="highlighter-rouge">show</code> module provides a method to display the content of <code class="highlighter-rouge">image</code> instance.
 </p>

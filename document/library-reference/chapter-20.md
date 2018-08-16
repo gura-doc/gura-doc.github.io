@@ -7,7 +7,7 @@ prevpage: chapter-19.html
 nextpage: chapter-21.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">20</span><a name="anchor-20"></a>freetype Module</h1>
+<h1><span class="caption-index-1">20</span>freetype Module</h1>
 <h2><span class="caption-index-2">20.1</span><a name="anchor-20-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">freetype</code> module provices measures to access vectorized font data using freetype library. To utilize it, import the <code class="highlighter-rouge">freetype</code> module using <code class="highlighter-rouge">import</code> function.

@@ -7,7 +7,7 @@ prevpage: chapter-01.html
 nextpage: chapter-03.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">2</span><a name="anchor-2"></a>Explanatory Note</h1>
+<h1><span class="caption-index-1">2</span>Explanatory Note</h1>
 <p>
 Functions in this reference are described in a generic expression. For example, if there is a reference described like <code class="highlighter-rouge">func(num:number)</code>, it means that <code class="highlighter-rouge">func</code> function takes one argument named <code class="highlighter-rouge">num</code> with value type of <code class="highlighter-rouge">number</code>. You can call it like <code class="highlighter-rouge">func(3)</code>.
 </p>

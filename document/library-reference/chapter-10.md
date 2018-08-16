@@ -7,7 +7,7 @@ prevpage: chapter-09.html
 nextpage: chapter-11.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">10</span><a name="anchor-10"></a>cairo Module</h1>
+<h1><span class="caption-index-1">10</span>cairo Module</h1>
 <h2><span class="caption-index-2">10.1</span><a name="anchor-10-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">cairo</code> module provides methods to draw 2-D graphics using Cairo library. Official site of Cairo is <a href="http://cairographics.org/">http://cairographics.org/</a>.

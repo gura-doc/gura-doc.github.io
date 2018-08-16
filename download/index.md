@@ -2,6 +2,7 @@
 layout: default
 lang: en
 title: download
+redirect_from: /download.html
 ---
 {% assign gura_version = '0.7.0' %}
 {% assign gura_version_prev = '0.6.2' %}

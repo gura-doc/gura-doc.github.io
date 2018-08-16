@@ -7,7 +7,7 @@ prevpage: chapter-11.html
 nextpage: chapter-13.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">12</span><a name="anchor-12"></a>Module</h1>
+<h1><span class="caption-index-1">12</span>Module</h1>
 <h2><span class="caption-index-2">12.1</span><a name="anchor-12-1"></a>Module as Environment</h2>
 <p>
 A <strong>module</strong> is a kind of environment and capable of containing variables and functions inside it. You can use <code class="highlighter-rouge">module()</code> function that takes a block procedure containing expressions of variable and function assignments. Below is an example:

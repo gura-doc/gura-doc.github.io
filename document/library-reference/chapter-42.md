@@ -7,7 +7,7 @@ prevpage: chapter-41.html
 nextpage: chapter-43.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">42</span><a name="anchor-42"></a>mtp Module</h1>
+<h1><span class="caption-index-1">42</span>mtp Module</h1>
 <h2><span class="caption-index-2">42.1</span><a name="anchor-42-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">mtp</code> module provides measures to read/write data on a mobile platform like an Android device.

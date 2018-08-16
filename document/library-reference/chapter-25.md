@@ -7,7 +7,7 @@ prevpage: chapter-24.html
 nextpage: chapter-26.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">25</span><a name="anchor-25"></a>gmp Module</h1>
+<h1><span class="caption-index-1">25</span>gmp Module</h1>
 <h2><span class="caption-index-2">25.1</span><a name="anchor-25-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">gmp</code> module provides measures to calculate numbers with multiple precision using GMP library. To utilize it, import the <code class="highlighter-rouge">gmp</code> module using <code class="highlighter-rouge">import</code> function.

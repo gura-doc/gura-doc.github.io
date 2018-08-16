@@ -7,7 +7,7 @@ prevpage: chapter-53.html
 nextpage: chapter-55.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">54</span><a name="anchor-54"></a>tar Module</h1>
+<h1><span class="caption-index-1">54</span>tar Module</h1>
 <h2><span class="caption-index-2">54.1</span><a name="anchor-54-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">tar</code> module provides measures to read/write TAR files. To utilize it, import the <code class="highlighter-rouge">tar</code> module using <code class="highlighter-rouge">import</code> function.

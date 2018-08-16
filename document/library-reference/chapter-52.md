@@ -7,7 +7,7 @@ prevpage: chapter-51.html
 nextpage: chapter-53.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">52</span><a name="anchor-52"></a>sqlite3 Module</h1>
+<h1><span class="caption-index-1">52</span>sqlite3 Module</h1>
 <h2><span class="caption-index-2">52.1</span><a name="anchor-52-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">sqlite3</code> module provides measures to access SQLite3 database. To utilize it, import the <code class="highlighter-rouge">sqlite3</code> module using <code class="highlighter-rouge">import</code> function.

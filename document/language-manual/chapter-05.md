@@ -7,7 +7,7 @@ prevpage: chapter-04.html
 nextpage: chapter-06.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">5</span><a name="anchor-5"></a>Operator</h1>
+<h1><span class="caption-index-1">5</span>Operator</h1>
 <h2><span class="caption-index-2">5.1</span><a name="anchor-5-1"></a>Overview</h2>
 <p>
 There are three types of Operators.

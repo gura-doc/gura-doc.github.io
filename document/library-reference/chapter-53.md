@@ -7,7 +7,7 @@ prevpage: chapter-52.html
 nextpage: chapter-54.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">53</span><a name="anchor-53"></a>sys Module</h1>
+<h1><span class="caption-index-1">53</span>sys Module</h1>
 <h2><span class="caption-index-2">53.1</span><a name="anchor-53-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">sys</code> module provides system-related information. This is a built-in module, so you can use it without being imported.

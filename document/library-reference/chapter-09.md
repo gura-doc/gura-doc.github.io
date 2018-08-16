@@ -7,7 +7,7 @@ prevpage: chapter-08.html
 nextpage: chapter-10.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">9</span><a name="anchor-9"></a>bzip2 Module</h1>
+<h1><span class="caption-index-1">9</span>bzip2 Module</h1>
 <h2><span class="caption-index-2">9.1</span><a name="anchor-9-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">bzip2</code> module provices measures to read/write BZIP2 files. To utilize it, import the <code class="highlighter-rouge">bzip2</code> module using <code class="highlighter-rouge">import</code> function.

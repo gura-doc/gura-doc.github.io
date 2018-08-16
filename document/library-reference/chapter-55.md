@@ -7,7 +7,7 @@ prevpage: chapter-54.html
 nextpage: chapter-56.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">55</span><a name="anchor-55"></a>tiff Module</h1>
+<h1><span class="caption-index-1">55</span>tiff Module</h1>
 <h2><span class="caption-index-2">55.1</span><a name="anchor-55-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">tiff</code> module provides measures to read/write image data in TIFF format. To utilize it, import the <code class="highlighter-rouge">tiff</code> module using <code class="highlighter-rouge">import</code> function.

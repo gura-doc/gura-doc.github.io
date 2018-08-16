@@ -7,7 +7,7 @@ prevpage: chapter-32.html
 nextpage: chapter-34.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">33</span><a name="anchor-33"></a>math Module</h1>
+<h1><span class="caption-index-1">33</span>math Module</h1>
 <h2><span class="caption-index-2">33.1</span><a name="anchor-33-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">math</code> module provices functions for mathematical calculation. This is a built-in module, so you can use it without being imported.

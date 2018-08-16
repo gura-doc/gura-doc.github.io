@@ -7,7 +7,7 @@ prevpage: chapter-19.html
 nextpage: ""
 ---
 {% raw %}
-<h1><span class="caption-index-1">20</span><a name="anchor-20"></a>Template Engine</h1>
+<h1><span class="caption-index-1">20</span>Template Engine</h1>
 <p>
 <!-- --------------------------------------------------------------------- -->
 </p>

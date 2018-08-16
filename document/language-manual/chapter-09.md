@@ -7,7 +7,7 @@ prevpage: chapter-08.html
 nextpage: chapter-10.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">9</span><a name="anchor-9"></a>Flow Control</h1>
+<h1><span class="caption-index-1">9</span>Flow Control</h1>
 <h2><span class="caption-index-2">9.1</span><a name="anchor-9-1"></a>Branch</h2>
 <p>
 Branch may be the most common flow-control in a program. Just like other programming language, Gura also provides <code class="highlighter-rouge">if</code> - <code class="highlighter-rouge">elsif</code> - <code class="highlighter-rouge">else</code> sequence. However, they're realized as functions, not as statements.

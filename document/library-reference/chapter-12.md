@@ -7,7 +7,7 @@ prevpage: chapter-11.html
 nextpage: chapter-13.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">12</span><a name="anchor-12"></a>cbridge Module</h1>
+<h1><span class="caption-index-1">12</span>cbridge Module</h1>
 <p>
 The <code class="highlighter-rouge">cbridge</code> module ...
 </p>

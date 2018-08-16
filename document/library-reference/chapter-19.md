@@ -7,7 +7,7 @@ prevpage: chapter-18.html
 nextpage: chapter-20.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">19</span><a name="anchor-19"></a>fftw Module</h1>
+<h1><span class="caption-index-1">19</span>fftw Module</h1>
 <h2><span class="caption-index-2">19.1</span><a name="anchor-19-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">fftw</code> module provides measures for FFT calculation on <code class="highlighter-rouge">array</code> class. To utilize it, import the <code class="highlighter-rouge">fftw</code> module using <code class="highlighter-rouge">import</code> function.

@@ -7,7 +7,7 @@ prevpage: chapter-02.html
 nextpage: chapter-04.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">3</span><a name="anchor-3"></a>Syntax</h1>
+<h1><span class="caption-index-1">3</span>Syntax</h1>
 <h2><span class="caption-index-2">3.1</span><a name="anchor-3-1"></a>Overview</h2>
 <p>
 Gura's parser consits of two parts: token parser and syntax parser.

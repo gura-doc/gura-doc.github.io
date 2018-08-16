@@ -7,7 +7,7 @@ prevpage: chapter-14.html
 nextpage: chapter-16.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">15</span><a name="anchor-15"></a>curl Module</h1>
+<h1><span class="caption-index-1">15</span>curl Module</h1>
 <h2><span class="caption-index-2">15.1</span><a name="anchor-15-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">curl</code> module provices measures to access Internet resources using cURL library. To utilize it, import the <code class="highlighter-rouge">curl</code> module using <code class="highlighter-rouge">import</code> function.

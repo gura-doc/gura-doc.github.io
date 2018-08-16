@@ -7,7 +7,7 @@ prevpage: chapter-10.html
 nextpage: chapter-12.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">11</span><a name="anchor-11"></a>calendar Module</h1>
+<h1><span class="caption-index-1">11</span>calendar Module</h1>
 <h2><span class="caption-index-2">11.1</span><a name="anchor-11-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">calendar</code> module provides a function to generate a string of calendar for the specified year.

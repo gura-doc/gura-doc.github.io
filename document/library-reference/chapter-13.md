@@ -7,7 +7,7 @@ prevpage: chapter-12.html
 nextpage: chapter-14.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">13</span><a name="anchor-13"></a>conio Module</h1>
+<h1><span class="caption-index-1">13</span>conio Module</h1>
 <h2><span class="caption-index-2">13.1</span><a name="anchor-13-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">conio</code> module provides following measures to work on a console screen:

@@ -1,6 +1,5 @@
 #!/usr/bin/env gura
-import(markdown)
-import(helper.builddoc)
+import(markdown.doctool)
 
 moduleNames = [
 	'basement' // this must come at first
@@ -82,7 +81,7 @@ title = 'Gura Library Reference'
 author = 'Yutaka Saito'
 date = 'June 11th, 2018'
 
-helper.builddoc.checkArgument()
+markdown.doctool.checkArgument()
 doc = markdown.document()
 doc.read('Main.md')
 moduleNames.each {|moduleName|
@@ -90,4 +89,4 @@ moduleNames.each {|moduleName|
 	moduleDocName = moduleName + '.doc'
 	import(&moduleDocName).__doc@markdown__(doc, `en)
 }
-helper.builddoc.output(doc, baseName, dirName@html, title, author, date, nChapters)
+markdown.doctool.output(doc, baseName, dirName@html, title, author, date, nChapters)

@@ -7,7 +7,7 @@ prevpage: chapter-12.html
 nextpage: chapter-14.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">13</span><a name="anchor-13"></a>String and Binary</h1>
+<h1><span class="caption-index-1">13</span>String and Binary</h1>
 <h2><span class="caption-index-2">13.1</span><a name="anchor-13-1"></a>Overview</h2>
 <p>
 A string is a sequence of character codes in UTF-8 format and is represented by <code class="highlighter-rouge">string</code> class. Class <code class="highlighter-rouge">string</code> is a primitive type, which means there's no operation that could modify the content of <code class="highlighter-rouge">string</code> instances. This leads to the following principles:

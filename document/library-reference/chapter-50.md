@@ -7,7 +7,7 @@ prevpage: chapter-49.html
 nextpage: chapter-51.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">50</span><a name="anchor-50"></a>sdl2 Module</h1>
+<h1><span class="caption-index-1">50</span>sdl2 Module</h1>
 <h2><span class="caption-index-2">50.1</span><a name="anchor-50-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">sdl2</code> module provices functions of SDL2 library.

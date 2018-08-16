@@ -7,7 +7,7 @@ prevpage: chapter-44.html
 nextpage: chapter-46.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">45</span><a name="anchor-45"></a>path Module</h1>
+<h1><span class="caption-index-1">45</span>path Module</h1>
 <h2><span class="caption-index-2">45.1</span><a name="anchor-45-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">path</code> module provides functions related to path operations. This is a built-in module, so you can use it without being imported.

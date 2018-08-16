@@ -7,7 +7,7 @@ prevpage: chapter-50.html
 nextpage: chapter-52.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">51</span><a name="anchor-51"></a>sed Module</h1>
+<h1><span class="caption-index-1">51</span>sed Module</h1>
 <p>
 The <code class="highlighter-rouge">sed</code> module ...
 </p>

@@ -7,7 +7,7 @@ prevpage: chapter-31.html
 nextpage: chapter-33.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">32</span><a name="anchor-32"></a>markdown Module</h1>
+<h1><span class="caption-index-1">32</span>markdown Module</h1>
 <h2><span class="caption-index-2">32.1</span><a name="anchor-32-1"></a>Overview</h2>
 <p>
 The <code class="highlighter-rouge">markdown</code> module provides measures to parse a text formatted in markdown syntax. To utilize it, import the <code class="highlighter-rouge">markdown</code> module using <code class="highlighter-rouge">import</code> function.

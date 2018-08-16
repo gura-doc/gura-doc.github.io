@@ -7,7 +7,7 @@ prevpage: chapter-02.html
 nextpage: chapter-04.html
 ---
 {% raw %}
-<h1><span class="caption-index-1">3</span><a name="anchor-3"></a>Predefined Variables</h1>
+<h1><span class="caption-index-1">3</span>Predefined Variables</h1>
 <p>
 <table class="table">
 <tr>
