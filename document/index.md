@@ -5,7 +5,7 @@ title: document
 ---
 <!-- ----------------------------------------------------------------------- -->
 
-<h2><i class="fas fa-book-open mr-2" style="width: 1.5em"></i>Manual<a name="manual"></a></h2>
+<h2><i class="fas fa-book-open mr-2" style="width: 1.5em"></i>Reference<a name="reference"></a></h2>
 
 <table class="table">
   <thead class="thead-light">
@@ -46,17 +46,17 @@ title: document
 
 <tbody>
 <tr>
-<td><a href="articles/Comparison-between-Java8-and-Gura.html">Comparison between Java 8 and Gura</a></td>
+<td><a href="article/Comparison-between-Java8-and-Gura.html">Comparison between Java 8 and Gura</a></td>
 <td>English</td>
 </tr>
 
 <tr>
-<td><a href="articles/Script-to-Generate-Prime-Numbers.html">Script to Generate Prime Numbers</a></td>
+<td><a href="article/Script-to-Generate-Prime-Numbers.html">Script to Generate Prime Numbers</a></td>
 <td>English</td>
 </tr>
 
 <tr>
-<td><a href="articles/Database-Access.html">Database Access</a></td>
+<td><a href="article/Database-Access.html">Database Access</a></td>
 <td>English</td>
 </tr>
 </tbody>
