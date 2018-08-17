@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-48.html
-nextpage: chapter-50.html
+prevpage: chapter-48.html#naviitem-selected
+nextpage: chapter-50.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">49</span>show Module</h1>
@@ -19,6 +19,4 @@ This module extends the <code class="highlighter-rouge">image</code> class with 
 <div style="margin-bottom:1em"><code>image#show(width =&gt; 640, height =&gt; 480)</code></div>
 Displays the content of <code class="highlighter-rouge">image</code> instance in a window.
 </p>
-<p />
-
 {% endraw %}

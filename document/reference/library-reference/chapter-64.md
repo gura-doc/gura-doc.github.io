@@ -2,7 +2,7 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-63.html
+prevpage: chapter-63.html#naviitem-selected
 nextpage: ""
 ---
 {% raw %}
@@ -256,6 +256,4 @@ This module uses zlib and bzip2 library which are distributed in the following s
 <li><a href="http://zlib.net/">http://zlib.net/</a></li>
 <li><a href="http://www.bzip.org/">http://www.bzip.org/</a></li>
 </ul>
-<p />
-
 {% endraw %}

@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-03.html
-nextpage: chapter-05.html
+prevpage: chapter-03.html#naviitem-selected
+nextpage: chapter-05.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">4</span>Built-in Function</h1>
@@ -885,6 +885,4 @@ Returns a symbol list of value types that are assigned in the environment of <co
 <p>
 In default, when the <code class="highlighter-rouge">obj</code> is an instance of a class, it also searches symbols assigned in the class that it belongs to and its parent classes. Specifying attribute <code class="highlighter-rouge">:noesc</code> inhibits avoids behavior.
 </p>
-<p />
-
 {% endraw %}

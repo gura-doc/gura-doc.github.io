@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-26.html
-nextpage: chapter-28.html
+prevpage: chapter-26.html#naviitem-selected
+nextpage: chapter-28.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">27</span>gzip Module</h1>
@@ -55,6 +55,4 @@ This module uses zlib which official site is:
 <p>
 <a href="http://zlib.net/">http://zlib.net/</a>
 </p>
-<p />
-
 {% endraw %}

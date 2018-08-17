@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-53.html
-nextpage: chapter-55.html
+prevpage: chapter-53.html#naviitem-selected
+nextpage: chapter-55.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">54</span>tar Module</h1>
@@ -69,6 +69,4 @@ This module uses zlib and bzip2 library which are distributed in the following s
 <li><a href="http://zlib.net/">http://zlib.net/</a></li>
 <li><a href="http://www.bzip.org/">http://www.bzip.org/</a></li>
 </ul>
-<p />
-
 {% endraw %}

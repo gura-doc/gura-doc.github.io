@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-10.html
-nextpage: chapter-12.html
+prevpage: chapter-10.html#naviitem-selected
+nextpage: chapter-12.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">11</span>Mapping Process</h1>
@@ -1721,6 +1721,4 @@ The mapping rule with map-along accessor is summarized below:
 <li>If the target iterable or one of the argument values is of iterator species, the result becomes an iterator.</li>
 <li>Otherwise, the result becomes a list.</li>
 </ul>
-<p />
-
 {% endraw %}

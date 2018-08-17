@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-51.html
-nextpage: chapter-53.html
+prevpage: chapter-51.html#naviitem-selected
+nextpage: chapter-53.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">52</span>sqlite3 Module</h1>
@@ -62,6 +62,4 @@ This module uses SQlite3 library which is distributed in the following site:
 <p>
 <a href="http://www.sqlite.org/index.html">http://www.sqlite.org/index.html</a>
 </p>
-<p />
-
 {% endraw %}

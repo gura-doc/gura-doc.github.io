@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-23.html
-nextpage: chapter-25.html
+prevpage: chapter-23.html#naviitem-selected
+nextpage: chapter-25.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">24</span>glut Module</h1>
@@ -594,6 +594,4 @@ This module uses freeglut which official site is:
 <p>
 <a href="http://freeglut.sourceforge.net/">http://freeglut.sourceforge.net/</a>
 </p>
-<p />
-
 {% endraw %}

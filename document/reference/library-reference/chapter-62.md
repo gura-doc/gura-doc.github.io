@@ -2,7 +2,7 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-61.html
+prevpage: chapter-61.html#naviitem-selected
 nextpage: ""
 ---
 {% raw %}
@@ -49,6 +49,4 @@ Writes a xpm image to a stream.
 <div style="margin-bottom:1em"><code>image#xpmdata(xpm[]:string):reduce</code></div>
 Read xpm data from a string list.
 </p>
-<p />
-
 {% endraw %}

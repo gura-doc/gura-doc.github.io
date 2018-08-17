@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-47.html
-nextpage: chapter-49.html
+prevpage: chapter-47.html#naviitem-selected
+nextpage: chapter-49.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">48</span>re Module</h1>
@@ -667,6 +667,4 @@ This module uses Oniguruma library which is distributed in the following site:
 <p>
 <a href="http://www.geocities.jp/kosako3/oniguruma/index.html">http://www.geocities.jp/kosako3/oniguruma/index.html</a>
 </p>
-<p />
-
 {% endraw %}

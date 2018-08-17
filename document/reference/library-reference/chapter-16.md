@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-15.html
-nextpage: chapter-17.html
+prevpage: chapter-15.html#naviitem-selected
+nextpage: chapter-17.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">16</span>diff Module</h1>
@@ -571,6 +571,4 @@ This module uses dtl (Diff Template Library) which is distributed in the followi
 <p>
 <a href="https://code.google.com/p/dtl-cpp/">https://code.google.com/p/dtl-cpp/</a>
 </p>
-<p />
-
 {% endraw %}

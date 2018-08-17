@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-08.html
-nextpage: chapter-10.html
+prevpage: chapter-08.html#naviitem-selected
+nextpage: chapter-10.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">9</span>Flow Control</h1>
@@ -567,6 +567,4 @@ An example code is shown below:
     printf('%s at %s:%d\n', err.text, err.source, err.lineno)
 }
 </code></pre>
-<p />
-
 {% endraw %}

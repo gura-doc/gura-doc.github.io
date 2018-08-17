@@ -3,7 +3,7 @@ layout: reference
 lang: en
 title: Gura Language Manual
 prevpage: ""
-nextpage: chapter-02.html
+nextpage: chapter-02.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">1</span>Introduction</h1>
@@ -55,6 +55,4 @@ As one user, I can recommend this script language for you.
 Yutaka Saito<br />
 March 6th, 2014
 </p>
-<p />
-
 {% endraw %}

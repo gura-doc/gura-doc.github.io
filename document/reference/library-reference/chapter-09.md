@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-08.html
-nextpage: chapter-10.html
+prevpage: chapter-08.html#naviitem-selected
+nextpage: chapter-10.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">9</span>bzip2 Module</h1>
@@ -73,6 +73,4 @@ This module uses libbzip2 which is distributed in the following site:
 <p>
 <a href="http://www.bzip.org/">http://www.bzip.org/</a>
 </p>
-<p />
-
 {% endraw %}

@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-34.html
-nextpage: chapter-36.html
+prevpage: chapter-34.html#naviitem-selected
+nextpage: chapter-36.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">35</span>ml.linear Module</h1>
@@ -112,6 +112,4 @@ Creates an instance of ml.linear.sample.
 <div style="margin-bottom:1em"><code>linear.train(prob:linear.problem, param:linear.parameter, bias?:number) {block?}</code></div>
 
 </p>
-<p />
-
 {% endraw %}

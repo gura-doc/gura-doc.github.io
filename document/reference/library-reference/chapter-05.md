@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-04.html
-nextpage: chapter-06.html
+prevpage: chapter-04.html#naviitem-selected
+nextpage: chapter-06.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">5</span>Built-in Class</h1>
@@ -9140,6 +9140,4 @@ Creates a <code class="highlighter-rouge">vertex</code> that is translated from 
 <p>
 If <code class="highlighter-rouge">block</code> is specified, it would be evaluated with a block parameter <code class="highlighter-rouge">|v:vertex|</code>, where <code class="highlighter-rouge">v</code> is the created instance. In this case, the block's result would become the function's returned value.
 </p>
-<p />
-
 {% endraw %}

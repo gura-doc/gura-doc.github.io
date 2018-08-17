@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-38.html
-nextpage: chapter-40.html
+prevpage: chapter-38.html#naviitem-selected
+nextpage: chapter-40.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">39</span>model.obj Module</h1>
@@ -11,6 +11,4 @@ nextpage: chapter-40.html
 <p>
 The <code class="highlighter-rouge">model.obj</code> module provides measures to read/write files in OBJ format for 3D models.
 </p>
-<p />
-
 {% endraw %}

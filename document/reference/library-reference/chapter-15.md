@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-14.html
-nextpage: chapter-16.html
+prevpage: chapter-14.html#naviitem-selected
+nextpage: chapter-16.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">15</span>curl Module</h1>
@@ -65,6 +65,4 @@ This module uses libcurl which is distributed in the following site:
 <p>
 <a href="http://curl.haxx.se/libcurl/">http://curl.haxx.se/libcurl/</a>
 </p>
-<p />
-
 {% endraw %}

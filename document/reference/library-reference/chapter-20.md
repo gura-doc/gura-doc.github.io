@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-19.html
-nextpage: chapter-21.html
+prevpage: chapter-19.html#naviitem-selected
+nextpage: chapter-21.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">20</span>freetype Module</h1>
@@ -188,6 +188,4 @@ This module uses FreeType library which is distributed in the following site:
 <p>
 <a href="http://www.freetype.org/">http://www.freetype.org/</a>
 </p>
-<p />
-
 {% endraw %}

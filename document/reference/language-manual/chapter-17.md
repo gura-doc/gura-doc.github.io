@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-16.html
-nextpage: chapter-18.html
+prevpage: chapter-16.html#naviitem-selected
+nextpage: chapter-18.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">17</span>Image Operation</h1>
@@ -297,6 +297,4 @@ Execution result.
 <p>
 You can find sample scripts using OpenGL on <a href="https://github.com/gura-lang/gura/tree/master/sample/opengl/">GitHub repository</a>, which have been ported from <a href="http://www.sgi.com/products/software/opengl/examples/samples/">SGI</a>.
 </p>
-<p />
-
 {% endraw %}

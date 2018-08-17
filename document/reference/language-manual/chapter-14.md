@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-13.html
-nextpage: chapter-15.html
+prevpage: chapter-13.html#naviitem-selected
+nextpage: chapter-15.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">14</span>Iterator/List Operation</h1>
@@ -645,6 +645,4 @@ Function <code class="highlighter-rouge">rands()</code> returns an iterator that
 </p>
 <pre class="highlight"><code>rands(100)         // random numbers between 0 and 99
 </code></pre>
-<p />
-
 {% endraw %}

@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-44.html
-nextpage: chapter-46.html
+prevpage: chapter-44.html#naviitem-selected
+nextpage: chapter-46.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">45</span>path Module</h1>
@@ -175,6 +175,4 @@ See the chapter of Mapping Process in Gura Language Manual for the detail.
 <p>
 If a block is specified, it would be evaluated repeatingly with block parameters <code class="highlighter-rouge">|value, idx:number|</code> where <code class="highlighter-rouge">value</code> is the iterated value and <code class="highlighter-rouge">idx</code> the loop index starting from zero. In this case, the last evaluated value of the block would be the result value. If one of the attributes listed above is specified, an iterator or a list of the evaluated value would be returned.
 </p>
-<p />
-
 {% endraw %}

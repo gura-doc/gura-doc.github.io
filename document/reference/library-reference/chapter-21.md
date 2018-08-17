@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-20.html
-nextpage: chapter-22.html
+prevpage: chapter-20.html#naviitem-selected
+nextpage: chapter-22.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">21</span>fs Module</h1>
@@ -366,6 +366,4 @@ R</td>
 </table>
 
 </p>
-<p />
-
 {% endraw %}

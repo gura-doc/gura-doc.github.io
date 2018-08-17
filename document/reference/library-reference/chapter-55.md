@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-54.html
-nextpage: chapter-56.html
+prevpage: chapter-54.html#naviitem-selected
+nextpage: chapter-56.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">55</span>tiff Module</h1>
@@ -49,6 +49,4 @@ This module uses libtiff which is distributed in the following site:
 <p>
 <a href="http://www.libtiff.org/">http://www.libtiff.org/</a>
 </p>
-<p />
-
 {% endraw %}

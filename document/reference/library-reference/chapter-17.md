@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-16.html
-nextpage: chapter-18.html
+prevpage: chapter-16.html#naviitem-selected
+nextpage: chapter-18.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">17</span>doxygen Module</h1>
@@ -223,6 +223,4 @@ Creates a <code class="highlighter-rouge">doxygen.renderer</code> instance.
 <p>
 If <code class="highlighter-rouge">block</code> is specified, it would be evaluated with a block parameter <code class="highlighter-rouge">|renderer:doxygen.renderer|</code>, where <code class="highlighter-rouge">renderer</code> is the created instance. In this case, the block's result would become the function's returned value.
 </p>
-<p />
-
 {% endraw %}

@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-22.html
-nextpage: chapter-24.html
+prevpage: chapter-22.html#naviitem-selected
+nextpage: chapter-24.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">23</span>glu Module</h1>
@@ -287,6 +287,4 @@ The <code class="highlighter-rouge">glu</code> module provides functions of GLU 
 <div style="margin-bottom:1em"><code>glu.gluUnProject(winX:number, winY:number, winZ:number, model:array@double:nomap, proj:array@double:nomap, view:array@int32:nomap, objX:array@double:nomap, objY:array@double:nomap, objZ:array@double:nomap)</code></div>
 
 </p>
-<p />
-
 {% endraw %}

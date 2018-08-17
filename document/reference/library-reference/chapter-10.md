@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-09.html
-nextpage: chapter-11.html
+prevpage: chapter-09.html#naviitem-selected
+nextpage: chapter-11.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">10</span>cairo Module</h1>
@@ -1533,6 +1533,4 @@ This module uses Cairo library which is distributed in the following site:
 <p>
 <a href="http://cairographics.org/">http://cairographics.org/</a>
 </p>
-<p />
-
 {% endraw %}

@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-18.html
-nextpage: chapter-20.html
+prevpage: chapter-18.html#naviitem-selected
+nextpage: chapter-20.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">19</span>fftw Module</h1>
@@ -42,6 +42,4 @@ This module uses FFTW library which is distributed in the following site:
 <p>
 <a href="http://www.fftw.org/">http://www.fftw.org/</a>
 </p>
-<p />
-
 {% endraw %}

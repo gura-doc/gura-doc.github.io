@@ -2,7 +2,7 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-62.html
+prevpage: chapter-62.html#naviitem-selected
 nextpage: ""
 ---
 {% raw %}
@@ -96,6 +96,4 @@ This module uses yaml library which is distributed in the following site:
 <p>
 <a href="http://pyyaml.org/wiki/LibYAML">http://pyyaml.org/wiki/LibYAML</a>
 </p>
-<p />
-
 {% endraw %}

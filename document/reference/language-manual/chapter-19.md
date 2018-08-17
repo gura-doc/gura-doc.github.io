@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-18.html
-nextpage: chapter-20.html
+prevpage: chapter-18.html#naviitem-selected
+nextpage: chapter-20.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">19</span>Mathematic Functions</h1>
@@ -288,6 +288,4 @@ Differentiation Forumula</th>
 </table>
 
 </p>
-<p />
-
 {% endraw %}

@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-27.html
-nextpage: chapter-29.html
+prevpage: chapter-27.html#naviitem-selected
+nextpage: chapter-29.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">28</span>hash Module</h1>
@@ -113,6 +113,4 @@ Initializes the state of the accumulator.
 <div style="margin-bottom:1em"><code>hash.accumulator#update(stream:stream:r):reduce</code></div>
 Updates the accumulator with the content of <code class="highlighter-rouge">stream</code>.
 </p>
-<p />
-
 {% endraw %}

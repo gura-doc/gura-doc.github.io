@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-59.html
-nextpage: chapter-61.html
+prevpage: chapter-59.html#naviitem-selected
+nextpage: chapter-61.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">60</span>wx Module</h1>
@@ -18,6 +18,4 @@ This module uses wxWidgets library which is distributed in the following site:
 <p>
 <a href="http://www.wxwidgets.org/">http://www.wxwidgets.org/</a>
 </p>
-<p />
-
 {% endraw %}

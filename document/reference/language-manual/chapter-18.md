@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-17.html
-nextpage: chapter-19.html
+prevpage: chapter-17.html#naviitem-selected
+nextpage: chapter-19.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">18</span>Graphical User Interface</h1>
@@ -247,6 +247,4 @@ Unlike other GUI platform, SDL requires you to implement an event handling loop 
 <p>
 You can find sample scripts using SDL on <a href="https://github.com/gura-lang/gura/tree/master/sample/sdl/">GitHub repository</a>.
 </p>
-<p />
-
 {% endraw %}

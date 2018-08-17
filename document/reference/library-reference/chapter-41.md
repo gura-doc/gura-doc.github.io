@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-40.html
-nextpage: chapter-42.html
+prevpage: chapter-40.html#naviitem-selected
+nextpage: chapter-42.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">41</span>msico Module</h1>
@@ -63,6 +63,4 @@ This module extends the <code class="highlighter-rouge">image</code> class with 
 <div style="margin-bottom:1em"><code>image#read@msico(stream:stream:r, idx:number =&gt; 0):reduce</code></div>
 Reads an ICO image from a stream.
 </p>
-<p />
-
 {% endraw %}

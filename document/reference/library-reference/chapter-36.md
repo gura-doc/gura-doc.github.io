@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-35.html
-nextpage: chapter-37.html
+prevpage: chapter-35.html#naviitem-selected
+nextpage: chapter-37.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">36</span>ml.mnist Module</h1>
@@ -273,6 +273,4 @@ Arguments:
 <p>
 If <code class="highlighter-rouge">block</code> is specified, it would be evaluated with a block parameter <code class="highlighter-rouge">|array:array|</code>, where <code class="highlighter-rouge">array</code> is the created instance. In this case, the block's result would become the function's returned value.
 </p>
-<p />
-
 {% endraw %}

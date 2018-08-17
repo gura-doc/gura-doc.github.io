@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-05.html
-nextpage: chapter-07.html
+prevpage: chapter-05.html#naviitem-selected
+nextpage: chapter-07.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">6</span>argopt Module</h1>
@@ -108,6 +108,4 @@ The result comes as below:
 -f, --flag1     flag option #1
 -g, --flag2     flag option #2
 </code></pre>
-<p />
-
 {% endraw %}

@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-45.html
-nextpage: chapter-47.html
+prevpage: chapter-45.html#naviitem-selected
+nextpage: chapter-47.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">46</span>png Module</h1>
@@ -56,6 +56,4 @@ This module uses libpng library which is distributed in the following site:
 <p>
 <a href="http://www.libpng.org/pub/png/libpng.html">http://www.libpng.org/pub/png/libpng.html</a>
 </p>
-<p />
-
 {% endraw %}

@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-12.html
-nextpage: chapter-14.html
+prevpage: chapter-12.html#naviitem-selected
+nextpage: chapter-14.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">13</span>String and Binary</h1>
@@ -921,6 +921,4 @@ You can specify a codec for <code class="highlighter-rouge">s</code> specifier b
 <p>
 cast from <code class="highlighter-rouge">binary</code> to <code class="highlighter-rouge">stream</code>
 </p>
-<p />
-
 {% endraw %}

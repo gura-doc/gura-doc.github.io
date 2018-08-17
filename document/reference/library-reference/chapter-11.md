@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-10.html
-nextpage: chapter-12.html
+prevpage: chapter-10.html#naviitem-selected
+nextpage: chapter-12.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">11</span>calendar Module</h1>
@@ -22,6 +22,4 @@ Below is an example to print a calendar for the year 2015.
 <div style="margin-bottom:1em"><code>calendar.calendar(year:number, weekoffset:number =&gt; 0, ncols:number =&gt; 3)</code></div>
 Prints calendars of a specified year. The argument <code class="highlighter-rouge">weekoffset</code> specifies from which week the calendar starts, <code class="highlighter-rouge">0</code> from Sunday, <code class="highlighter-rouge">1</code> from Monday, and so on. The argument <code class="highlighter-rouge">ncols</code> specifies how many months are printed in one row.
 </p>
-<p />
-
 {% endraw %}

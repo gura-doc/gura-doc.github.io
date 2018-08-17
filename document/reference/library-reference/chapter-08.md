@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-07.html
-nextpage: chapter-09.html
+prevpage: chapter-07.html#naviitem-selected
+nextpage: chapter-09.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">8</span>bmp Module</h1>
@@ -54,6 +54,4 @@ Writes a BMP image to a stream.
 <p>
 This method returns the reference to the target instance itself.
 </p>
-<p />
-
 {% endraw %}

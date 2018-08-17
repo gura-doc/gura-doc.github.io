@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-13.html
-nextpage: chapter-15.html
+prevpage: chapter-13.html#naviitem-selected
+nextpage: chapter-15.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">14</span>csv Module</h1>
@@ -119,6 +119,4 @@ Creates a <code class="highlighter-rouge">csv.writer</code> instance that provid
 <p>
 The argument <code class="highlighter-rouge">format</code> specifies a printf-style format string that is used to convert a <code class="highlighter-rouge">number</code> and <code class="highlighter-rouge">complex</code> value to a string.
 </p>
-<p />
-
 {% endraw %}

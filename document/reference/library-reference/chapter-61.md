@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-60.html
-nextpage: chapter-62.html
+prevpage: chapter-60.html#naviitem-selected
+nextpage: chapter-62.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">61</span>xml Module</h1>
@@ -329,6 +329,4 @@ This module uses expat library which is distributed in the following site:
 <p>
 <a href="http://expat.sourceforge.net/">http://expat.sourceforge.net/</a>
 </p>
-<p />
-
 {% endraw %}

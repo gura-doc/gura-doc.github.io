@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-46.html
-nextpage: chapter-48.html
+prevpage: chapter-46.html#naviitem-selected
+nextpage: chapter-48.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">47</span>ppm Module</h1>
@@ -48,6 +48,4 @@ Reads a PPM/PGM image from a stream.
 <div style="margin-bottom:1em"><code>image#write@ppm(stream:stream:w):reduce:[gray]</code></div>
 Writes a PPM/PGM image to a stream.
 </p>
-<p />
-
 {% endraw %}

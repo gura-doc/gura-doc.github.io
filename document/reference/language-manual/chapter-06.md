@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-05.html
-nextpage: chapter-07.html
+prevpage: chapter-05.html#naviitem-selected
+nextpage: chapter-07.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">6</span>Environment</h1>
@@ -101,6 +101,4 @@ When a block is evaluated, the Interpreter creates a new Environment with cloned
 |       root        |
 +-------------------+
 </code></pre>
-<p />
-
 {% endraw %}

@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-11.html
-nextpage: chapter-13.html
+prevpage: chapter-11.html#naviitem-selected
+nextpage: chapter-13.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">12</span>Module</h1>
@@ -785,6 +785,4 @@ Congratulations! It's ready to edit Module_hoge.cpp for implementations as you l
 <p>
 By the way, you need to get some information about C++ functions and classes provided by Gura for actual programming. The best way for it is to see source files of other binary modules. At first, find out a module from those provided by Gura, which has a function similar to what you want to create. You can find module source files in a directory gura/src/Module_module in a source package. Each module is so simple that consists of one to two source files. I'm sure it's relatively easy to know how to realize your purpose by investigating them, because they have been developed in the same coding policy.
 </p>
-<p />
-
 {% endraw %}

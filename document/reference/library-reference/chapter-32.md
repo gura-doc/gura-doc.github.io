@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-31.html
-nextpage: chapter-33.html
+prevpage: chapter-31.html#naviitem-selected
+nextpage: chapter-33.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">32</span>markdown Module</h1>
@@ -433,6 +433,4 @@ R</td>
 <div style="margin-bottom:1em"><code>markdown.item#print(indent?:number):void</code></div>
 Prints structured content of the item. Argument <code class="highlighter-rouge">indent</code> specifies an indentation level and is set to zero when omitted.
 </p>
-<p />
-
 {% endraw %}

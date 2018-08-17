@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-12.html
-nextpage: chapter-14.html
+prevpage: chapter-12.html#naviitem-selected
+nextpage: chapter-14.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">13</span>conio Module</h1>
@@ -128,6 +128,4 @@ Character code numbers of some of the special keys are defined as below:
 <li><code class="highlighter-rouge">conio.K_PAGEDOWN</code></li>
 <li><code class="highlighter-rouge">conio.K_DELETE</code></li>
 </ul>
-<p />
-
 {% endraw %}

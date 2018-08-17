@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-02.html
-nextpage: chapter-04.html
+prevpage: chapter-02.html#naviitem-selected
+nextpage: chapter-04.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">3</span>Predefined Variables</h1>
@@ -111,6 +111,4 @@ Value of true.</td>
 </table>
 
 </p>
-<p />
-
 {% endraw %}

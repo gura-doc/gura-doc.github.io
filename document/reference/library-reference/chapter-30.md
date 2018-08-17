@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-29.html
-nextpage: chapter-31.html
+prevpage: chapter-29.html#naviitem-selected
+nextpage: chapter-31.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">30</span>jpeg Module</h1>
@@ -376,6 +376,4 @@ This module uses JPEG library which is distributed in the following site:
 <p>
 <a href="http://www.ijg.org/">http://www.ijg.org/</a>
 </p>
-<p />
-
 {% endraw %}

@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-09.html
-nextpage: chapter-11.html
+prevpage: chapter-09.html#naviitem-selected
+nextpage: chapter-11.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">10</span>Object Oriented Programming</h1>
@@ -379,6 +379,4 @@ B = class {           // B's actual declaration.
     // ...
 }
 </code></pre>
-<p />
-
 {% endraw %}

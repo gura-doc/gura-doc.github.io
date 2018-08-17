@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-58.html
-nextpage: chapter-60.html
+prevpage: chapter-58.html#naviitem-selected
+nextpage: chapter-60.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">59</span>wav Module</h1>
@@ -23,6 +23,4 @@ Reads WAV audio from a stream.
 <div style="margin-bottom:1em"><code>audio#write@wav(stream:stream:w):reduce</code></div>
 Writes WAV audio to a stream.
 </p>
-<p />
-
 {% endraw %}

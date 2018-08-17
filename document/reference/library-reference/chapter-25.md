@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-24.html
-nextpage: chapter-26.html
+prevpage: chapter-24.html#naviitem-selected
+nextpage: chapter-26.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">25</span>gmp Module</h1>
@@ -1618,6 +1618,4 @@ This module uses GMP and its forked project MPIR which are distributed in the fo
 <li><a href="https://gmplib.org">https://gmplib.org</a></li>
 <li><a href="http://www.mpir.org/">http://www.mpir.org/</a></li>
 </ul>
-<p />
-
 {% endraw %}

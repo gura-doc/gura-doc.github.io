@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-56.html
-nextpage: chapter-58.html
+prevpage: chapter-56.html#naviitem-selected
+nextpage: chapter-58.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">57</span>units Module</h1>
@@ -31,6 +31,4 @@ Converts <strong>mm</strong> to <strong>pt</strong>.
 <div style="margin-bottom:1em"><code>units.pt$mm(pt:number):map</code></div>
 Converts <strong>pt</strong> to <strong>mm</strong>.
 </p>
-<p />
-
 {% endraw %}

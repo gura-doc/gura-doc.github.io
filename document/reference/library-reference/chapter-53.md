@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-52.html
-nextpage: chapter-54.html
+prevpage: chapter-52.html#naviitem-selected
+nextpage: chapter-54.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">53</span>sys Module</h1>
@@ -55,6 +55,4 @@ Enters to interactive mode.
 <div style="margin-bottom:1em"><code>sys.required_version(major:number, minor:number, patch:number)</code></div>
 Raises an error if the running interpreter doesn't satisfy the required version.
 </p>
-<p />
-
 {% endraw %}

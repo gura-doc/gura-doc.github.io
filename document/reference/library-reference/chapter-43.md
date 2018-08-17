@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-42.html
-nextpage: chapter-44.html
+prevpage: chapter-42.html#naviitem-selected
+nextpage: chapter-44.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">43</span>opengl Module</h1>
@@ -1752,6 +1752,4 @@ delimit the vertices of a primitive or a group of like primitives
 <div style="margin-bottom:1em"><code>opengl.glUniformMatrix4x3fv(location:number, count:number, transpose:boolean, value:array@float:nomap):map:void</code></div>
 
 </p>
-<p />
-
 {% endraw %}

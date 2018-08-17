@@ -2,7 +2,7 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-19.html
+prevpage: chapter-19.html#naviitem-selected
 nextpage: ""
 ---
 {% raw %}
@@ -693,6 +693,4 @@ func(tmpl, 'grape', 100)
 <p>
 Note that the template is evaluated with a scope in the context of <code class="highlighter-rouge">func</code>.
 </p>
-<p />
-
 {% endraw %}

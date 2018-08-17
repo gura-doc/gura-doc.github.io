@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-01.html
-nextpage: chapter-03.html
+prevpage: chapter-01.html#naviitem-selected
+nextpage: chapter-03.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">2</span>Explanatory Note</h1>
@@ -22,6 +22,4 @@ If the the arument name has <code class="highlighter-rouge">+</code> symbol foll
 <p>
 An argument may have a default value. The default value is described with <code class="highlighter-rouge">=&gt;</code> operator like <code class="highlighter-rouge">func(num:number =&gt; 4)</code>. In such a case, if <code class="highlighter-rouge">num</code> is omitted, the default value <code class="highlighter-rouge">4</code> shall be used.
 </p>
-<p />
-
 {% endraw %}

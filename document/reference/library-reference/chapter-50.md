@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-49.html
-nextpage: chapter-51.html
+prevpage: chapter-49.html#naviitem-selected
+nextpage: chapter-51.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">50</span>sdl2 Module</h1>
@@ -2688,6 +2688,4 @@ This module uses SDL2 library which is distributed in the following site:
 <p>
 <a href="http://www.libsdl.org/">http://www.libsdl.org/</a>
 </p>
-<p />
-
 {% endraw %}

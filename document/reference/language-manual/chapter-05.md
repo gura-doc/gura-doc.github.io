@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-04.html
-nextpage: chapter-06.html
+prevpage: chapter-04.html#naviitem-selected
+nextpage: chapter-06.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">5</span>Operator</h1>
@@ -1488,6 +1488,4 @@ The method returns entries registered as binary operators. Specifying a symbol <
 <pre class="highlight"><code>op = operator(`-)
 println(op.entries(`unary))
 </code></pre>
-<p />
-
 {% endraw %}

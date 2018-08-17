@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-03.html
-nextpage: chapter-05.html
+prevpage: chapter-03.html#naviitem-selected
+nextpage: chapter-05.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">4</span>Data Type</h1>
@@ -206,6 +206,4 @@ A string literal preceded by <code class="highlighter-rouge">b</code> instantiat
 </p>
 <pre class="highlight"><code>b'\x00\x01\0x02\0x03'
 </code></pre>
-<p />
-
 {% endraw %}

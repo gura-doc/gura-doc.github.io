@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-15.html
-nextpage: chapter-17.html
+prevpage: chapter-15.html#naviitem-selected
+nextpage: chapter-17.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">16</span>Network Operation</h1>
@@ -109,6 +109,4 @@ http.server(port =&gt; 80).wait {|req|
 <p>
 After the script runs, it waits for HTTP requests. Launch a Web browser and access to it as like http://localhost/?site=0,1. If you try it on Linux, you have to run the script as a root user or replace the port number with one larger than or equal to 1024.
 </p>
-<p />
-
 {% endraw %}

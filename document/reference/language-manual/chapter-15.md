@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-14.html
-nextpage: chapter-16.html
+prevpage: chapter-14.html#naviitem-selected
+nextpage: chapter-16.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">15</span>File Operation</h1>
@@ -1081,6 +1081,4 @@ print(os.fromnative(buff))
 <p>
 Function <code class="highlighter-rouge">os.fromnative()</code> converts <code class="highlighter-rouge">binary</code> instance that contains a raw data from the process to a string in UTF-8 format.
 </p>
-<p />
-
 {% endraw %}

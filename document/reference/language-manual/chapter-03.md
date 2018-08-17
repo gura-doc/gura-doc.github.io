@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-02.html
-nextpage: chapter-04.html
+prevpage: chapter-02.html#naviitem-selected
+nextpage: chapter-04.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">3</span>Syntax</h1>
@@ -1103,6 +1103,4 @@ finally
     // ...
 }
 </code></pre>
-<p />
-
 {% endraw %}

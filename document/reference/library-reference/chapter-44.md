@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-43.html
-nextpage: chapter-45.html
+prevpage: chapter-43.html#naviitem-selected
+nextpage: chapter-45.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">44</span>os Module</h1>
@@ -65,6 +65,4 @@ Converts Gura's regulated string into binary data that includes OS's native stri
 <div style="margin-bottom:1em"><code>os.unsetenv(name:string):void</code></div>
 Unset an environment variable.
 </p>
-<p />
-
 {% endraw %}

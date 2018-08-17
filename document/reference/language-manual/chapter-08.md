@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-07.html
-nextpage: chapter-09.html
+prevpage: chapter-07.html#naviitem-selected
+nextpage: chapter-09.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">8</span>Function</h1>
@@ -920,6 +920,4 @@ do_trailer(false) println('good-bye')
 <p>
 Some functions that govern sequence flow like <code class="highlighter-rouge">if-elsif-else</code> and <code class="highlighter-rouge">try-catch</code> utilizes this trailer control mechanism.
 </p>
-<p />
-
 {% endraw %}

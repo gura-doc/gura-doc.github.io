@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Language Manual
-prevpage: chapter-06.html
-nextpage: chapter-08.html
+prevpage: chapter-06.html#naviitem-selected
+nextpage: chapter-08.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">7</span>Interpreter</h1>
@@ -412,6 +412,4 @@ Equivalent Code</th>
 </table>
 
 </p>
-<p />
-
 {% endraw %}

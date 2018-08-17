@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-32.html
-nextpage: chapter-34.html
+prevpage: chapter-32.html#naviitem-selected
+nextpage: chapter-34.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">33</span>math Module</h1>
@@ -227,6 +227,4 @@ Returns a hyperbolic tangent value.
 <div style="margin-bottom:1em"><code>math.unitstep(num):map</code></div>
 Evaluates a unit step function with a given argument <code class="highlighter-rouge">num</code> that returns <code class="highlighter-rouge">1</code> when <code class="highlighter-rouge">num &gt;= 0</code> and <code class="highlighter-rouge">0</code> otherwise.
 </p>
-<p />
-
 {% endraw %}

@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-06.html
-nextpage: chapter-08.html
+prevpage: chapter-06.html#naviitem-selected
+nextpage: chapter-08.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">7</span>base64 Module</h1>
@@ -84,6 +84,4 @@ The number of characters per line is specified by an argument <code class="highl
 <p>
 If <code class="highlighter-rouge">block</code> is specified, it would be evaluated with a block parameter <code class="highlighter-rouge">|s:stream|</code>, where <code class="highlighter-rouge">s</code> is the created instance. In this case, the block's result would become the function's returned value.
 </p>
-<p />
-
 {% endraw %}

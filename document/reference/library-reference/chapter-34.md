@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-33.html
-nextpage: chapter-35.html
+prevpage: chapter-33.html#naviitem-selected
+nextpage: chapter-35.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">34</span>midi Module</h1>
@@ -258,6 +258,4 @@ It creates an instance to access data in SoundFont file.
 
 </p>
 <h2><span class="caption-index-2">34.10</span><a name="anchor-34-10"></a>midi.synthesizer Class</h2>
-<p />
-
 {% endraw %}

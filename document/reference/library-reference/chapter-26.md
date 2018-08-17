@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-25.html
-nextpage: chapter-27.html
+prevpage: chapter-25.html#naviitem-selected
+nextpage: chapter-27.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">26</span>gurcbuild Module</h1>
@@ -26,6 +26,4 @@ Creates a composite Gura file from files specified by <code class="highlighter-r
 <p>
 The result file would be created in the directory specified by <code class="highlighter-rouge">dirName</code>. If the argument is omitted, the file would be created in the current working directory.
 </p>
-<p />
-
 {% endraw %}

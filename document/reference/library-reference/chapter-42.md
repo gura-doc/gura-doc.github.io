@@ -2,8 +2,8 @@
 layout: reference
 lang: en
 title: Gura Library Reference
-prevpage: chapter-41.html
-nextpage: chapter-43.html
+prevpage: chapter-41.html#naviitem-selected
+nextpage: chapter-43.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">42</span>mtp Module</h1>
@@ -320,6 +320,4 @@ This module uses libusb and libmtp library which is distributed in the following
 <li><a href="https://libusb.info/">https://libusb.info/</a></li>
 <li><a href="http://libmtp.sourceforge.net/">http://libmtp.sourceforge.net/</a></li>
 </ul>
-<p />
-
 {% endraw %}
