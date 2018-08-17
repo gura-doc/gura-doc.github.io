@@ -26,7 +26,9 @@ title: top
 
 	<!-- card -->
 	<div class="card">
-	  <div class="card-header bg-info"><h5 class="text-white font-weight-bold">What's This?</h5></div>
+	  <div class="card-header bg-info">
+		<h5 class="text-white font-weight-bold"><i class="fas fa-feather mr-2"></i>What's This?</h5>
+	  </div>
 <div class="card-body" markdown="1">
 **Gura** is an **iterator-oriented** programming language
 that focuses on iterators with improved functions for calculation and data processing.
@@ -54,10 +56,12 @@ Below is a code to do the same thing using a control sequence:
 
 <!-- card -->
 	<div class="card">
-	  <div class="card-header bg-info"><h5 class="text-white font-weight-bold">Latest News</h5></div>
+	  <div class="card-header bg-info">
+		<h5 class="text-white font-weight-bold"><i class="fas fa-feather mr-2"></i>Latest News</h5>
+	  </div>
 	  <div class="card-body">
 		<dl class="row">
-		  <dt class="col-sm-3">2018-08-xx</dt>
+		  <dt class="col-sm-3">2018-08-17</dt>
 		  <dd class="col-sm-9">The web site was renewed.</dd>
 
 		  <dt class="col-sm-3">2017-07-04</dt>
@@ -85,7 +89,9 @@ Below is a code to do the same thing using a control sequence:
 
 <!-- card -->
 	<div class="card">
-	  <div class="card-header bg-info"><h5 class="text-white font-weight-bold">Features</h5></div>
+	  <div class="card-header bg-info">
+		<h5 class="text-white font-weight-bold"><i class="fas fa-feather mr-2"></i>Features</h5>
+	  </div>
 <div class="card-body" markdown="1">
 * It provides a variety of iterator operations including mapping process
   such as **Implicit Mapping** and **Member Mapping**.
@@ -100,7 +106,9 @@ Below is a code to do the same thing using a control sequence:
 
 <!-- card -->
 	<div class="card">
-	  <div class="card-header bg-info"><h5 class="text-white font-weight-bold">Resource</h5></div>
+	  <div class="card-header bg-info">
+		<h5 class="text-white font-weight-bold"><i class="fas fa-feather mr-2"></i>Resource</h5>
+	  </div>
 	  <div class="card-body">
 		<dl class="row">
 		  <dt class="col-sm-3">

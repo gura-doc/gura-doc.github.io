@@ -12,18 +12,18 @@ redirect_from: /Download.html
 ## Latest Version<a name="download-latest"></a><a class="btn btn-secondary float-right" data-toggle="collapse" href="#relnote-latest" role="button" aria-expanded="false" aria-controls="relnote-latest">Release Notes</a>
 
 <div class="collapse bg-light p-2 mb-2" id="relnote-latest" markdown="1">
-  - Performance has been improved. It's **twice** as fast as v0.6.2.
-  - Uses Visual Studio 2015 to build for Windows.
-  - Can be built with GCC 5.
-  - Supports Ubuntu 16.04.
-  - Enhanced `opengl` module so that it supports APIs of OpenGL 1.2 or later.
-  - Implemented `array` class that provides features for matrix calculations.
-  - Mathematical functions such as `math.sin()` and `math.log()` can be expanded so they can take various types of value in their arguments.
-  - Implemented `vertex` class that represents 2-D or 3-D coord data.
-  - Implemented `model.stl` module that provides measures to read/write files in STL format for 3D models.
-  - Implemented `model.obj` module that provides measures to read/write files in OBJ format for 3D models.
-  - Implemented `doxygen` module that parses Doxygen documents.
-  - Implemented `fftw` module that applies fourier transform on array data.
+- Performance has been improved. It's **twice** as fast as v0.6.2.
+- Uses Visual Studio 2015 to build for Windows.
+- Can be built with GCC 5.
+- Supports Ubuntu 16.04.
+- Enhanced `opengl` module so that it supports APIs of OpenGL 1.2 or later.
+- Implemented `array` class that provides features for matrix calculations.
+- Mathematical functions such as `math.sin()` and `math.log()` can be expanded so they can take various types of value in their arguments.
+- Implemented `vertex` class that represents 2-D or 3-D coord data.
+- Implemented `model.stl` module that provides measures to read/write files in STL format for 3D models.
+- Implemented `model.obj` module that provides measures to read/write files in OBJ format for 3D models.
+- Implemented `doxygen` module that parses Doxygen documents.
+- Implemented `fftw` module that applies fourier transform on array data.
 </div>
 
 <table class="table">
@@ -56,23 +56,23 @@ redirect_from: /Download.html
 ## Previous Version<a name="download-previous"></a><a class="btn btn-secondary float-right" data-toggle="collapse" href="#relnote-previous" role="button" aria-expanded="false" aria-controls="relnote-previous">Release Notes</a>
 
 <div class="collapse bg-light p-2 mb-2" id="relnote-previous" markdown="1">
-  - Enhanced features to provide help documents of each function.
-    - Added much of help document.
-    - You can use `~` operator to print a function help in the interactive mode: eg) `~println`
-    - As the help documents are written in Markdown, they can also be converted to HTML and TeX.
-        Actually, the Gura Library Reference (http://www.gura-lang.org/library-reference/index.html) has been created from documents implemented in the interpreter.
-  - Enhanced `markdown` module:
-    - It can now parse a "table" format in which columns and rows are separated with vertical bars and hyphens.
-    - Implemented parser of fenced code blocks.
-  - Modified `import` function so that it can take a variable as its argument like `import(&foo)` where `foo` is a variable that has been assigned with a module name as a string.
-  - Modified naming convention of methods for image class: eg) `image#jpegread` -> `image#read@jpeg`
-  - Reimplemented methods in `re` module.
-  - Implemented `diff` module that extracts differences between two documents.
-  - Implemented `string#embed()` method that embeds Gura script in a string.
-  - Implemented `u` and `U` escape sequence in a string that represents a unicode point coded in UTF-16 and UTF-32 respectively.
-  - Implemented method `string#replaces()` that accepts multiple match-substitution pairs.
-  - Implemented methods `string#isalnum()`, `string#isalpha()`, `string#isdigit()` and `string#isspace()`.
-  - Places site-specific modules in module/site directory.
+- Enhanced features to provide help documents of each function.
+  - Added much of help document.
+  - You can use `~` operator to print a function help in the interactive mode: eg) `~println`
+  - As the help documents are written in Markdown, they can also be converted to HTML and TeX.
+      Actually, the Gura Library Reference (http://www.gura-lang.org/library-reference/index.html) has been created from documents implemented in the interpreter.
+- Enhanced `markdown` module:
+  - It can now parse a "table" format in which columns and rows are separated with vertical bars and hyphens.
+  - Implemented parser of fenced code blocks.
+- Modified `import` function so that it can take a variable as its argument like `import(&foo)` where `foo` is a variable that has been assigned with a module name as a string.
+- Modified naming convention of methods for image class: eg) `image#jpegread` -> `image#read@jpeg`
+- Reimplemented methods in `re` module.
+- Implemented `diff` module that extracts differences between two documents.
+- Implemented `string#embed()` method that embeds Gura script in a string.
+- Implemented `u` and `U` escape sequence in a string that represents a unicode point coded in UTF-16 and UTF-32 respectively.
+- Implemented method `string#replaces()` that accepts multiple match-substitution pairs.
+- Implemented methods `string#isalnum()`, `string#isalpha()`, `string#isdigit()` and `string#isspace()`.
+- Places site-specific modules in module/site directory.
 </div>
 
 <table class="table">
