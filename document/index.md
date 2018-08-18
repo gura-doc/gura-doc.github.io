@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sub
 lang: en
 title: document
 ---

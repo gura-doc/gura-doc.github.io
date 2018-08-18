@@ -1,9 +1,9 @@
 ---
-layout: reference
+layout: doc-widenavi
 lang: en
 title: Gura Library Reference
 prevpage: chapter-62.html#naviitem-selected
-nextpage: ""
+nextpage: chapter-64.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">63</span>yaml Module</h1>

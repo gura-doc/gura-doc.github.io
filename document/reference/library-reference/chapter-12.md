@@ -1,5 +1,5 @@
 ---
-layout: reference
+layout: doc-widenavi
 lang: en
 title: Gura Library Reference
 prevpage: chapter-11.html#naviitem-selected

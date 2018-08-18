@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc-nonavi
 lang: en
 title: Database Access
 ---

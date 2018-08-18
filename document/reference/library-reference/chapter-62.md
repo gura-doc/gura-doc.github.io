@@ -1,9 +1,9 @@
 ---
-layout: reference
+layout: doc-widenavi
 lang: en
 title: Gura Library Reference
 prevpage: chapter-61.html#naviitem-selected
-nextpage: ""
+nextpage: chapter-63.html#naviitem-selected
 ---
 {% raw %}
 <h1><span class="caption-index-1">62</span>xpm Module</h1>

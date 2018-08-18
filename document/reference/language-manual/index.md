@@ -1,8 +1,8 @@
 ---
-layout: reference
+layout: doc-widenavi
 lang: en
 title: Gura Language Manual
 ---
 <h1>Gura Language Manual</h1>
-<div>Yutaka Saito</div>
-<div>June 17th, 2017</div>
+<div>ypsitau@gmail.com</div>
+<div>August 18th, 2018</div>

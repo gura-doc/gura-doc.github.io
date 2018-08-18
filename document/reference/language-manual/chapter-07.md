@@ -1,5 +1,5 @@
 ---
-layout: reference
+layout: doc-widenavi
 lang: en
 title: Gura Language Manual
 prevpage: chapter-06.html#naviitem-selected

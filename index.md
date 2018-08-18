@@ -1,5 +1,5 @@
 ---
-layout: toppage
+layout: top
 lang: en
 title: top
 ---

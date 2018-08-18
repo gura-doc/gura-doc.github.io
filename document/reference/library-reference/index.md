@@ -1,8 +1,8 @@
 ---
-layout: reference
+layout: doc-widenavi
 lang: en
 title: Gura Library Reference
 ---
 <h1>Gura Library Reference</h1>
-<div>Yutaka Saito</div>
-<div>June 11th, 2018</div>
+<div>ypsitau@gmail.com</div>
+<div>August 18th, 2018</div>
