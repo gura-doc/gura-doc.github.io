@@ -35,18 +35,35 @@ Returns an absolute path name of the given name.
 <p>
 <div><strong style="text-decoration:underline">path.basename</strong></div>
 <div style="margin-bottom:1em"><code>path.basename(pathname:string):map</code></div>
-Removes a suffix part of a path name.
+Removes a suffix part of a path name. This is complementary to <code class="highlighter-rouge">path.extname()</code>.
 </p>
+<p>
+Example:
+</p>
+<pre class="highlight"><code>path.basename('/foo/bar/file.txt')  # Returns '/foo/bar/file'
+</code></pre>
 <p>
 <div><strong style="text-decoration:underline">path.bottom</strong></div>
 <div style="margin-bottom:1em"><code>path.bottom(pathname:string):map</code></div>
-Returns the last part of a path name.
+Returns the last part of a path name (cf. <code class="highlighter-rouge">path.filename()</code>).This is complementary to <code class="highlighter-rouge">path.cutbottom()</code>.
 </p>
+<p>
+Example:
+</p>
+<pre class="highlight"><code>path.bottom('/foo/bar/file.txt')  # Returns 'file.txt'
+path.bottom('/foo/bar/dir/')      # Returns 'dir'
+</code></pre>
 <p>
 <div><strong style="text-decoration:underline">path.cutbottom</strong></div>
 <div style="margin-bottom:1em"><code>path.cutbottom(pathname:string):map</code></div>
-Returns a path name after eliminating its bottom part.
+Returns a path name after eliminating its bottom part (cf. <code class="highlighter-rouge">path.dirname()</code>).This is complementary to <code class="highlighter-rouge">path.bottom()</code>.
 </p>
+<p>
+Example:
+</p>
+<pre class="highlight"><code>path.cutbottom('/foo/bar/file.txt')  # Returns '/foo/bar/'
+path.cutbottom('/foo/bar/dir/')      # Returns '/foo/bar/'
+</code></pre>
 <p>
 <div><strong style="text-decoration:underline">path.dir</strong></div>
 <div style="margin-bottom:1em"><code>path.dir(directory?:directory, pattern*:string):flat:map:[case,dir,file,icase,stat] {block?}</code></div>
@@ -75,8 +92,14 @@ If a block is specified, it would be evaluated repeatingly with block parameters
 <p>
 <div><strong style="text-decoration:underline">path.dirname</strong></div>
 <div style="margin-bottom:1em"><code>path.dirname(pathname:string):map</code></div>
-Splits a pathname by a directory separator and returns a directory name part.
+Splits a pathname by a directory separator and returns a directory name part (cf. <code class="highlighter-rouge">path.cutbottom()</code>).This is complementary to <code class="highlighter-rouge">path.filename()</code>.
 </p>
+<p>
+Example:
+</p>
+<pre class="highlight"><code>path.dirname('/foo/bar/file.txt')  # Returns '/foo/bar/'
+path.dirname('/foo/bar/dir/')      # Returns '/foo/bar/dir/'
+</code></pre>
 <p>
 <div><strong style="text-decoration:underline">path.exists</strong></div>
 <div style="margin-bottom:1em"><code>path.exists(pathname:string):map</code></div>
@@ -85,13 +108,25 @@ Returns true if the specified file exists in a file system.
 <p>
 <div><strong style="text-decoration:underline">path.extname</strong></div>
 <div style="margin-bottom:1em"><code>path.extname(pathname:string):map</code></div>
-Extracts a suffix part of a path name.
+Extracts a suffix part of a path name. It returns an empty string when the given pathname has no suffix. This is complementary to <code class="highlighter-rouge">path.basename()</code>.
 </p>
+<p>
+Example:
+</p>
+<pre class="highlight"><code>path.extname('/foo/bar/file.txt')  # Returns 'txt'
+path.extname('/foo/bar/file')      # Returns ''
+</code></pre>
 <p>
 <div><strong style="text-decoration:underline">path.filename</strong></div>
 <div style="margin-bottom:1em"><code>path.filename(pathname:string):map</code></div>
-Splits a pathname by a directory separator and returns a file name part.
+Splits a pathname by a directory separator and returns a file name part (cf. <code class="highlighter-rouge">path.bottom()</code>). This is complementary to <code class="highlighter-rouge">path.dirname()</code>.
 </p>
+<p>
+Example:
+</p>
+<pre class="highlight"><code>path.filename('/foo/bar/file.txt')  # Returns 'file.txt'
+path.filename('/foo/bar/dir/')      # Returns ''
+</code></pre>
 <p>
 <div><strong style="text-decoration:underline">path.glob</strong></div>
 <div style="margin-bottom:1em"><code>path.glob(pattern:string):flat:map:[case,dir,file,icase,stat] {block?}</code></div>
@@ -133,13 +168,28 @@ Though the default sensitiveness of character cases depends on the current platf
 <p>
 <div><strong style="text-decoration:underline">path.regulate</strong></div>
 <div style="margin-bottom:1em"><code>path.regulate(name:string):map:[uri]</code></div>
-Returns a regulated path name of the given name.
+Removes redundant relative directories.
 </p>
 <p>
 <div><strong style="text-decoration:underline">path.split</strong></div>
 <div style="margin-bottom:1em"><code>path.split(pathname:string):map:[bottom]</code></div>
-Splits a pathname by a directory separator and returns a list containing a directory name as the first element and a base name as the second one. This has the same result as calling path.dirname() and path.filename().
+Splits a pathname by a directory separator and returns a list containing a directory name as the first element and a base name as the second one.
 </p>
+<p>
+Calling this function has the same result as calling <code class="highlighter-rouge">path.dirname()</code> and <code class="highlighter-rouge">path.filename()</code>.
+</p>
+<p>
+Calling this function with <code class="highlighter-rouge">:bottom</code> attribute has the same result as calling <code class="highlighter-rouge">path.cutbottom()</code> and <code class="highlighter-rouge">path.bottom()</code>.
+</p>
+<p>
+Example:
+</p>
+<pre class="highlight"><code>path.split('/foo/bar/file.txt')         # Returns ['/foo/bar/', 'file.txt']
+path.split('/foo/bar/dir/')             # Returns ['/foo/bar/dir/', '']
+
+path.split('/foo/bar/file.txt'):bottom  # Returns ['/foo/bar/', 'file.txt']
+path.split('/foo/bar/dir/'):bottom      # Returns ['/foo/bar/', 'dir']
+</code></pre>
 <p>
 <div><strong style="text-decoration:underline">path.splitext</strong></div>
 <div style="margin-bottom:1em"><code>path.splitext(pathname:string):map</code></div>

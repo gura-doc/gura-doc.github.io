@@ -57,7 +57,7 @@ Below is a code to do the same thing using a control sequence:
 <!-- card -->
 	<div class="card">
 	  <div class="card-header bg-info">
-		<h5 class="text-white font-weight-bold"><i class="fas fa-feather mr-2"></i>Latest News</h5>
+		<h5 class="text-white font-weight-bold"><i class="fas fa-calendar mr-2"></i>Latest News</h5>
 	  </div>
 	  <div class="card-body">
 		<dl class="row">
@@ -90,7 +90,7 @@ Below is a code to do the same thing using a control sequence:
 <!-- card -->
 	<div class="card">
 	  <div class="card-header bg-info">
-		<h5 class="text-white font-weight-bold"><i class="fas fa-feather mr-2"></i>Features</h5>
+		<h5 class="text-white font-weight-bold"><i class="fas fa-pen-fancy mr-2"></i>Features</h5>
 	  </div>
 <div class="card-body" markdown="1">
 * It provides a variety of iterator operations including mapping process
@@ -107,7 +107,7 @@ Below is a code to do the same thing using a control sequence:
 <!-- card -->
 	<div class="card">
 	  <div class="card-header bg-info">
-		<h5 class="text-white font-weight-bold"><i class="fas fa-feather mr-2"></i>Resource</h5>
+		<h5 class="text-white font-weight-bold"><i class="fas fa-database mr-2"></i>Resource</h5>
 	  </div>
 	  <div class="card-body">
 		<dl class="row">
